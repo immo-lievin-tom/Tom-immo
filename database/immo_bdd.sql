@@ -21,7 +21,6 @@ CREATE TABLE `address` (
     `number` INT NOT NULL,
     `street` VARCHAR(255) NOT NULL,
     `zipcode` VARCHAR(255) NOT NULL,
-    `password` VARCHAR(255) NOT NULL,
     `country` VARCHAR(255) NOT NULL, 
     `city` VARCHAR(255) NOT NULL, 
     `date_create` DATETIME DEFAULT CURRENT_DATE,

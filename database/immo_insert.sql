@@ -1,0 +1,1 @@
+INSERT INTO `address`(`number`, `street`, `zipcode`, `password`, `country`, `city`) VALUES (2, 'rue malfidano', '62950',  )
