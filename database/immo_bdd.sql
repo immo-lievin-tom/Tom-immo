@@ -16,6 +16,7 @@ CREATE TABLE `users` (
     `date_update` DATETIME DEFAULT CURRENT_DATE,
     `date_delete` DATETIME DEFAULT CURRENT_DATE,
     `role` VARCHAR DEFAULT 1,
+<<<<<<< HEAD
     `id_address` int, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_address`) REFERENCES address(id)
@@ -59,6 +60,40 @@ CREATE TABLE `image` (
     `id_property` int,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_property`) REFERENCES property(id)
+=======
+    `id_address` INT, 
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`id_address`) references address(id)
+)ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `address`;
+CREATE TABLE `address` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `number` INT NOT NULL,
+    `street` VARCHAR(255) NOT NULL,
+    `zipcode` VARCHAR(255) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `country` VARCHAR(255) NOT NULL, 
+    `city` VARCHAR NOT NULL, 
+    `date_create` DATETIME DEFAULT CURRENT_DATE,
+    `date_update` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `is_active` BOOLEAN DEFAULT 1,
+    PRIMARY KEY (`id`)
+)ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `date_create` DATETIME DEFAULT CURRENT_DATE,
+    `date_update` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `is_active` BOOLEAN DEFAULT 1,
+    PRIMARY KEY (`id`)
+>>>>>>> f28f831c38bfe1cf5a8f295f56c98f36f40f125c
 )ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 COMMIT;
