@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Core;
 
@@ -6,38 +6,48 @@ use Core\Db;
 
 class Model
 {
-    protected static $_table;
+  protected static $_db;
+  protected $id;
+  protected $_table;
 
-    protected $id;
+  protected function __construct()
+  {
 
-    public function insert($fields) {
-         
+  }
+
+  public static function getDb()
+  {
+    if (!self::$_db) {
+      self::$_db = Db::getInstance();
     }
+    return self::$_db;
+  }
 
-    public function select()
+  function select()
     {
-
+      $where = ["id" => $this->id];
+      $dbh = self::getDb();
+      $result = $dbh->select($this->_table, $where)->getResult();
+      return $result;
     }
 
-    public static function find($params = []) {
-       
-        
-      }
+  /**
+   * Get the value of id
+   */
+  public function getId()
+  {
+    return $this->id;
+  }
 
-    public function update($fields) {
-      
-      }
+  /**
+   * Set the value of id
+   *
+   * @return  self
+   */
+  public function setId($id)
+  {
+    $this->id = $id;
 
-    public function delete()
-    {
-
-    }
-
-    public static function getDb(){
-        if(!self::$_db) {
-          self::$_db = Db::getInstance();
-        }
-        return self::$_db;
-      }
-
+    return $this;
+  }
 }

@@ -34,10 +34,9 @@ class App
 
     public function run()
     {
-
+        var_dump($this->url);
         $this->url[0] = !empty($this->url[0]) ? $this->url[0] : $this->controller;
          
-  
         if (file_exists('../app/controllers/' . $this->moduleName . '/' . ucfirst($this->url[0]) . 'Controller.php')) {
 
             $this->controller = $this->namespace . ucfirst($this->url[0]) . 'Controller';
@@ -82,7 +81,7 @@ class App
             array_shift($this->url);
         } else {
             //Front car module par defaut
-            $this->namespace = 'App\Controllers\Front\\';
+            $this->namespace = 'App\Controllers\\'.ucfirst(DEFAULT_MODULE).'\\';
         }
     }
 
