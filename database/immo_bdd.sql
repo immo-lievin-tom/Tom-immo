@@ -1,0 +1,53 @@
+START TRANSACTION;
+
+DROP DATABASE IF EXISTS bdd_immo;
+CREATE DATABASE bdd_immo;
+USE bdd_immo;
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `firstname` VARCHAR(255) NOT NULL,
+    `email` VARCHAR(255) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `date_birth` DATETIME NOT NULL, 
+    `date_create` DATETIME DEFAULT CURRENT_DATE,
+    `date_update` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `role` VARCHAR DEFAULT 1,
+    `id_address` INT, 
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`id_address`) references address(id)
+)ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `address`;
+CREATE TABLE `address` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `number` INT NOT NULL,
+    `street` VARCHAR(255) NOT NULL,
+    `zipcode` VARCHAR(255) NOT NULL,
+    `password` VARCHAR(255) NOT NULL,
+    `country` VARCHAR(255) NOT NULL, 
+    `city` VARCHAR NOT NULL, 
+    `date_create` DATETIME DEFAULT CURRENT_DATE,
+    `date_update` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `is_active` BOOLEAN DEFAULT 1,
+    PRIMARY KEY (`id`)
+)ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category` (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `date_create` DATETIME DEFAULT CURRENT_DATE,
+    `date_update` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `is_active` BOOLEAN DEFAULT 1,
+    PRIMARY KEY (`id`)
+)ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+COMMIT;
