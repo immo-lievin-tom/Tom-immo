@@ -38,6 +38,7 @@ CREATE TABLE `user` (
     `email` VARCHAR(255) NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `date_birth` DATETIME NOT NULL, 
+    `phone_number` INT NOT NULL,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
     `date_delete` DATETIME DEFAULT CURRENT_DATE,
@@ -98,8 +99,7 @@ CREATE TABLE `image` (
     `date_update` DATETIME DEFAULT CURRENT_DATE,
     `date_delete` DATETIME DEFAULT CURRENT_DATE,
     `default` BOOLEAN NOT NULL,
-    `id_property` int,
-    `id_` INT, 
+    `id_property` int, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_property`) REFERENCES property(id)
 )ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
