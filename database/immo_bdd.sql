@@ -31,7 +31,6 @@ CREATE TABLE `address` (
     PRIMARY KEY (`id`)
 )ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
-
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
     `id` INT(10) NOT NULL AUTO_INCREMENT,
@@ -64,13 +63,6 @@ CREATE TABLE `message` (
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_user`) REFERENCES user(id)
 )ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
-
-
-
-
-
-
-
 
 DROP TABLE IF EXISTS `property`;
 CREATE TABLE `property` (
