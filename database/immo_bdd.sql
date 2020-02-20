@@ -4,8 +4,8 @@ DROP DATABASE IF EXISTS bdd_immo;
 CREATE DATABASE bdd_immo;
 USE bdd_immo;
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
     `id` INT(10) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(255) NOT NULL,
     `firstname` VARCHAR(255) NOT NULL,
@@ -16,7 +16,6 @@ CREATE TABLE `users` (
     `date_update` DATETIME DEFAULT CURRENT_DATE,
     `date_delete` DATETIME DEFAULT CURRENT_DATE,
     `role` VARCHAR DEFAULT 1,
-<<<<<<< HEAD
     `id_address` int, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_address`) REFERENCES address(id)
@@ -60,7 +59,6 @@ CREATE TABLE `image` (
     `id_property` int,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_property`) REFERENCES property(id)
-=======
     `id_address` INT, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_address`) references address(id)
@@ -93,7 +91,6 @@ CREATE TABLE `category` (
     `date_delete` DATETIME DEFAULT CURRENT_DATE,
     `is_active` BOOLEAN DEFAULT 1,
     PRIMARY KEY (`id`)
->>>>>>> f28f831c38bfe1cf5a8f295f56c98f36f40f125c
 )ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 COMMIT;
