@@ -99,10 +99,9 @@ CREATE TABLE `image` (
     `date_delete` DATETIME DEFAULT CURRENT_DATE,
     `default` BOOLEAN NOT NULL,
     `id_property` int,
-    `id_address` INT, 
+    `id_` INT, 
     PRIMARY KEY (`id`),
-    FOREIGN KEY (`id_property`) REFERENCES property(id),
-    FOREIGN KEY (`id_address`) references address(id)
+    FOREIGN KEY (`id_property`) REFERENCES property(id)
 )ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `favorite`;
