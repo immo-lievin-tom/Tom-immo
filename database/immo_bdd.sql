@@ -4,8 +4,8 @@ DROP DATABASE IF EXISTS bdd_immo;
 CREATE DATABASE bdd_immo;
 USE bdd_immo;
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE `users` (
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
     `id` INT(10) NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(255) NOT NULL,
     `firstname` VARCHAR(255) NOT NULL,
