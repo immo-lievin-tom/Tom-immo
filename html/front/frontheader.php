@@ -1,7 +1,7 @@
 <div class="container-fluid h-100">
     <div class="row h-100">
         <div class="col-6 col-md-4 my-auto d-flex justify-content-center justify-content-md-end">
-            <img src="./img/logo_head.png" alt="" class="w-100 img-fluid logohead">
+            <img src="../img/logo_head.png" alt="" class="w-100 img-fluid logohead">
         </div>
         <div class="d-none d-md-block menu col-md-4">
         </div>

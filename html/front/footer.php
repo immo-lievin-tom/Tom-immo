@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="row">
     <div class="mx-auto col-12">
         <div>
@@ -44,8 +43,6 @@
             </div>
         </div>
     </div>
-=======
 <div class="navbar navbar-expand-lg navbar-light headadmin">
         <span class="title_footer mx-auto">Agence Immo Liévin</span>
->>>>>>> e598654957f5d1747245fa9d972cab751df0dbf1
 </div>
