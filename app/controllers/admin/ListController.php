@@ -1,11 +1,12 @@
-<?php 
+<?php
 
 
 namespace App\Controllers\Admin;
 
 use App\Controllers\Admin\AppController;
 
-class ListController extends AppController{
+class ListController extends AppController
+{
     public function __construct()
     {
         parent::__construct();
@@ -13,20 +14,13 @@ class ListController extends AppController{
 
     public function userAction()
     {
-
     }
 
     public function propertyAction()
     {
-         
-
-         
     }
     public function messageAction()
     {
-         
 
-         
     }
-
 }

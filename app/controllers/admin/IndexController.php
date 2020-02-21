@@ -13,7 +13,11 @@ class IndexController extends AppController{
     }
 
     public function indexAction()
+<<<<<<< HEAD
     { 
+=======
+    {
+>>>>>>> 13533d8004d40a113556d0aa621c0652438dafd7
         $this->render('index/index');
     }
 }
