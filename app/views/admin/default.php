@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +9,24 @@
 
     <title><?= $title ?></title>
 </head>
+
 <body>
 
     <?= $header ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <?= $menu  ?>
+            </div>
+            <div class="col-9">
+                <?= $content  ?>
+            </div>
+        </div>
 
-    <?= $content  ?>
+    </div>
 
-    
     <?= $footer ?>
 
 </body>
+
 </html>
