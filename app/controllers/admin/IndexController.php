@@ -14,8 +14,6 @@ class IndexController extends AppController{
 
     public function indexAction()
     {
-        $tabPosts = ['name' => 'undeundeu'];
-        
-        $this->render('index/index', $tabPosts);
+        $this->render('index/index');
     }
 }
