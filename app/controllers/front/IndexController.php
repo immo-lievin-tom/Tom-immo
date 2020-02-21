@@ -30,15 +30,22 @@ class IndexController extends AppController{
         // dans la vue index de mon module "front"
         $tableauPourLaVue = ['name' => 'undeundeu'];
          
-        $this->render('index.index', $tableauPourLaVue);
+        $this->render('index/index', $tableauPourLaVue);
       
     }
-    /**
-     * Juste une methode pour tester
-     * d'afficher la liste des utilisateur sur l'accueil
-     */
-    public function userlistAction()
-    {
-        echo 'test';
-    }
+
+public function connectionAction()
+    {}
+
+public function contactAction()
+    {}
+
+public function inscriptionAction()
+    {}
+
+public function agencyAction()
+    {}
+
+public function mentionAction()
+    {}
 }

@@ -34,7 +34,6 @@ class App
 
     public function run()
     {
-        var_dump($this->url);
         $this->url[0] = !empty($this->url[0]) ? $this->url[0] : $this->controller;
          
         if (file_exists('../app/controllers/' . $this->moduleName . '/' . ucfirst($this->url[0]) . 'Controller.php')) {

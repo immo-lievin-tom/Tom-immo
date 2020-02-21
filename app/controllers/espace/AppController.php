@@ -1,16 +1,13 @@
-<?php
+<?php 
 
-namespace App\Controllers\Front;
+namespace App\Controllers\Espace;
 
 use Core\Controller;
 
 class AppController extends Controller
 {
-    protected $appName = 'front';
 
-    protected $header;
-
-    protected $footer;
+    protected $appName = 'espace';
 
     public function __construct()
     {

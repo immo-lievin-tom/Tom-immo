@@ -3,6 +3,8 @@
 define('ROOT', __DIR__.'/');
  
 define('BASE_DIR', '/tom-immo/public/');
+define('BASE_JS', '/tom-immo/public/assets/js/');
+define('BASE_CSS', '/tom-immo/public/assets/css/');
 define('PATH_VIEWS', ROOT . '../app/views/');
 define('PATH_MODELS', ROOT . '../app/models/');
 

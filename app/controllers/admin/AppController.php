@@ -18,7 +18,6 @@ class AppController extends Controller
         //Chacun de ses elements peut etre surchargé dans vos methodeAction
         $element['header'] = $this->buildHeader();
         $element['footer'] = $this->buildFooter();
-        $element['title'] = 'test titre';
 
         $this->addContentToView($element);
 
@@ -27,12 +26,12 @@ class AppController extends Controller
 
     public function buildHeader()
     {
-        return $this->renderView('partial.menu');
+        return $this->renderView('partial/menu');
     }
 
     public function buildFooter()
     {
-        return $this->renderView('partial.footer');
+        return $this->renderView('partial/footer');
     }
 
 }

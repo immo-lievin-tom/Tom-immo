@@ -7,17 +7,15 @@ use App\Controllers\Admin\AppController;
 
 class IndexController extends AppController{
 
-    public function indexAction($name)
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function indexAction()
     {
         $tabPosts = ['name' => 'undeundeu'];
         
-        $this->render('index.index', $tabPosts);
-    }
-
-    public function testparamsAction($name)
-    {
-         
-       echo '<h1>' . $name . '<h1>';
-         
+        $this->render('index/index', $tabPosts);
     }
 }

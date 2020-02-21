@@ -4,15 +4,16 @@ namespace App\Controllers\Front;
 
 use App\Controllers\Front\AppController;
 
-class ErrorController extends AppController
+class AnnounceController extends AppController
 {
     public function __construct()
     {
         parent::__construct();
     }
     
-    public function indexAction()
+    public function categoryAction()
     {
-        $this->render('error/index');
+       $this->render('category/index');
     }
+
 }
