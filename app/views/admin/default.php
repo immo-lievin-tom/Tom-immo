@@ -14,8 +14,17 @@
 <body>
 
     <?= $header ?>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <?= $menu  ?>
+            </div>
+            <div class="col-9">
+                <?= $content  ?>
+            </div>
+        </div>
 
-    <?= $content  ?>
+    </div>
 
 
     <?= $footer ?>
