@@ -1,0 +1,52 @@
+/* Slide */
+
+.slide {
+    max-height: 25rem;
+}
+
+.arrowcontrol {
+    font-size: 1.8rem;
+    color: white;
+}
+
+/* Reassurance */
+
+.titlereassurance,
+.textreassurance {
+    color: #4A1B7C;
+}
+
+.sizereassurance {
+    font-size: 4rem;
+    color: #F71D78;
+}
+
+.textreassurance {
+    font-size: 1.1rem;
+    width: 11rem;
+}
+
+/* Announce index */
+
+.imgbig {
+    max-width: 25rem;
+}
+
+.announcetitle a {
+    color: #F71D78;
+    font-size: 1.5rem
+}
+
+/* Medias queries */
+
+@media screen and (max-width : 575px) {
+    .arrowcontrol {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width : 992px) {
+    .textreassurance {
+        width: auto;
+    }
+}

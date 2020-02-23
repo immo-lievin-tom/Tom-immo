@@ -1,0 +1,284 @@
+/* Header */
+
+.headercontainer {
+  background: center / cover no-repeat url("../img/img-inner.png");
+  background-attachment: fixed;
+}
+
+.logohead {
+  min-width: 8rem;
+  max-width: 11rem;
+}
+
+.icon {
+  color: #4A1B7C;
+}
+
+.hamburger {
+  z-index: 10;
+  cursor: pointer;
+}
+
+.bars {
+  background-color: #4A1B7C;
+  width: 2rem;
+  height: 0.3rem;
+  display: block;
+  margin: 0.3rem;
+}
+
+.w65 {
+  width: 65% !important;
+}
+
+.w80 {
+  width: 80% !important;
+}
+
+.limenu a {
+  color: black;
+}
+
+.limenu:hover {
+  cursor: pointer;
+  background-color: #F17105;
+}
+
+.limenu:hover a {
+  color: white;
+}
+
+.mobilemenu {
+  right: -100%;
+  z-index: 5;
+  opacity: 0.8;
+  background-color: #0E80CF;
+}
+
+.iconsearch {
+  cursor: pointer;
+}
+
+.searchinput {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out;
+  -webkit-transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out;
+  -moz-transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out;
+  -ms-transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out;
+  -o-transition: max-height 1s ease-in-out, opacity 0.8s ease-in-out;
+  top: 65%;
+  left: -10%;
+}
+
+.searchinputshow {
+  opacity: 1;
+  max-height: 5rem;
+  z-index: 300;
+}
+
+.submenu {
+  font-size: 1.3rem;
+  background-color: #0E80CF;
+  color: white;
+  height: 0;
+  opacity: 0;
+}
+
+/* Keyframes */
+
+@keyframes bar1animation {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(45deg);
+    margin: -0.1rem -0.1rem -0.2rem -0.1rem;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+}
+
+@keyframes bar3animation {
+  from {
+    transform: rotate(0deg);
+    transform-origin: center;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-45deg);
+    margin: -0.1rem;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+  }
+}
+
+@keyframes bar1backanimation {
+  from {
+    transform: rotate(45deg);
+    margin: -0.1rem -0.1rem -0.2rem -0.1rem;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+
+  }
+
+  to {
+    transform: rotate(0deg);
+    transform-origin: center;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
+
+@keyframes bar3backanimation {
+  from {
+    transform: rotate(-45deg);
+    margin: -0.1rem;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+  }
+
+  to {
+
+    transform: rotate(0deg);
+    transform-origin: center;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+}
+
+@keyframes transfermenu {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes transfermenuback {
+  from {
+    right: 0;
+  }
+
+  to {
+    right: -100%;
+  }
+}
+
+@keyframes showsubmenu {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+
+  to {
+    height: auto;
+    opacity: 1;
+  }
+}
+
+@keyframes hidesubmenu {
+  from {
+    height: auto;
+    opacity: 1;
+  }
+
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+
+/* Media queries */
+
+@media screen and (max-width: 575px) {
+
+  .ulmenu {
+    font-size: 1.6rem !important;
+  }
+
+  .icofont-2x {
+    font-size: 1.5em !important;
+}
+
+}
+
+@media screen and (max-width: 991px) {
+  
+  .headercontainer {
+    height: 6.25rem;
+  }
+
+  .ulmenu {
+    font-size: 1.8rem;
+    margin-top: 50%;
+  }
+
+  .limenu a {
+    color: white;
+  }
+
+  .limenu:hover {
+    background-color: transparent;
+  }
+
+  .limenu:hover a {
+    color: white;
+  }
+}
+
+@media screen and (min-width: 992px) {
+
+  .headercontainer {
+    height: 12.5rem;
+  }
+
+  .submenu {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    background-color: #fff !important;
+    z-index: 15;
+    font-size: 0.8rem;
+  }
+  
+  .submenu li a{
+    color: #000000 !important;
+  }
+
+  .submenu li:hover{
+    background-color: #F17105;
+  }
+  .submenu li:hover a{
+    
+    color: white !important;
+  }
+
+}
