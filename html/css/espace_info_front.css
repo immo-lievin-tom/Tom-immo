@@ -1,0 +1,20 @@
+
+.bodycontainer {
+    background: center / cover no-repeat url("../img/img-inner.png");
+    background-attachment: fixed;
+  }
+
+.buttonespace{
+    background-color: #ffffff !important;
+    color: #1B0A2E !important;
+}
+
+.resize{
+    height: 80px;
+    width: 80px;
+    resize: none;
+}
+
+.opa{
+    opacity:0.95;
+}

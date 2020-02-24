@@ -5,5 +5,10 @@
 @media screen and (max-width : 769px){
     .hs{
         display: none;
+        text-align: center;
     }
 } 
+
+.olivtitle{
+    font-size: 1em !important;
+}
