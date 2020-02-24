@@ -1,0 +1,35 @@
+/* maps */
+
+.maps-google {
+  min-height: 250px;
+}
+
+.presentation {
+  max-height: 20rem;
+}
+
+/* Media queries */
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .maps-google {
+    min-height: 400px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .maps-google {
+    min-height: 500px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .maps-google {
+    min-height: 500px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .w75 {
+    width: 75%;
+  }
+}
