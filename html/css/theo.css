@@ -23,3 +23,29 @@
     height: 500px;
     padding-top: 5%;
 }
+
+.table {
+    width: 50%;
+}
+
+form {
+    width: 50%;
+}
+
+.color_button {
+    background-color: cornflowerblue;
+}
+
+.bouton_ajout {
+    padding-right: 25%;
+}
+
+.label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+.input,
+.label {
+    margin: .4rem 0;
+}

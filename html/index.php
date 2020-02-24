@@ -16,15 +16,19 @@
         ?>
     </header>
 
-    <?php
+    <main class="container-fluid main">
+        <div class="row">
+            <?php
+            require_once('menu.php')
+            ?>
 
+        </div>
 
+    </main>
 
-    ?>
-    
     <footer>
         <?php
-        require_once('footer.php')
+        require_once('footer_admin.php')
         ?>
     </footer>
 </body>
