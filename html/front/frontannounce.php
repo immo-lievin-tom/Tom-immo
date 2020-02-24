@@ -105,7 +105,7 @@
 
         <div class="row">
             <p class="col-12 text-center my-3 my-lg-5 txtupselling">Ces biens pourraient vous intéresser</p>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-3 mx-auto text-center">
                 <a href="#"><img src="../img/img1_.jpg" class="w-100 img-fluid imgupselling" alt=""></a>
                 <div class="px-2 text-left txtsub">
                     <p class="mt-2">Titre annonce</p>
@@ -114,7 +114,7 @@
                     <p>Prix : <span class="price">125 000</span> €</p>
                 </div>
             </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-3 mx-auto text-center">
                 <a href="#"><img src="../img/img2_.jpg" class="w-100 img-fluid imgupselling" alt=""></a>
                 <div class="px-2 text-left txtsub">
                     <p class="mt-2">Titre annonce</p>
@@ -123,7 +123,7 @@
                     <p>Prix : <span class="price">125 000</span> €</p>
                 </div>
             </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center">
+            <div class="col-12 col-sm-10 col-md-8 col-lg-3 mx-auto text-center">
                 <a href="#"><img src="../img/img3_.jpg" class="w-100 img-fluid imgupselling" alt=""></a>
                 <div class="px-2 text-left txtsub">
                     <p class="mt-2">Titre annonce</p>

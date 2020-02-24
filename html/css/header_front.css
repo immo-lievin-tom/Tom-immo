@@ -36,7 +36,8 @@
 }
 
 .limenu a {
-  color: black;
+  color: white;
+  text-transform: uppercase;
 }
 
 .limenu:hover {

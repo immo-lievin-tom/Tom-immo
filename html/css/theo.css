@@ -1,5 +1,5 @@
-.headadmin {
-    background-color: rgba(154, 41, 206, 0.315) !important;
+.color1b0a2e {
+    background-color:#1b0a2e;
  }
 
 .title {
@@ -18,10 +18,12 @@
 
 .menu {
     padding: 0%;
-    border: solid black 1px;
-    background-color: white;
     height: 500px;
     padding-top: 5%;
+}
+
+.icofont-2x{
+    font-size: 1.5rem !important;
 }
 
 .table {
@@ -48,4 +50,13 @@ form {
 .input,
 .label {
     margin: .4rem 0;
+}
+
+.selectedbtn{
+    background-color: black;
+    color: white;
+}
+
+.selectedbtn:hover{
+    color: white;
 }

@@ -34,8 +34,8 @@
 }
 
 .txtdescannounce {
-    top: 5%;
-    font-size: 1.2rem;
+    top: 7%;
+    font-size: 0.8rem;
     width: 75%;
     color: white;
     height: 40%;
@@ -44,6 +44,7 @@
     right: 0;
     opacity: 0;
     background-color: rgba(194 , 194, 220, 0.8);
+    cursor: pointer;
 }
 
 /* Keyframes */
@@ -69,13 +70,31 @@
 
 }
 
-
 /* Media queries */
+
+@media screen and (min-width : 576px) {
+
+    .txtdescannounce {
+        top: 12%;
+        font-size: 1rem;
+
+    }
+
+}
 
 @media screen and (max-width : 991px) {
 
     .w100 {
         width: 100% !important;
+    }
+
+}
+
+@media screen and (min-width : 992px) {
+
+    .txtdescannounce {
+        top: 10%;
+        font-size: 1.2rem;
     }
 
 }

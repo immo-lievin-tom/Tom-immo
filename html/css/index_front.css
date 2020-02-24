@@ -37,6 +37,10 @@
     font-size: 1.5rem
 }
 
+.imgthumbnail, .imgmain{
+    cursor: pointer;
+}
+
 /* Medias queries */
 
 @media screen and (max-width : 575px) {

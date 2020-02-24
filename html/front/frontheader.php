@@ -11,7 +11,7 @@
 
             <!-- Menu -->
 
-            <nav class="bg-light w80 mx-auto rounded">
+            <nav class="w80 mx-auto text-white bg-dark">
                 <ul class="p-0 d-lg-flex flex-row justify-content-around my-lg-auto ulmenu">
                     <li class="list-unstyled py-2 flex-fill text-center limenu">
                         <a class="p-0 text-decoration-none" href="#">Accueil</a>

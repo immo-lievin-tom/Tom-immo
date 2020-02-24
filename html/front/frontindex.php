@@ -16,7 +16,7 @@
         <?php require_once('frontheader.php') ?>
     </header>
 
-    <main class="container-fluid">
+    <main class="container-fluid p-0">
 
         <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">

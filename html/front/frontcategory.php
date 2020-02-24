@@ -83,8 +83,83 @@
             <!-- List of announce -->
 
             <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
+                <img src="../img/img1_.jpg" class="w-100 img-fluid imgcategory" alt="">
+                <div class="txtdescannounce position-absolute mx-auto d-flex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
+                </div>
+                <div class="px-2 text-left txtsub">
+                    <p class="mt-2">Titre annonce</p>
+                    <p>Référence : <span>FDC899964</span></p>
+                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
+                    <p>Prix : <span class="price">125 000</span> €</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
+                <img src="../img/img2_.jpg" class="w-100 img-fluid imgcategory" alt="">
+                <div class="txtdescannounce position-absolute mx-auto d-flex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
+                </div>
+                <div class="px-2 text-left txtsub">
+                    <p class="mt-2">Titre annonce</p>
+                    <p>Référence : <span>FDC899964</span></p>
+                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
+                    <p>Prix : <span class="price">125 000</span> €</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
+                <img src="../img/img3_.jpg" class="w-100 img-fluid imgcategory" alt="">
+                <div class="txtdescannounce position-absolute mx-auto d-flex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
+                </div>
+                <div class="px-2 text-left txtsub">
+                    <p class="mt-2">Titre annonce</p>
+                    <p>Référence : <span>FDC899964</span></p>
+                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
+                    <p>Prix : <span class="price">125 000</span> €</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
+                <img src="../img/img1_.jpg" class="w-100 img-fluid imgcategory" alt="">
+                <div class="txtdescannounce position-absolute mx-auto d-flex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
+                </div>
+                <div class="px-2 text-left txtsub">
+                    <p class="mt-2">Titre annonce</p>
+                    <p>Référence : <span>FDC899964</span></p>
+                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
+                    <p>Prix : <span class="price">125 000</span> €</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
+                <img src="../img/img2_.jpg" class="w-100 img-fluid imgcategory" alt="">
+                <div class="txtdescannounce position-absolute mx-auto d-flex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
+                </div>
+                <div class="px-2 text-left txtsub">
+                    <p class="mt-2">Titre annonce</p>
+                    <p>Référence : <span>FDC899964</span></p>
+                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
+                    <p>Prix : <span class="price">125 000</span> €</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
+                <img src="../img/img3_.jpg" class="w-100 img-fluid imgcategory" alt="">
+                <div class="txtdescannounce position-absolute mx-auto d-flex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
+                </div>
+                <div class="px-2 text-left txtsub">
+                    <p class="mt-2">Titre annonce</p>
+                    <p>Référence : <span>FDC899964</span></p>
+                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
+                    <p>Prix : <span class="price">125 000</span> €</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
                 <a href="#"><img src="../img/img1_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
+    
+                <div class="txtdescannounce position-absolute mx-auto ex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
+                </div>
                 <div class="px-2 text-left txtsub">
                     <p class="mt-2">Titre annonce</p>
                     <p>Référence : <span>FDC899964</span></p>
@@ -93,8 +168,10 @@
                 </div>
             </div>
             <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
-                <a href="#"><img src="../img/img2_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
+                <img src="../img/img2_.jpg" class="w-100 img-fluid imgcategory" alt="">
+                <div class="txtdescannounce position-absolute mx-auto d-flex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
+                </div>
                 <div class="px-2 text-left txtsub">
                     <p class="mt-2">Titre annonce</p>
                     <p>Référence : <span>FDC899964</span></p>
@@ -103,68 +180,10 @@
                 </div>
             </div>
             <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
-                <a href="#"><img src="../img/img3_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
-                <div class="px-2 text-left txtsub">
-                    <p class="mt-2">Titre annonce</p>
-                    <p>Référence : <span>FDC899964</span></p>
-                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
-                    <p>Prix : <span class="price">125 000</span> €</p>
+                <img src="../img/img3_.jpg" class="w-100 img-fluid imgcategory" alt="">
+                <div class="txtdescannounce position-absolute mx-auto d-flex align-items-center">
+                    <p class="mx-auto p-3 descannounce">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus...<a href="#">Plus d'infos</a></p>
                 </div>
-            </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
-                <a href="#"><img src="../img/img1_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
-                <div class="px-2 text-left txtsub">
-                    <p class="mt-2">Titre annonce</p>
-                    <p>Référence : <span>FDC899964</span></p>
-                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
-                    <p>Prix : <span class="price">125 000</span> €</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
-                <a href="#"><img src="../img/img2_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
-                <div class="px-2 text-left txtsub">
-                    <p class="mt-2">Titre annonce</p>
-                    <p>Référence : <span>FDC899964</span></p>
-                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
-                    <p>Prix : <span class="price">125 000</span> €</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
-                <a href="#"><img src="../img/img3_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
-                <div class="px-2 text-left txtsub">
-                    <p class="mt-2">Titre annonce</p>
-                    <p>Référence : <span>FDC899964</span></p>
-                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
-                    <p>Prix : <span class="price">125 000</span> €</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
-                <a href="#"><img src="../img/img1_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
-                <div class="px-2 text-left txtsub">
-                    <p class="mt-2">Titre annonce</p>
-                    <p>Référence : <span>FDC899964</span></p>
-                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
-                    <p>Prix : <span class="price">125 000</span> €</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
-                <a href="#"><img src="../img/img2_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
-                <div class="px-2 text-left txtsub">
-                    <p class="mt-2">Titre annonce</p>
-                    <p>Référence : <span>FDC899964</span></p>
-                    <p><i class="icofont-location-pin mr-1"></i>Lieu : <span>Lièvin</span></p>
-                    <p>Prix : <span class="price">125 000</span> €</p>
-                </div>
-            </div>
-            <div class="col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative">
-                <a href="#"><img src="../img/img3_.jpg" class="w-100 img-fluid imgcategory" alt=""></a>
-                <p class="txtdescannounce position-absolute mx-auto p-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis doloribus, accusamus, nobis laboriosam sunt assumenda non tempora ipsum dignissimos quasi a obcaecati id dolore necessitatibus praesentium soluta earum at eveniet!</p>
                 <div class="px-2 text-left txtsub">
                     <p class="mt-2">Titre annonce</p>
                     <p>Référence : <span>FDC899964</span></p>

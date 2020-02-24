@@ -4,12 +4,12 @@ $("document").ready(function() {
     $(".inputfilter").toggle();
   });
 
-  $('.announcecat').mouseover(function(){
-    $(this).children( ".txtdescannounce" ).css("animation", "mousein ease 2s forwards");
+  $('.txtdescannounce').mouseover(function(){
+    $(this).css("animation", "mousein ease 2s forwards");
   })
 
-  $('.announcecat').mouseout(function(){
-    $(this).children( ".txtdescannounce" ).css("animation", "mouseout ease 2s forwards");
+  $('.txtdescannounce').mouseout(function(){
+    $(this).css("animation", "mouseout ease 2s forwards");
   })
 
 });
