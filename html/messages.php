@@ -42,7 +42,7 @@
                             <td scope="row"><a class="text-decoration-none text-dark" href="#"><i class="icofont-eye icofont-2x"></i></a></td>
                             <td>Mark</td>
                             <td>Salut</td>
-                            <td class="messageadmin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ex sint maxime, placeat hic cupiditate rerum aliquam...</td>
+                            <td class="messageadmin">Lorem deux ipsum dolor sit amet consectetur adipisicing elit. Eaque ex sint maxime, placeat hic cupiditate rerum aliquam...</td>
                             <td>12:00</td>
                         </tr>
                     </tbody>
