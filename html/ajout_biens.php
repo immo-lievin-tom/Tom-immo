@@ -22,6 +22,7 @@
             require_once('menu_admin.php')
             ?>
             <div class="col-10 pl-0 pt-5">
+                
                 <form class="mx-auto">
 
                     <div class="form-group col-12 d-flex mx-auto">

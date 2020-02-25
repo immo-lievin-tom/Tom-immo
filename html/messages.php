@@ -50,45 +50,6 @@
                             <td>Salut</td>
                             <td class="messageadmin">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ex sint maxime, placeat hic cupiditate rerum aliquam...</td>
                             <td>12:00</td>
-
-                        </tr>
-                        <tr>
-                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
-                            <td>Markus</td>
-                            <td>Salut</td>
-                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
-                            <td>12:00</td>
-
-                        </tr>
-                        <tr>
-                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
-                            <td>Larry</td>
-                            <td>Salut</td>
-                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
-                            <td>12:00</td>
-
-                        </tr>
-                        <tr>
-                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
-                            <td>Larry</td>
-                            <td>Salut</td>
-                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
-                            <td>12:00</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
-                            <td>Larry</td>
-                            <td>Salut</td>
-                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
-                            <td>12:00</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
-                            <td>Larry</td>
-                            <td>Salut</td>
-                            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
-                            <td>12:00</td>
-
                         </tr>
                     </tbody>
                 </table>
