@@ -22,6 +22,7 @@
             require_once('menu_biens.php')
             ?>
             <div class="col-10 pt-5">
+
                 <form class="mx-auto"> 
                     <div class="form-group col-12">
                         <label for="inputName">Nom</label>
