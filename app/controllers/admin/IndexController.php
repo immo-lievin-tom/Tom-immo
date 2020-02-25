@@ -16,4 +16,9 @@ class IndexController extends AppController{
     { 
         $this->render('index/index');
     }
+
+    public function propertyAction()
+    {
+        $this->render('list/property');
+    }
 }

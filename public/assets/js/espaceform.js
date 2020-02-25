@@ -13,29 +13,9 @@ $(document).ready(function () {
         });
         $(this).addClass('buttonespace');
     });
-    $('.info-espace').show();
-    $('.property-espace').hide();
-    $('.favoris-espace').hide();
-    $('.info-e').click(function () {
-        $('.info-espace').show();
-        $('.property-espace').hide();
-        $('.favoris-espace').hide();
-    });
-    $('.property-e').click(function () {
-        $('.property-espace').show();
-        $('.info-espace').hide();
-        $('.favoris-espace').hide();
-    });
-    $('.favoris-e').click(function () {
-        $('.favoris-espace').show();
-        $('.property-espace').hide();
-        $('.info-espace').hide();
-    });
     $('.property-select').on('change', function () {
-
         if ($(this).val() == "garage") {
             $('.no-garage').each(function () {
-
                 $('.no-garage').addClass('d-none');
                 $('.no-garage').removeClass('d-flex')
             })

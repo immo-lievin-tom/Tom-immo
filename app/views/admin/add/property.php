@@ -1,5 +1,5 @@
 <div class="col-12 col-sm-8 mx-auto col-lg-5 col-xl-9 mt-4 border p-2 mx-2 property-espace">
-    <h4 class="text-center">Modifier un bien</h4>
+    <h4 class="text-center">Ajouter un bien</h4>
     <form method="post" class="text-center">
         <div class="form-check form-check-inline">
             <input class="form-check-input m-2" type="radio" id="sale" name="contrat" value="sale"> 
