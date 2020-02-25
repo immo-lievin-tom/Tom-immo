@@ -23,8 +23,11 @@
             require_once('menu_admin.php')
             ?>
             <div class="col-10 pt-5">
+            <div class="titre_message pb-5">
+                    <h4 class="text-center">LISTE DES BIENS</h4>
+                </div>
                 <table class="table table-striped mx-auto border w-100">
-                    <thead>
+                    <thead class="text-center">
                         <tr>
                             <th class="text-center" scope="col" >Titre</th>
                             <th class="text-center" scope="col" >Référence</th>
