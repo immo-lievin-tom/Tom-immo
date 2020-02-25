@@ -24,19 +24,18 @@
             require_once('menu_admin.php')
             ?>
             <div class="mx-auto col-10">
-                <h4 class="text-center">EXPORT</h4>
-                <form action="" class="mx-auto w-25">
+                <h4 class="text-center my-3">Exporter les biens</h4>
+                <form action="" class="mx-auto w-25 text-center">
                     <div class="pl-0 pt-5 d-flex justify-content-around">
                         <div class="text-center">
-                            <label class="label" for="start">Start date:</label>
-                            <input class="input " type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31"></div>
+                            <label class="label" for="start">Date de début:</label>
+                            <input class="input " type="date" id="start" name="trip-start"></div>
                         <div class="text-center">
-                            <label class="label" for="end">End date:</label>
-                            <input class="input" type="date" id="end" name="trip-end" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                            <label class="label" for="end">Date de fin:</label>
+                            <input class="input" type="date" id="end" name="trip-end">
                         </div>
                     </div>
-
-                    <button class="mx-auto d-block">Valider</button>
+                    <button type="button" class="btn btn-info my-5">Valider</button>
                 </form>
             </div>
 
