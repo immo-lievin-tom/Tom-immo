@@ -14,3 +14,4 @@ $('.anchor').each(function(){
         $(this).children().addClass('selectedbtn')
     }
 })
+
