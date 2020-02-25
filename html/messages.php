@@ -24,11 +24,8 @@
             ?>
 
             <div class="col-12 col-lg-10 pt-5">
-                <div class="titre_message pb-5">
-                    <h4 class="text-center">LISTE DES MESSAGES</h4>
-                </div>
                 <div class="col-12 mx-auto">
-                    <h4 class="text-center my-3">Messages</h4>
+                    <h4 class="text-center my-3">Listes des Messages</h4>
                     <table class="table table-striped mx-auto border w-100">
                         <thead>
                             <tr>
