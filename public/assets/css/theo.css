@@ -1,0 +1,92 @@
+.color1b0a2e {
+  background-color: #1b0a2e;
+}
+
+.title {
+  color: white !important;
+  font-size: 35px;
+}
+
+.title_footer {
+  color: white !important;
+  font-size: 35px;
+}
+
+.logo {
+  height: 125px;
+}
+
+.menu {
+  padding: 0%;
+  padding-top: 5%;
+  padding: 0%;
+  padding-top: 5%;
+  height: 70vh;
+}
+
+.icofont-2x {
+  font-size: 1.5rem !important;
+}
+
+.table {
+  width: 50%;
+}
+
+form {
+  width: 50%;
+}
+
+.color_button {
+  background-color: cornflowerblue;
+}
+
+.label {
+  display: block;
+  font: 1rem "Fira Sans", sans-serif;
+}
+
+.input,
+.label {
+  margin: 0.4rem 0;
+}
+
+.selectedbtn {
+  background-color: black;
+  color: white;
+}
+
+.selectedbtn:hover {
+  color: white;
+}
+
+.selectedbtn {
+  background-color: black;
+  color: white;
+}
+
+.selectedbtn:hover {
+  color: white;
+}
+.messageadmin {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btndelete:hover {
+  background-color: black !important;
+  color: white;
+}
+
+.resize {
+  height: 80px;
+  width: 80px;
+  resize: none;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  border-color: green !important;
+  background-color: green;
+}

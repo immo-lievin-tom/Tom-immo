@@ -1,0 +1,14 @@
+.bg{
+    background-color: #1B0A2E;
+}
+
+@media screen and (max-width : 769px){
+    .hs{
+        display: none;
+        text-align: center;
+    }
+} 
+
+.olivtitle{
+    font-size: 1em !important;
+}

@@ -1,14 +1,9 @@
-<ul class="nav flex-column">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#">Disabled</a>
-  </li>
-</ul>
+<div class="menu col-12 col-lg-2 color1b0a2e">
+    <a href="utilisateurs.php" class="anchor"><button class="btn btn-light mx-auto col-12 rounded-0">Gérer les utilisateurs</button></a><br>
+
+    <a href="biens.php" class="anchor"><button class="btn btn-light mx-auto col-12 rounded-0">Gérer les biens</button><br></a>
+
+    <a href="import.php" class="anchor"><button class="btn btn-light mx-auto col-12 rounded-0">Import/Export</button><br></a>
+
+    <a href="messages.php" class="anchor"><button class="btn btn-light mx-auto col-12 rounded-0">Messages</button></a>
+</div>

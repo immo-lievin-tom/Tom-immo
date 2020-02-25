@@ -1,0 +1,100 @@
+.announcecat {
+    font-size: 2rem;
+}
+
+.imgcategory {
+    max-width: 800px;
+}
+
+.txtsub {
+    font-size: 1.2rem;
+}
+
+.txtfilter {
+    font-size: 1.3rem;
+}
+
+.checkfilter {
+    left: 30%;
+    top: 30%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.inputfilter {
+    display: none;
+}
+
+.check {
+    display: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.txtdescannounce {
+    top: 7%;
+    font-size: 0.8rem;
+    width: 75%;
+    color: white;
+    height: 40%;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgba(194 , 194, 220, 0.8);
+    cursor: pointer;
+}
+
+/* Keyframes */
+
+@keyframes mousein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mouseout {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+/* Media queries */
+
+@media screen and (min-width : 576px) {
+
+    .txtdescannounce {
+        top: 12%;
+        font-size: 1rem;
+
+    }
+
+}
+
+@media screen and (max-width : 991px) {
+
+    .w100 {
+        width: 100% !important;
+    }
+
+}
+
+@media screen and (min-width : 992px) {
+
+    .txtdescannounce {
+        top: 10%;
+        font-size: 1.2rem;
+    }
+
+}

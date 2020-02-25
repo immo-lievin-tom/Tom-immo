@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="<?= BASE_CSS . "olivieradmin.css" ?>">
+    <link rel="stylesheet" href="<?= BASE_CSS . "theo.css" ?>">
     <title><?= $title ?></title>
 </head>
 
@@ -17,26 +17,24 @@
     
     <div class="container-fluid">
         <div class="row">
-            <div class="col-3">
-                <?= $menu  ?>
-            </div>
-            <div class="col-9">
-                <?= $content  ?>
-            </div>
+
+                <?= $menu ?>
+    
+
+                <?= $content ?>
+
         </div>
 
     </div>
 
-<<<<<<< HEAD
-
-=======
->>>>>>> e598654957f5d1747245fa9d972cab751df0dbf1
     <?= $footer ?>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a2bab1df4f.js" crossorigin="anonymous"></script>
+    <script src="<?= BASE_JS . "admin.js" ?>"></script>
+
 </body>
 
 </html>
