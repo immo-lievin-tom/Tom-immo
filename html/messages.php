@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/theo.css">
+    <link rel="stylesheet" href="css/icofont/icofont.min.css">
     <title>Document</title>
 </head>
 
@@ -21,7 +22,11 @@
             <?php
             require_once('menu_admin.php')
             ?>
+
             <div class="col-10 pt-5">
+                <div class="titre_message pb-5">
+                    <h4 class="text-center">LISTE DES MESSAGES</h4>
+                </div>
                 <table class="table table-striped mx-auto border w-100">
                     <thead>
                         <tr>
@@ -34,7 +39,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td scope="row"><button>Supprimer</button></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
+
                             <td>Mark</td>
                             <td>Salut</td>
                             <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ex sint maxime, placeat hic cupiditate rerum aliquam... <br><a href="#">Lire la suite</a></td>
@@ -42,7 +48,7 @@
 
                         </tr>
                         <tr>
-                            <td scope="row"><button>Supprimer</button></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
                             <td>Markus</td>
                             <td>Salut</td>
                             <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
@@ -50,7 +56,7 @@
 
                         </tr>
                         <tr>
-                            <td scope="row"><button>Supprimer</button></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
                             <td>Larry</td>
                             <td>Salut</td>
                             <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
@@ -58,21 +64,21 @@
 
                         </tr>
                         <tr>
-                            <td scope="row"><button>Supprimer</button></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
                             <td>Larry</td>
                             <td>Salut</td>
                             <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
                             <td>12:00</td>
                         </tr>
                         <tr>
-                            <td scope="row"><button>Supprimer</button></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
                             <td>Larry</td>
                             <td>Salut</td>
                             <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>
                             <td>12:00</td>
                         </tr>
                         <tr>
-                            <td scope="row"><button>Supprimer</button></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
                             <td>Larry</td>
                             <td>Salut</td>
                             <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda consectetur praesentium quas cupiditate laborum non doloribus expedita, eligendi recusandae. Ab error aperiam animi necessitatibus neque, eaque quam! In, ducimus tenetur.</td>

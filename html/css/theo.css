@@ -18,7 +18,6 @@
 
 .menu {
     padding: 0%;
-    height: 500px;
     padding-top: 5%;
 }
 
@@ -38,10 +37,6 @@ form {
     background-color: cornflowerblue;
 }
 
-.bouton_ajout {
-    padding-right: 25%;
-}
-
 .label {
     display: block;
     font: 1rem 'Fira Sans', sans-serif;
@@ -52,11 +47,11 @@ form {
     margin: .4rem 0;
 }
 
-.selectedbtn{
+.selectedbtn {
     background-color: black;
     color: white;
 }
 
-.selectedbtn:hover{
+.selectedbtn:hover {
     color: white;
 }

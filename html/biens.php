@@ -105,7 +105,7 @@
                     </tbody>
                 </table>
                 <div class="col-12 d-flex justify-content-end bouton_ajout">
-                    <button><a href="ajout_biens.php">Ajouter</a></button>
+                    <a href="ajout_biens.php"><button>Ajouter</button></a>
                 </div>
             </div>
 
