@@ -29,7 +29,7 @@ class AppController extends Controller
 
     public function buildHeader()
     {
-        return $this->renderView('partial/menu');
+        return $this->renderView('partial/header');
     }
 
     public function buildFooter()

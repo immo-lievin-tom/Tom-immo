@@ -18,7 +18,7 @@
     </header>
 
     <main class="container-fluid">
-        <div class="row align-items-start">
+    <div class="row align-items-start">
             <!-- Image -->
             <div class="col-12 col-sm-8 mx-auto col-lg-5 col-xl-4 mt-4 border p-2 mx-2 text-white order-lg-0 order-1">
                 <img src="../img/insc.jpg" class="w-100 img-fluid" alt="image de connexion">
