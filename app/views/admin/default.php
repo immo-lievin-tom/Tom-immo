@@ -14,14 +14,14 @@
 <body>
 
     <?= $header ?>
-    
+
     <div class="container-fluid">
         <div class="row">
 
-                <?= $menu ?>
-    
+            <?= $menu ?>
 
-                <?= $content ?>
+
+            <?= $content ?>
 
         </div>
 

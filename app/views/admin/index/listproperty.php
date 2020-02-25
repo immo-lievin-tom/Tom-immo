@@ -145,7 +145,7 @@
                     </tbody>
                 </table>
                 <div class="col-12 d-flex justify-content-end bouton_ajout">
-                    <a href="ajout_biens.php"><button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button></a>
+                    <a href="<?= BASE_ADMIN . "/index/addproperty" ?>"><button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button></a>
 
                 </div>
             </div>

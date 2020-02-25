@@ -36,6 +36,3 @@ window.addEventListener("resize", function() {
   }
 });
 
-
-
-console.log(imgcontain.style.height = slide.offsetHeight + announcetitle.offsetHeight + thumbnail.offsetHeight +"px");

@@ -17,8 +17,41 @@ class IndexController extends AppController{
         $this->render('index/index');
     }
 
-    public function propertyAction()
+    public function listpropertyAction()
     {
-        $this->render('list/property');
+        $this->render('index/listproperty');
+   }
+
+    public function listuserAction()
+    {
+        $this->render('index/listuser');
+    }
+
+    public function listmessageAction()
+    {
+        $this->render('index/listmessage');
+    }
+
+    public function addpropertyAction()
+    {
+        $this->render('index/addproperty');
+    }
+
+    public function adduserAction()
+    {
+        $this->render('index/adduser');
+    }
+
+    public function modifypropertyAction()
+    {
+        $this->render('index/modifyproperty');
+    }
+    public function modifyuserAction()
+    {
+        $this->render('index/modifyuser');
+    }
+    public function exportAction()
+    {
+        $this->render('index/export');
     }
 }

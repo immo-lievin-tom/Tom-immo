@@ -2,7 +2,7 @@
 
 <div class="row text-center w85 mx-auto imgcontain position-relative d-xl-flex justify-content-center">
     <h1 class="w-100 announcetitle my-3">Titre de l'annonce</h1>
-    <div id="carouselIndicators" class="carousel slide col-12 mx-auto p-0" data-ride="carousel" data-interval="false">
+    <div id="carouselIndicators" class="carousel col-12 mx-auto p-0" data-ride="carousel" data-interval="false">
         <div class="carousel-inner slidecontain">
             <div class="carousel-item active">
                 <img class="w-100 h-100 imgmain2 img-fluid" src="<?= BASE_IMG . "img1_.jpg" ?>" alt="Maison1">

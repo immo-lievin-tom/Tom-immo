@@ -20,7 +20,7 @@
         </tbody>
     </table>
     <div class="row m-0 d-flex col-12 justify-content-end">
-        <a href="ajout_biens.php"><button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button></a>
+        <a href="<?= BASE_ADMIN . "/index/adduser" ?>"><button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button></a>
     </div>
 </div>
 </div>

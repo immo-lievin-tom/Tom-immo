@@ -1,4 +1,4 @@
-/* Slide */
+/* Main Image */
 
 .slidecontain {
     max-height: 13rem;
@@ -55,7 +55,7 @@
     max-width: 800px;
 }
 
-.txtsub{
+.txtsub {
     font-size: 1.2rem;
 }
 
