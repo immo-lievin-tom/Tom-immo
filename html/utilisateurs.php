@@ -44,9 +44,42 @@
                             <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
                         </tr>
                     </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" scope="row">DOE</td>
+                            <td class="text-center">Mark</td>
+                            <td class="text-center">
+                                <form method="post" action="" class="mx-auto"><input type="submit" value="Activer" class="button" /></form>
+                            </td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-arrow-right icofont-2x"></i></a></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" scope="row">DOE</td>
+                            <td class="text-center">Mark</td>
+                            <td class="text-center">
+                                <form method="post" action="" class="mx-auto"><input type="submit" value="Activer" class="button" /></form>
+                            </td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-arrow-right icofont-2x"></i></a></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" scope="row">DOE</td>
+                            <td class="text-center">Mark</td>
+                            <td class="text-center">
+                                <form method="post" action="" class="mx-auto"><input type="submit" value="Activer" class="button" /></form>
+                            </td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-arrow-right icofont-2x"></i></a></td>
+                            <td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>
+                        </tr>
+                    </tbody>
                 </table>
-                <div class="row m-0 d-flex justify-content-end">
-                    <a class="text-decoration-none text-dark col-2 p-0 text-center" href="ajout_utilisateurs.php"><button class="btn btn-light rounded-0 w-100">Ajouter</button></a>
+                <div class="row m-0 d-flex">
+                    <a class="text-decoration-none text-dark col-2 p-0 justify-content-end" href="ajout_utilisateurs.php"><button>Ajouter</button></a>
                 </div>
             </div>
         </div>
