@@ -53,7 +53,7 @@
                     </table>
                 </div>
             </div>
-
+        </div>
     </main>
 
     <footer>

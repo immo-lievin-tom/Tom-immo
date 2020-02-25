@@ -22,27 +22,28 @@
             require_once('menu_admin.php')
             ?>
             <div class="col-10 pt-5">
+            <div class="titre_message pb-5">
+                    <h4 class="text-center">LISTE DES BIENS</h4>
+                </div>
                 <table class="table table-striped mx-auto border w-100">
-                    <thead>
+                    <thead class="text-center">
                         <tr>
-                            <th scope="col">Titre</th>
-                            <th scope="col">Référence</th>
-                            <th scope="col">Prix</th>
-                            <th scope="col">Modifier</th>
-                            <th scope="col">Top</th>
-                            <th scope="col">Visible</th>
-                            <th scope="col">Supprimer</th>
-
+                            <th scope="col" >Titre</th>
+                            <th scope="col" >Référence</th>
+                            <th scope="col" >Prix</th>
+                            <th scope="col" >Modifier</th>
+                            <th scope="col" >Top</th>
+                            <th scope="col" >Visible</th>
+                            <th scope="col" >Supprimer</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
+                    <tbody class="text-center">
+                        <tr class="text-center">
                             <td scope="row">Maison</td>
                             <td>1524362</td>
                             <td>15€</td>
                             <td><button>Modifier</button></td>
                             <td><button>lol</button></td>
-
                             <td><button>lol</button></td>
                             <td><button>Supprimer</button></td>
 
