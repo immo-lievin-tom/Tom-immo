@@ -27,7 +27,7 @@
                 <div class="titre_message pb-5">
                     <h4 class="text-center">LISTE DES MESSAGES</h4>
                 </div>
-                <div class="col-12 col-lg-10">
+                <div class="col-12 col-lg-10 mx-auto">
                     <h4 class="text-center my-3">Messages</h4>
                     <table class="table table-striped mx-auto border w-100">
                         <thead>

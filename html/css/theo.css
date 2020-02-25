@@ -20,9 +20,7 @@
     padding: 0%;
     padding-top: 5%;
   padding: 0%;
-  height: 500px;
   padding-top: 5%;
-  height: 80vh;
 }
 
 .icofont-2x {
@@ -39,10 +37,6 @@ form {
 
 .color_button {
   background-color: cornflowerblue;
-}
-
-.bouton_ajout {
-  padding-right: 25%;
 }
 
 .label {
