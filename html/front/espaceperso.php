@@ -18,12 +18,12 @@
         <?php require_once('frontheader.php') ?>
     </header>
     <main class="container-fluid">
-        <div class="row align-items-start d-flex justify-content-lg-center bg-white w-75 mx-auto opa mb-5">
+        <div class="row align-items-start d-flex justify-content-lg-center bg-white w-75 mx-auto opa mb-5 sm">
             <!-- bouton -->
             <div class="btn-group-vertical col-12 mx-auto mx-lg-0 col-sm-8 col-lg-3 col-xl-3 mt-4 mr-1p-0 text-white">
-                <button type="button" class="btn bb bg text-white info-e">Mes infos personnelles</button>
+                <button type="button" class="btn bb bg text-white info-e buttonespace">Mes infos personnelles</button>
                 <button type="button" class="btn bb bg text-white property-e">Proposer un bien</button>
-                <button type="button" class="btn bb bg text-white favoris-e buttonespace">Mes favoris</button>
+                <button type="button" class="btn bb bg text-white favoris-e">Mes favoris</button>
             </div>
             <?php require_once('espaceinfoperso.php'); ?>
             <?php require_once('espaceproposerbien.php'); ?>

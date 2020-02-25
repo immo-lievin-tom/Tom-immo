@@ -9,6 +9,15 @@
     color: #1B0A2E !important;
 }
 
+@media screen and (max-width : 767px){
+    .sm{
+        width: 100% !important;
+    }
+    .fa-2x {
+        font-size: 1.3em !important;
+    }
+} 
+
 .resize{
     height: 80px;
     width: 80px;
@@ -17,4 +26,13 @@
 
 .opa{
     opacity:0.95;
+}
+
+.iconefav{
+    position: absolute;
+    display: inline-block;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    bottom:0.5rem;
 }
