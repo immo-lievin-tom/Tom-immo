@@ -23,9 +23,9 @@
             <?php
             require_once('menu_admin.php')
             ?>
-            <div class="mx-auto col-10">
-                <h4 class="text-center my-3">Exporter les biens</h4>
-                <form action="" class="mx-auto w-25 text-center">
+            <div class="mx-auto col-10 row">
+                <h4 class="text-center my-3 col-12">Exporter les biens</h4>
+                <form action="" class="mx-auto col-4 text-center">
                     <div class="pl-0 pt-5 d-flex justify-content-around">
                         <div class="text-center">
                             <label class="label" for="start">Date de début:</label>

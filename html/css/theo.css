@@ -17,10 +17,11 @@
 }
 
 .menu {
-    padding: 0%;
-    padding-top: 5%;
   padding: 0%;
   padding-top: 5%;
+  padding: 0%;
+  padding-top: 5%;
+  height: 70vh;
 }
 
 .icofont-2x {
@@ -59,12 +60,12 @@ form {
 }
 
 .selectedbtn {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 .selectedbtn:hover {
-    color: white;
+  color: white;
 }
 .messageadmin {
   max-width: 250px;
@@ -78,14 +79,14 @@ form {
   color: white;
 }
 
-.resize{
+.resize {
   height: 80px;
   width: 80px;
   resize: none;
 }
 
-.custom-control-input:checked~.custom-control-label::before {
+.custom-control-input:checked ~ .custom-control-label::before {
   color: #fff;
   border-color: green !important;
-  background-color: green ;
+  background-color: green;
 }
