@@ -17,6 +17,8 @@
 }
 
 .menu {
+    padding: 0%;
+    padding-top: 5%;
   padding: 0%;
   height: 500px;
   padding-top: 5%;
@@ -62,6 +64,14 @@ form {
   color: white;
 }
 
+.selectedbtn {
+    background-color: black;
+    color: white;
+}
+
+.selectedbtn:hover {
+    color: white;
+}
 .messageadmin {
   max-width: 250px;
   white-space: nowrap;

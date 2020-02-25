@@ -24,22 +24,20 @@
             <div class="col-10 pl-0 pt-5">
                 <form class="mx-auto">
 
-                    <div class="form-group col-12">
+                    <div class="form-group col-12 d-flex mx-auto">
                         <label for="inputName">Catégorie</label>
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Action
                             </button>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
+                                <a class="dropdown-item" href="#">Appartement</a>
+                                <a class="dropdown-item" href="#">Maison</a>
+                                <a class="dropdown-item" href="#">Studio</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="form-group col-12">
+                    
+                    <div class="">
                         <label for="inputSurname">Type</label>
                         <div class="btn-group">
                             <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,18 +47,17 @@
                                 <a class="dropdown-item" href="#">Action</a>
                                 <a class="dropdown-item" href="#">Another action</a>
                                 <a class="dropdown-item" href="#">Something else here</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Separated link</a>
                             </div>
                         </div>
                     </div>
+                </div>
                     <div class="form-group col-12">
                         <label for="inputDescription">Description</label>
-                        <input type="text" class="form-control" id="inputDescription" placeholder="1234 Main St">
+                        <input type="text" class="form-control" id="inputDescription" placeholder="">
                     </div>
                     <div class="form-group col-12">
                         <label for="inputAddress2">Prix</label>
-                        <input type="text" class="form-control" id="inputAddress2" placeholder="Appartement, studio..">
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="">
                     </div>
                     <div class="form-group col-12">
                         <label for="inputCity">Close Energie</label>
@@ -73,7 +70,7 @@
                     <div class="form-row col-12">
                         <div class="form-group col-12">
                             <label for="inputEmail4">Ville</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Ville">
                         </div>
                         <div class="form-group col-12">
                             <label for="inputZip">Surface</label>
@@ -81,26 +78,28 @@
                         </div>
                         <div class="form-group col-12">
                             <label for="inputPassword4">Nombre de pièces</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="1,2,3">
                         </div>
                         <div class="form-group col-12">
                             <label for="inputPassword4">Nombre de chambres</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Confirmation">
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="">
                         </div>
                         <div class="form-group col-12">
                             <label for="inputPassword4">Photo 1</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Confirmation">
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="">
                         </div>
                         <div class="form-group col-12">
                             <label for="inputPassword4">Photo 2</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Confirmation">
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="">
                         </div>
                         <div class="form-group col-12">
                             <label for="inputPassword4">Photo 3</label>
-                            <input type="password" class="form-control" id="inputPassword4" placeholder="Confirmation">
+                            <input type="password" class="form-control" id="inputPassword4" placeholder="">
                         </div>
                     </div>
-                    <a href="biens.php"><button type="submit">Ajouter</button></a>
+                    <a href="biens.php">
+                        <button type="submit" class="mx-auto">Ajouter</button>
+                    </a>
                     <button><a href="modify_biens.php">Modifier</button>
 
                 </form>
