@@ -14,7 +14,18 @@ class Model
   {
 
   }
+  
+  function selectPerso(array $table)
+  {
+    $condition = implode( " , ", $table );
+  
+    $insert = "SELECT ". $condition . " FROM " . $this->_table;   
+    $dbh = self::getDb();
+    $dbh->query($insert);
+    return $dbh->getResult();
+  }
 
+  
   public static function getDb()
   {
     if (!self::$_db) {
@@ -23,9 +34,9 @@ class Model
     return self::$_db;
   }
 
-  function select()
+  function select($id)
     {
-      $where = ["id" => $this->id];
+      $where = ["id" => $id];
       $dbh = self::getDb();
       $result = $dbh->select($this->_table, $where)->getResult();
       return $result;
@@ -47,6 +58,26 @@ class Model
   public function setId($id)
   {
     $this->id = $id;
+
+    return $this;
+  }
+
+  /**
+   * Get the value of _table
+   */ 
+  public function get_table()
+  {
+    return $this->_table;
+  }
+
+  /**
+   * Set the value of _table
+   *
+   * @return  self
+   */ 
+  public function set_table($_table)
+  {
+    $this->_table = $_table;
 
     return $this;
   }

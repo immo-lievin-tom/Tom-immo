@@ -4,7 +4,8 @@ INSERT INTO `category`(`name`, `isActive`) VALUES
 ('garage',1),
 ('loft',1);
 
-INSERT INTO `address`(`number`, `street`, `zipcode`, `country`, `city`) VALUES (2, 'rue malfidano', '62950', 'France', 'Noyelles-Godault'),
+INSERT INTO `address`(`number`, `street`, `zipcode`, `country`, `city`) VALUES 
+(2, 'rue malfidano', '62950', 'France', 'Noyelles-Godault'),
 (24, 'rue de la libération', '62800', 'France', 'Lièvin'),
 (20, 'rue pasteur', '75000', 'France', 'Paris');
 

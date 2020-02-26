@@ -1,16 +1,21 @@
+<?php
+var_dump($all);
+?>
+
+
 <div class="col-10 pt-5">
     <form class="mx-auto">
         <div class="form-group col-12">
             <label for="inputName">Nom</label>
-            <input type="text" class="form-control" id="inputNom" placeholder="Dupond">
+            <input type="text" class="form-control" id="inputNom" value="<?= $all[0]['name']?>" >
         </div>
         <div class="form-group col-12">
             <label for="inputSurname">Prénom</label>
-            <input type="text" class="form-control" id="inputPrenom" placeholder="Pierre">
+            <input type="text" class="form-control" id="inputPrenom" value="<?= $all[0]['firstname']?>">
         </div>
         <div class="form-group col-12">
             <label for="inputAddress">Rue</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="inputAddress" placeholder="Main St">
         </div>
         <div class="form-group col-12">
             <label for="inputAddress2">Numéro</label>
@@ -27,7 +32,7 @@
         <div class="form-row col-12">
             <div class="form-group col-12">
                 <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <input type="email" class="form-control" id="inputEmail4" value="<?= $all[0]['email']?>">
             </div>
             <div class="form-group col-12">
                 <label for="inputZip">Code postal</label>
@@ -35,11 +40,11 @@
             </div>
             <div class="form-group col-12">
                 <label for="inputPassword4">Mot de passe</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                <input type="password" class="form-control" id="inputPassword4" value="<?= $all[0]['password']?>">
             </div>
             <div class="form-group col-12">
                 <label for="inputPassword4">Confirmation</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Confirmation">
+                <input type="password" class="form-control" id="inputPassword4" value="<?= $all[0]['password']?>">
             </div>
         </div>
         <button type="submit" class="btn btn-primary">Modifier</button>

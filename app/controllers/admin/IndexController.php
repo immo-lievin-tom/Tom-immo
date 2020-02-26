@@ -4,6 +4,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\Admin\AppController;
+use App\Models\User;
 
 class IndexController extends AppController{
 
@@ -24,7 +25,9 @@ class IndexController extends AppController{
 
     public function listuserAction()
     {
-        $this->render('index/listuser');
+        $user = new User();
+        $alluser['alluser'] = $user->selectPerso(['id','name','firstname','role']);
+        $this->render('index/listuser', $alluser);
     }
 
     public function listmessageAction()
@@ -46,10 +49,15 @@ class IndexController extends AppController{
     {
         $this->render('index/modifyproperty');
     }
-    public function modifyuserAction()
+    public function modifyuserAction($id, $id_adress)
     {
-        $this->render('index/modifyuser');
+        $user = new User();
+        $res["all"] = $user->select($id);
+        $this->render('index/modifyuser', $res);
+        $address['coor'] = $user->select($id_adress);
+        $this->render('index/modifyuser', $address);
     }
+    
     public function exportAction()
     {
         $this->render('index/export');

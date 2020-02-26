@@ -43,6 +43,7 @@ CREATE TABLE `user` (
     `date_update` DATETIME DEFAULT CURRENT_DATE,
     `date_delete` DATETIME DEFAULT CURRENT_DATE,
     `role` VARCHAR(255),
+    `isActive` BOOLEAN DEFAULT 1,
     `id_address` int, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_address`) REFERENCES address(id)
