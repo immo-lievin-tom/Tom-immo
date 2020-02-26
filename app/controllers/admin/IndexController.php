@@ -54,4 +54,8 @@ class IndexController extends AppController{
     {
         $this->render('index/export');
     }
+    public function detailmessageAction()
+    {
+        $this->render('index/detail_message');
+    }
 }
