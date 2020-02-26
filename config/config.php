@@ -3,7 +3,7 @@
 define('ROOT', __DIR__ . '/');
 
 define('BASE_DIR', '/tom-immo/public/');
-define('BASE_ADMIN', '/tom-immo/public/admin');
+define('BASE_ADMIN', '/tom-immo/public/admin/');
 define('BASE_JS', '/tom-immo/public/assets/js/');
 define('BASE_CSS', '/tom-immo/public/assets/css/');
 define('BASE_IMG', '/tom-immo/public/assets/img/');

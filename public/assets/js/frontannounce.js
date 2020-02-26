@@ -7,22 +7,23 @@ const slide = document.querySelector(".slide");
 const announcetitle = document.querySelector(".announcetitle");
 
 if (window.innerWidth >= 992) {
-  slidecontain.addEventListener("mouseover", function() {
-    thumbnail.style.animation = "thumbnailshow 2s ease forwards";
-  });
+  if (slidecontain) {
+    slidecontain.addEventListener("mouseover", function () {
+      thumbnail.style.animation = "thumbnailshow 2s ease forwards";
+    });
 
-  slidecontain.addEventListener("mouseleave", function() {
-    thumbnail.style.animation = "thumbnailhide 2s ease forwards";
-  });
+    slidecontain.addEventListener("mouseleave", function () {
+      thumbnail.style.animation = "thumbnailhide 2s ease forwards";
+    });
 
-  thumbnail.addEventListener("mouseover", function() {
-    thumbnail.style.animation = "thumbnailshow 2s ease forwards";
-  });
-
+    thumbnail.addEventListener("mouseover", function () {
+      thumbnail.style.animation = "thumbnailshow 2s ease forwards";
+    });
+  }
 }
 
 thumbnailimg.forEach(e => {
-  e.addEventListener("click", function() {
+  e.addEventListener("click", function () {
     const getatt = e.getAttribute("src");
     imgmain2.setAttribute("src", getatt);
   });
@@ -30,7 +31,7 @@ thumbnailimg.forEach(e => {
 
 // Reset animation on resize
 
-window.addEventListener("resize", function() {
+window.addEventListener("resize", function () {
   if (window.innerWidth >= 992) {
     thumbnail.style.animation = "";
   }

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="<?= BASE_CSS . "announce_front.css" ?>">
     <link rel="stylesheet" href="<?= BASE_CSS . "category_front.css" ?>">
     <link rel="stylesheet" href="<?= BASE_CSS . "aboutus_front.css" ?>">
+    <link rel="stylesheet" href="<?= BASE_CSS . "inscription_front.css" ?>">
 
     <title>Accueil</title>
 </head>

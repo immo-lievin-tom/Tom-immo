@@ -15,10 +15,12 @@ class MyaccountController extends AppController
     {
         $this->render('myaccount/info');
     }
+
     public function proposeAction()
     {
         $this->render('myaccount/propose');
     }
+    
     public function favoriteAction()
     {
         $this->render('myaccount/favorite');
