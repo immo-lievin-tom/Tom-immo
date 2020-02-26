@@ -20,7 +20,8 @@
                             <td class="text-center" scope="row">Maison</td>
                             <td class="text-center" class="text-center">1524362</td>
                             <td class="text-center">15€</td>
-                            <td class="text-center"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></td>
+                                                        <td class="text-center"><a href="<?= BASE_ADMIN . "index/modifyproperty"?>"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>
+
                             <td class="text-center">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitchesTop">
@@ -41,7 +42,7 @@
                             <td class="text-center" scope="row">Maison</td>
                             <td class="text-center">1524362</td>
                             <td class="text-center">15€</td>
-                            <td class="text-center"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></td>
+                            <td class="text-center"><a href="<?= BASE_ADMIN . "index/modifyproperty"?>"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>
                             <td class="text-center">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitchesTop1">
@@ -62,7 +63,8 @@
                             <td class="text-center" scope="row">Maison</td>
                             <td class="text-center">1524362</td>
                             <td class="text-center">15€</td>
-                            <td class="text-center"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></td>
+                                                        <td class="text-center"><a href="<?= BASE_ADMIN . "index/modifyproperty"?>"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>
+
                             <td class="text-center">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitchesTop2">
@@ -83,7 +85,8 @@
                             <td class="text-center" scope="row">Maison</td>
                             <td class="text-center">1524362</td>
                             <td class="text-center">15€</td>
-                            <td class="text-center"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></td>
+                                                        <td class="text-center"><a href="<?= BASE_ADMIN . "index/modifyproperty"?>"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>
+
                             <td class="text-center">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitchesTop3">
@@ -104,7 +107,8 @@
                             <td class="text-center" scope="row">Maison</td>
                             <td class="text-center">1524362</td>
                             <td class="text-center">15€</td>
-                            <td class="text-center"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></td>
+                                                        <td class="text-center"><a href="<?= BASE_ADMIN . "index/modifyproperty"?>"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>
+
                             <td class="text-center">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitchesTop4">
@@ -125,7 +129,8 @@
                             <td class="text-center" scope="row">Maison</td>
                             <td class="text-center">1524362</td>
                             <td class="text-center">150000000000€</td>
-                            <td class="text-center"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></td>
+                                                        <td class="text-center"><a href="<?= BASE_ADMIN . "index/modifyproperty"?>"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>
+
                             <td class="text-center">
                                 <div class="custom-control custom-switch">
                                     <input type="checkbox" class="custom-control-input" id="customSwitchesTop5">

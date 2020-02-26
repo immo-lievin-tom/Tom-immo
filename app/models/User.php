@@ -26,4 +26,9 @@ class User extends Model
     {
         return $this->lastname;
     }
+    
+    public function selectUser()
+    {
+        return $this->select();
+    }
 }

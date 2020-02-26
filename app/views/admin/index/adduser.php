@@ -42,6 +42,6 @@
                 <input type="password" class="form-control" id="inputPassword4" placeholder="Confirmation">
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Modifier</button>
+        <button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button>
     </form>
 </div>

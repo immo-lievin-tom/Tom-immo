@@ -1,6 +1,6 @@
 <div class="col-12 col-sm-8 mx-auto col-lg-5 col-xl-9 mt-4 border p-2 mx-2 property-espace">
     <h4 class="text-center">Ajouter un bien</h4>
-    <form method="post" class="text-center">
+    <form method="post" class="mx-auto text-center col-12">
         <div class="form-check form-check-inline">
             <input class="form-check-input m-2" type="radio" id="sale" name="contrat" value="sale"> 
             <label class="form-check-label m-2" for="sale">Vente</label>
@@ -73,6 +73,6 @@
             <label for="photo3">Description</label>
             <textarea class="col-8 resize form-control" name="desc" id="desc" rows="10"></textarea>
         </div>
-        <button type="submit" class="btn btn-outline-dark bg text-white">Proposer</button>
+        <button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button>
     </form>
 </div>
