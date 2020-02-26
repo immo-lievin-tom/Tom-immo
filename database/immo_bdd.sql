@@ -11,7 +11,7 @@ CREATE TABLE `category` (
     `isActive` BOOLEAN DEFAULT 1,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
-    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME,
     PRIMARY KEY (`id`)
 )ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -41,7 +41,7 @@ CREATE TABLE `user` (
     `phone_number` INT NOT NULL,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
-    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME,
     `role` VARCHAR(255),
     `id_address` int, 
     PRIMARY KEY (`id`),
@@ -58,7 +58,7 @@ CREATE TABLE `message` (
     `isRead` BOOLEAN,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
-    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME,
     `id_user` INT,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_user`) REFERENCES user(id)
@@ -98,8 +98,8 @@ CREATE TABLE `image` (
     `path` varchar(255) NOT NULL,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
-    `date_delete` DATETIME DEFAULT CURRENT_DATE,
-    `default` BOOLEAN,
+    `date_delete` DATETIME,
+    `isTop` BOOLEAN,
     `id_property` int, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_property`) REFERENCES property(id)

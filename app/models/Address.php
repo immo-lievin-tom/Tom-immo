@@ -16,11 +16,7 @@ class Address extends Model
         return $this->get_table();
     }
     
-    function selectAdress(){
+    function selectAddress(){
         return $this->selectAll();
-    }
-
-    function insertAdress(){
-        return $this->insert();
     }
 }

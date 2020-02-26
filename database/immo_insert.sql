@@ -23,7 +23,7 @@ INSERT INTO `property`(`name`, `price`, `reference`, `description`, `nb_bedroom`
 ('Garage', 125000, 'XXXfdgXXXX', 'Garage spacieux idéal mécanicien', '', '', '', 20, '', '', '', '',1, 1, 1, 2, 3, 3),
 ('Appartement', 125000, 'XXXXggXXX', 'Bel appartement avec une vue incroyable en mer !', 1, 4, 1, 70, '', 'C', 'Electricité', 1, 1, 1, 1, 1, 1, 2);
 
-INSERT INTO `image`(`name`, `path`, `default`, `id_property`) VALUES 
+INSERT INTO `image`(`name`, `path`, `isTop`, `id_property`) VALUES 
 ('img1', '/img/img315.jpg', 1, 1),
 ('img2', '/img/img311.jpg', 0, 1),
 ('img3', '/img/img310.jpg', 0, 1),

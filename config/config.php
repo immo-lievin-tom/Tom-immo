@@ -11,7 +11,7 @@ define('BASE_CSS', '/tom-immo/public/assets/css/');
 define('BASE_IMG', '/tom-immo/public/assets/img/');
 define('PATH_VIEWS', ROOT . '../app/views/');
 define('PATH_MODELS', ROOT . '../app/models/');
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', '127.0.0.1:3307');
 define('DB_NAME', 'bdd_immo');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');

@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 namespace Core;
-    
+
 class Db
 {
     private static $_instance = null;
@@ -30,12 +30,11 @@ class Db
         // }
         try {
             $this->_pdo->beginTransaction();
-            if ($this->_sth->execute($array)) {
-                $this->_lastInsertId = $this->_pdo->lastInsertId();
-                $this->_pdo->commit();
-                $this->_res = $this->_sth->fetchAll();
-                $this->_rowCount = $this->_sth->rowCount();
-            }
+            $this->_sth->execute($array);
+            $this->_lastInsertId = $this->_pdo->lastInsertId();
+            $this->_pdo->commit();
+            $this->_res = $this->_sth->fetchAll();
+            $this->_rowCount = $this->_sth->rowCount();
         } catch (\PDOException $e) {
             $this->_pdo->rollBack();
             $this->_error = true;
@@ -49,18 +48,17 @@ class Db
         $where2 = [];
         if (count($where) == 0) {
             $insert = "SELECT * FROM " . $tableName;
-        } else{
+        } else {
             foreach ($where as $key => $value) {
                 $wherereq .= $key . "= :" . $key;
                 $where2[":$key"] = $value;
             }
             $insert = "SELECT * FROM " . $tableName . " where " . $wherereq;
-            
         }
         // echo $insert;
 
         $this->query($insert, $where2);
-        
+
         return $this;
     }
 
@@ -71,7 +69,6 @@ class Db
             $insertToQuery[':' . $key] = $value;
         }
         $insert = "INSERT INTO " . $tableName . " (" . implode(',', array_keys($array)) . ") " . "values(" . implode(',', array_keys($insertToQuery)) . ")";
-        echo $this->getRowCount();
         $this->query($insert, $insertToQuery);
         return $this->getLastInsertId();
     }
