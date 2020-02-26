@@ -46,7 +46,7 @@
     <div class="input-group mt-2 position-absolute w-75 searchinput mx-2">
         <input type="text" class="form-control formsearch" placeholder="Search" >
     </div>
-    <a class="icon" href="<?= BASE_ESPACE . "info" ?>" ><i class="icofont-user-alt-7 icon icofont-2x mx-2"></i></a>
+    <a class="icon" href="<?= BASE_DIR . "index/connection" ?>" ><i class="icofont-user-alt-7 icon icofont-2x mx-2"></i></a>
     <div class="hamburger d-lg-none">
         <span class="bar1 bars"></span>
         <span class="bar2 bars"></span>
