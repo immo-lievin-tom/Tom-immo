@@ -21,6 +21,12 @@
             <input type="number" class="col-8 d-inline form-control" id="price" name="price">
         </div>
         <div class="form-group d-flex justify-content-between">
+            <label for="price">Num</label>
+            <input type="number" class="col-2 d-inline form-control" id="price" name="price">
+            <label for="price">Adresse</label>
+            <input type="text" class="col-8 d-inline form-control" id="price" name="price">
+        </div>
+        <div class="form-group d-flex justify-content-between">
             <label for="city">Ville</label>
             <input type="text" class="col-8 d-inline form-control" id="city" name="city">
         </div>
