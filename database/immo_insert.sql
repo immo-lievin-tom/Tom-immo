@@ -11,7 +11,7 @@ INSERT INTO `address`(`number`, `street`, `zipcode`, `country`, `city`) VALUES (
 INSERT INTO `user`(`name`, `firstname`, `email`, `password`, `date_birth`,`role`,`id_address`) VALUES 
 ('dufour','olivier','olivier.dufour@yahoo.com','020988','02-09-1988','admin', 1),
 ('laslaa','mohammed','mohammed.laslaa@yahoo.com','coucou','02-08-1987','admin',2),
-('dufour','olivier','olivier.dufour@yahoo.com','coucou','02-79-1988','admin',3);
+('devise','theo','t.devise@laposte.net','coucou','02-79-1988','admin',3);
 
 INSERT INTO `message`(`name`, `object`, `message`, `isActive`, `isRead`,`id_user`) VALUES 
 ('coucou','test','ca fait chier git cest hard', 1, 1, 1),
