@@ -20,7 +20,7 @@ class IndexController extends AppController{
     public function listpropertyAction()
     {
         $this->render('index/listproperty');
-   }
+    }
 
     public function listuserAction()
     {

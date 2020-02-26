@@ -35,10 +35,10 @@
                 <a class="text-white" href="">CGU</a>
             </div>
             <div>
-                <a class="text-white" href="">Mentions légales</a>
+                <a class="text-white" href="<?= BASE_DIR . "/index/mention" ?>">Mentions légales</a>
             </div>
             <div>
-                <a class="text-white" href="">Politiques</a>
+                <a class="text-white" href="<?= BASE_DIR . "/index/contact" ?>">Nous contactez</a>
             </div>
         </div>
     </div>

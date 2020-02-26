@@ -21,9 +21,9 @@
         <div class="row align-items-start d-flex justify-content-lg-center bg-white w-75 mx-auto opa mb-5 sm">
             <!-- bouton -->
             <div class="btn-group-vertical col-12 mx-auto mx-lg-0 col-sm-8 col-lg-3 col-xl-3 mt-4 mr-1p-0 text-white">
-                <button type="button" class="btn bb bg text-white info-e "><a class="text-white" href="<?= PATH_ESPACE . "info"?>">Mes infos personnelles</a></button>
-                <button type="button" class="btn bb bg text-white property-e"><a class="text-white" href="<?= PATH_ESPACE . "propose"?>">Proposer un bien</a></button>
-                <button type="button" class="btn bb bg text-white favoris-e"><a class="text-white" href="<?= PATH_ESPACE . "favorite"?>">Mes favoris</a></button>
+                <button type="button" class="btn bb bg text-white info-e "><a class="text-white" href="<?= BASE_ESPACE . "info"?>">Mes infos personnelles</a></button>
+                <button type="button" class="btn bb bg text-white property-e"><a class="text-white" href="<?= BASE_ESPACE . "propose"?>">Proposer un bien</a></button>
+                <button type="button" class="btn bb bg text-white favoris-e"><a class="text-white" href="<?= BASE_ESPACE . "favorite"?>">Mes favoris</a></button>
             </div>
             <?= $content ?>
         </div>
