@@ -1,6 +1,6 @@
 <div class="col-12 col-sm-8 mx-auto col-lg-5 col-xl-9 mt-4 border p-2 mx-2 property-espace">
     <h4 class="text-center">Ajouter un bien</h4>
-    <form method="post" class="mx-auto text-center col-12">
+    <form method="post" class="mx-auto text-center col-12" enctype="multipart/form-data">
         <div class="form-check form-check-inline">
             <input class="form-check-input m-2" type="radio" id="sale" name="contrat" value="sale"> 
             <label class="form-check-label m-2" for="sale">Vente</label>
@@ -8,8 +8,8 @@
             <label class="form-check-label m-2" for="leasing">Location</label>
         </div>
         <div class="input-group mb-3">
-            <select class="custom-select property-select" id="type">
-                <option selected>Type de bien</option>
+            <select class="custom-select property-select" name="type" id="type">
+                <option disabled selected>Type de bien</option>
                 <option value="1">Appartement</option>
                 <option value="2">Maison</option>
                 <option value="garage">Garage</option>
@@ -21,22 +21,28 @@
             <input type="number" class="col-8 d-inline form-control" id="price" name="price">
         </div>
         <div class="form-group d-flex justify-content-between">
-            <label for="price">Num</label>
-            <input type="number" class="col-2 d-inline form-control" id="price" name="price">
-            <label for="price">Adresse</label>
-            <input type="text" class="col-8 d-inline form-control" id="price" name="price">
+            <label for="num">Num</label>
+            <input type="number" class="col-2 d-inline form-control" id="num" name="num">
+            <label for="address">Adresse</label>
+            <input type="text" class="col-8 d-inline form-control" id="address" name="address">
         </div>
         <div class="form-group d-flex justify-content-between">
             <label for="city">Ville</label>
-            <input type="text" class="col-8 d-inline form-control" id="city" name="city">
+            <input type="text" class="col-3 d-inline form-control" id="city" name="city">
+            <label for="zipcode">Code Postal</label>
+            <input type="number" class="col-3 d-inline form-control" id="zipcode" name="zipcode">
         </div>
         <div class="form-group d-flex justify-content-between">
-            <label for="surface">Surfarce</label>
+            <label for="country">Pays</label>
+            <input type="text" class="col-8 d-inline form-control" id="country" name="country">
+        </div>
+        <div class="form-group d-flex justify-content-between">
+            <label for="surface">Surface</label>
             <input type="number" class="col-8 col-md-8 d-inline form-control" id="surface" name="surface">
         </div>
         <div class="form-group d-flex justify-content-between no-garage">
             <label for="garden">Jardin</label>
-            <input type="number" class="col-8 col-md-8 d-inline form-control" id="surface" name="surface">
+            <input type="number" class="col-8 col-md-8 d-inline form-control" id="garden" name="garden">
         </div>
         <div class="form-group d-flex justify-content-between no-garage">
             <label for="room">Nb de pièce</label>
@@ -44,7 +50,7 @@
         </div>
         <div class="form-group d-flex justify-content-between no-garage">
             <label for="bedroom">Nb de chambre</label>
-            <input type="number" class="col-8 d-inline form-control" id="bedroom" name="street">
+            <input type="number" class="col-8 d-inline form-control" id="bedroom" name="bedroom">
         </div>
         <div class="form-check form-check-inline text-left w-100 no-garage">
             <div class="w-25">
@@ -52,9 +58,9 @@
             </div>
             <div class="w-75">
                 <div class="text-center">
-                    <input class="form-check-input m-2" type="radio" id="garage-y" name="garage" value="garage">
+                    <input class="form-check-input m-2" type="radio" id="garage-y" name="garage" value="1">
                     <label class="form-check-label m-2" for="miss">Oui</label>
-                    <input class="form-check-input m-2" type="radio" id="garage-n" name="garage" value="garage">
+                    <input class="form-check-input m-2" type="radio" id="garage-n" name="garage" value="0">
                     <label class="form-check-label m-2" for="mister">Non</label>
                 </div>
             </div>

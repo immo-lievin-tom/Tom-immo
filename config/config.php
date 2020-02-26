@@ -3,6 +3,7 @@
 define('ROOT', __DIR__ . '/');
 
 define('BASE_DIR', '/tom-immo/public/');
+define('BASE_UPIMG', 'c:\\wamp64\\www\\Tom-immo\\public\\assets\\imguploads\\');
 define('BASE_ADMIN', '/tom-immo/public/admin/');
 define('BASE_ESPACE', '/tom-immo/public/espace/myaccount/');
 define('BASE_JS', '/tom-immo/public/assets/js/');

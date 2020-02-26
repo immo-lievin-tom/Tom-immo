@@ -1,12 +1,16 @@
-<?php 
+<?php
 
 
 namespace App\Controllers\Admin;
 
 use App\Controllers\Admin\AppController;
 use App\Models\Address;
+use App\Models\User;
+use App\Models\Property;
+use App\Models\Image;
 
-class IndexController extends AppController{
+class IndexController extends AppController
+{
 
     public function __construct()
     {
@@ -14,16 +18,21 @@ class IndexController extends AppController{
     }
 
     public function indexAction()
-    { 
+    {
         $this->render('index/index');
     }
 
     public function listpropertyAction()
     {
-        $address = new Address();
-        $hey = $address->selectAdress();
-
-        $this->render('index/listproperty');
+        // $address = new Address();
+        // $allAddress = $address->selectAdress();
+        // $users = new User();
+        // $allUsers = $users->selectUser();
+        // $images = new Image();
+        // $allImages = $images->selectImage();
+        $properties = new Property();
+        $allProperties['all'] = $properties->selectPerso(['name', 'reference', 'price', 'isTop', 'isVisible']);
+        $this->render('index/listproperty', $allProperties);
     }
 
     public function listuserAction()
@@ -39,6 +48,23 @@ class IndexController extends AppController{
 
     public function addpropertyAction()
     {
+        if (isset($_POST['address'])) {
+
+            $address = new Address();
+
+
+            $idaddress = $address->insert(['number' => $_POST['num'], 'street' => $_POST['address'], 'zipcode' => $_POST['zipcode'], 'country' => $_POST['country'], 'city' => $_POST['city']]);
+
+            $target_dir = BASE_UPIMG;
+
+            foreach ($_FILES as $key) {
+                $target_file = $target_dir . basename($key["name"]);
+                if(move_uploaded_file($key['tmp_name'], $target_file)){
+                    echo 'file registered';
+                };
+            }
+        }
+
         $this->render('index/addproperty');
     }
 

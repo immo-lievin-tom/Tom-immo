@@ -68,6 +68,8 @@ DROP TABLE IF EXISTS `property`;
 CREATE TABLE `property` (
     `id` int(10) NOT NULL AUTO_INCREMENT,
     `name` varchar(255) NOT NULL,
+    `price` INT NOT NULL,
+    `reference` varchar(255) NOT NULL,
     `description` varchar(255) NOT NULL,
     `nb_bedroom` INT,
     `nb_room` INT,

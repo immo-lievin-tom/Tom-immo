@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="<?= BASE_CSS . "admin.css" ?>">
+    <link rel="stylesheet" href="<?= BASE_CSS . "icofont/icofont.min.css" ?>">
     <title><?= $title ?></title>
 </head>
 
@@ -16,10 +17,10 @@
     <?= $header ?>
 
     <div class="container-fluid">
+
         <div class="row">
 
             <?= $menu ?>
-
 
             <?= $content ?>
 

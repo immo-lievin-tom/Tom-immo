@@ -22,13 +22,28 @@ class Model
     return self::$_db;
   }
 
-  function select()
+  function selectAll()
   {
     $dbh = self::getDb();
     $result = $dbh->select($this->_table)->getResult();
     return $result;
   }
 
+  function selectPerso(array $table)
+  {
+    $condition = implode( " , ", $table );
+    $insert = "SELECT ". $condition . " FROM " . $this->_table;   
+    $dbh = self::getDb();
+    $dbh->query($insert);
+    return $dbh->getResult();
+  }
+
+  function insert($array)
+  {
+    $dbh = self::getDb();
+    return $dbh->insert($this->_table, $array);
+  }
+  
   /**
    * Get the value of id
    */
