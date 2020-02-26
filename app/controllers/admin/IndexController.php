@@ -4,6 +4,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\Admin\AppController;
+use App\Models\Address;
 
 class IndexController extends AppController{
 
@@ -19,11 +20,15 @@ class IndexController extends AppController{
 
     public function listpropertyAction()
     {
+        $address = new Address();
+        $hey = $address->selectAdress();
+
         $this->render('index/listproperty');
     }
 
     public function listuserAction()
     {
+
         $this->render('index/listuser');
     }
 

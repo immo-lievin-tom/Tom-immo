@@ -12,7 +12,6 @@ class Model
 
   protected function __construct()
   {
-
   }
 
   public static function getDb()
@@ -24,12 +23,11 @@ class Model
   }
 
   function select()
-    {
-      $where = ["id" => $this->id];
-      $dbh = self::getDb();
-      $result = $dbh->select($this->_table, $where)->getResult();
-      return $result;
-    }
+  {
+    $dbh = self::getDb();
+    $result = $dbh->select($this->_table)->getResult();
+    return $result;
+  }
 
   /**
    * Get the value of id
@@ -49,5 +47,23 @@ class Model
     $this->id = $id;
 
     return $this;
+  }
+
+  /**
+   * Get the value of _table
+   */
+  public function get_table()
+  {
+    return $this->_table;
+  }
+
+  /**
+   * Set the value of _table
+   *
+   * @return  self
+   */
+  public function set_table($_table)
+  {
+    return $this->_table = $_table;
   }
 }
