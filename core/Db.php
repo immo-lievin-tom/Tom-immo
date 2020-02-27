@@ -28,8 +28,9 @@ class Db
         // foreach($array as $key => $value){
         //     self::$_sth->bindParam($key, $value);
         // }
-        var_dump($req);
         try {
+            var_dump($req);
+            var_dump($array);
             $this->_pdo->beginTransaction();
             $this->_sth->execute($array);
             $this->_lastInsertId = $this->_pdo->lastInsertId();

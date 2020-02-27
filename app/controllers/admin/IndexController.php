@@ -63,8 +63,9 @@ class IndexController extends AppController
             $isTop = isset($_POST['isTop']) && $_POST['isTop'] == "on" ? 1 : 0;
             $isActive = isset($_POST['isActive']) && $_POST['isActive'] == "on" ? 1 : 0;
             $isVisible = isset($_POST['isVisible']) && $_POST['isVisible'] == "on" ? 1 : 0;
-            $typeproperty = (isset($_POST['type']) && $_POST['type'] == 1) ? ['isSale' => 1] : ['isRental' => 1];
+            $typeproperty = (isset($_POST['typeproperty']) && $_POST['typeproperty'] == 1) ? ['isSale' => 1] : ['isRental' => 1];
 
+            $property->setId(1);
             $property->setTitle(htmlspecialchars($_POST['title']));
             $property->setPrice(htmlspecialchars($_POST['price']));
             $property->setSurface(htmlspecialchars($_POST['surface']));

@@ -90,3 +90,7 @@ form {
   border-color: green !important;
   background-color: green;
 }
+
+.error{
+  color: red;
+}

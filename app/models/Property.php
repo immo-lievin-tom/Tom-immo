@@ -25,6 +25,7 @@ class Property extends Model
     private $id_address;
     private $id_cat;
     private $typeproperty;
+    private $Id;
     
     public function __construct()
     {
@@ -33,7 +34,7 @@ class Property extends Model
 
     public function getFieldArray()
     {
-        return ['name' => $this->getTitle(), 'price' =>  $this->getPrice(), 'surface' =>  $this->getSurface(), 'reference' =>  $this->getReference(), 'description'=>  $this->getDescription(),'nb_room'=> $this->getNb_room(),'nb_bedroom'=>  $this->getNb_bedroom(), 'nb_bathroom'=>  $this->getNb_bathroom(),'garden'=>  $this->getGarden(),'energy_class'=> $this->getEnergy_class(),'type_heating'=>  $this->getType_heating(), 'garage'=>  $this->getGarage(),'isActive'=>  $this->getIsActive(),'isTop'=>  $this->getIsTop(), 'isVisible'=>  $this->getIsVisible(), 'id_address' =>  $this->getId_address(), 'id_user'=> 2, 'id_cat'=> 1, array_keys($this->getTypeproperty())[0] => array_values($this->getTypeproperty())[0]];
+        return ['name' => $this->getTitle(), 'price' =>  $this->getPrice(), 'surface' =>  $this->getSurface(), 'reference' =>  $this->getReference(), 'description'=>  $this->getDescription(),'nb_room'=> $this->getNb_room(),'nb_bedroom'=>  $this->getNb_bedroom(), 'nb_bathroom'=>  $this->getNb_bathroom(),'garden'=>  $this->getGarden(),'energy_class'=> $this->getEnergy_class(),'type_heating'=>  $this->getType_heating(), 'garage'=>  $this->getGarage(),'isActive'=>  $this->getIsActive(),'isTop'=>  $this->getIsTop(), 'isVisible'=>  $this->getIsVisible(), 'id_address' =>  $this->getId_address(), 'id_user'=> $this->getId(), 'id_cat'=> $this->getId_cat(), array_keys($this->getTypeproperty())[0] => array_values($this->getTypeproperty())[0]];
     }
 
     function insertProperty()
@@ -227,6 +228,26 @@ class Property extends Model
     public function setGarden($garden)
     {
         $this->garden = $garden;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->Id;
+    }
+
+    /**
+     * Set the value of id
+     *
+     * @return  self
+     */ 
+    public function setId($Id)
+    {
+        $this->Id = $Id;
 
         return $this;
     }
