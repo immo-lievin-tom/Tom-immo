@@ -1,7 +1,7 @@
-<?php 
+<?php
 
 namespace Core;
-    
+
 class Db
 {
     private static $_instance = null;
@@ -28,14 +28,15 @@ class Db
         // foreach($array as $key => $value){
         //     self::$_sth->bindParam($key, $value);
         // }
+        
         try {
             $this->_pdo->beginTransaction();
-            if ($this->_sth->execute($array)) {
-                $this->_lastInsertId = $this->_pdo->lastInsertId();
-                $this->_pdo->commit();
-                $this->_res = $this->_sth->fetchAll();
-                $this->_rowCount = $this->_sth->rowCount();
-            }
+            $this->_sth->execute($array);
+            var_dump($this->_sth->errorInfo());
+            $this->_lastInsertId = $this->_pdo->lastInsertId();
+            $this->_pdo->commit();
+            $this->_res = $this->_sth->fetchAll();
+            $this->_rowCount = $this->_sth->rowCount();
         } catch (\PDOException $e) {
             $this->_pdo->rollBack();
             $this->_error = true;
@@ -49,18 +50,17 @@ class Db
         $where2 = [];
         if (count($where) == 0) {
             $insert = "SELECT * FROM " . $tableName;
-        } else{
+        } else {
             foreach ($where as $key => $value) {
                 $wherereq .= $key . "= :" . $key;
                 $where2[":$key"] = $value;
             }
             $insert = "SELECT * FROM " . $tableName . " where " . $wherereq;
-            
         }
-        // echo $insert;
+        //echo $insert;
 
         $this->query($insert, $where2);
-        
+
         return $this;
     }
 
@@ -71,7 +71,7 @@ class Db
             $insertToQuery[':' . $key] = $value;
         }
         $insert = "INSERT INTO " . $tableName . " (" . implode(',', array_keys($array)) . ") " . "values(" . implode(',', array_keys($insertToQuery)) . ")";
-        echo $this->getRowCount();
+        echo $insert;
         $this->query($insert, $insertToQuery);
         return $this->getLastInsertId();
     }
@@ -87,11 +87,17 @@ class Db
             $update[] = $key . "= :" . $key;
         }
 
+        // foreach ($where as $key => $value) {
+        //     $wherereq[] = $key . "=:" . $key;
+        //     $arrayVal[':' . $key] = $value;
+        // }
         foreach ($where as $key => $value) {
-            $wherereq[] = $key . "=" . $value;
-        }
+            $wherereq[] = $key . "=:" . str_replace('.', '', $key);
+            $arrayVal[":" . str_replace('.', '', $key)] = $value;
+          }
 
         $insert = "UPDATE " . $tableName . " SET " . implode(' , ', $update) . " WHERE " . implode(' AND ', $wherereq);
+        echo $insert;
         $this->query($insert, $arrayVal);
     }
 

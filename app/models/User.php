@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Models;
-use Core\Db;
 use Core\Model;
 
 class User extends Model
@@ -27,10 +26,11 @@ class User extends Model
         return $this->_table;
     }
 
-    // public function selectUser()
-    // {
-    //     return $this->select();
-    // }
+    public function getFieldArray()
+    {
+        
+        return ['name'=> $this->getName(), 'firstname' => $this->getFirstname(), 'email'=> $this->getEmail(),'date_birth'=>$this->getDate_birth(), 'password'=>$this->getPassword(),'role'=>$this->getRole(), 'phone_number'=>$this->getPhone_number()];
+    }
 
     
 
