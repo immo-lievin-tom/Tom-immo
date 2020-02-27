@@ -28,6 +28,7 @@ class Db
         // foreach($array as $key => $value){
         //     self::$_sth->bindParam($key, $value);
         // }
+        var_dump($req);
         try {
             $this->_pdo->beginTransaction();
             $this->_sth->execute($array);
@@ -53,7 +54,7 @@ class Db
                 $wherereq .= $key . "= :" . $key;
                 $where2[":$key"] = $value;
             }
-            $insert = "SELECT * FROM " . $tableName . " where " . $wherereq;
+            $insert = "SELECT * FROM " . $tableName . "where " . $wherereq;
         }
         // echo $insert;
 

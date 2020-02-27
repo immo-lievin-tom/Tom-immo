@@ -14,7 +14,7 @@ $(document).ready(function () {
         $(this).addClass('buttonespace');
     });
     $('.property-select').on('change', function () {
-        if ($(this).val() == "garage") {
+        if ($(this).val() == "3") {
             $('.no-garage').each(function () {
                 $('.no-garage').addClass('d-none');
                 $('.no-garage').removeClass('d-flex')

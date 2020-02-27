@@ -4,11 +4,13 @@ namespace Core;
 
 use Core\Db;
 
-class Model
+abstract class Model
 {
   protected static $_db;
   protected $id;
   protected $_table;
+
+  abstract public function getFieldArray();
 
   protected function __construct()
   {
@@ -38,10 +40,10 @@ class Model
     return $dbh->getResult();
   }
 
-  function insert($array)
+  function insert()
   {
     $dbh = self::getDb();
-    return $dbh->insert($this->_table, $array);
+    return $dbh->insert($this->_table, $this->getFieldArray());
   }
   
   /**

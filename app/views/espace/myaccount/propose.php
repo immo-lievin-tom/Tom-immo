@@ -12,8 +12,8 @@
                 <option selected>Type de bien</option>
                 <option value="1">Appartement</option>
                 <option value="2">Maison</option>
-                <option value="garage">Garage</option>
-                <option value="3">Autres...</option>
+                <option value="3">Garage</option>
+                <option value="4">Autres...</option>
             </select>
         </div>
         <div class="form-group d-flex justify-content-between">
@@ -31,7 +31,7 @@
             <input type="text" class="col-8 d-inline form-control" id="city" name="city">
         </div>
         <div class="form-group d-flex justify-content-between">
-            <label for="surface">Surfarce</label>
+            <label for="surface">Surface</label>
             <input type="number" class="col-8 col-md-8 d-inline form-control" id="surface" name="surface">
         </div>
         <div class="form-group d-flex justify-content-between no-garage">
