@@ -50,4 +50,41 @@ class Model
 
     return $this;
   }
+
+  function selectPerso(array $table)
+  {
+    $condition = implode( " , ", $table );
+ 
+    $insert = "SELECT ". $condition . " FROM " . $this->_table;   
+    $dbh = self::getDb();
+    $dbh->query($insert);
+    return $dbh->getResult();
+  }
+
+  function selectAll()
+  {
+    $dbh = self::getDb();
+    $result = $dbh->select($this->_table)->getResult();
+    return $result;
+  }
+
+  /**
+   * Get the value of _table
+   */ 
+  public function get_table()
+  {
+    return $this->_table;
+  }
+
+  /**
+   * Set the value of _table
+   *
+   * @return  self
+   */ 
+  public function set_table($_table)
+  {
+    $this->_table = $_table;
+
+    return $this;
+  }
 }

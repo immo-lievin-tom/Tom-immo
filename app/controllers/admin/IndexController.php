@@ -4,6 +4,7 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\Admin\AppController;
+use App\Models\Message;
 
 class IndexController extends AppController{
 
@@ -29,7 +30,9 @@ class IndexController extends AppController{
 
     public function listmessageAction()
     {
-        $this->render('index/listmessage');
+        $message = new Message();
+        $array['all'] = $message->selectPerso(['name', 'object', 'message', 'date_create']);
+        $this->render('index/listmessage', $array);
     }
 
     public function addpropertyAction()

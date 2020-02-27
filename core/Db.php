@@ -71,7 +71,6 @@ class Db
             $insertToQuery[':' . $key] = $value;
         }
         $insert = "INSERT INTO " . $tableName . " (" . implode(',', array_keys($array)) . ") " . "values(" . implode(',', array_keys($insertToQuery)) . ")";
-        echo $this->getRowCount();
         $this->query($insert, $insertToQuery);
         return $this->getLastInsertId();
     }
