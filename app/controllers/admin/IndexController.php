@@ -28,7 +28,7 @@ class IndexController extends AppController
     public function listuserAction()
     {
         $user = new User();
-        $alluser['alluser'] = $user->selectPerso(['id', 'name', 'firstname', 'role']);
+        $alluser['alluser'] = $user->selectPerso(['id', 'name', 'firstname', 'role', 'isActive']);
         $this->render('index/listuser', $alluser);
     }
 
@@ -42,8 +42,35 @@ class IndexController extends AppController
         $this->render('index/addproperty');
     }
 
+    public function activeuserAction()
+    {
+        
+        $this->render('index/activeuser'); 
+    }
+
     public function adduserAction()
     {
+        $user = new User();
+        if (isset($_POST['name'])) {
+            $adress = new Address();
+
+            $adress->setCountry($_POST['country']);
+            $adress->setCity($_POST['city']);
+            $adress->setZipcode($_POST['zipcode']);
+            $adress->setStreet($_POST['street']);
+            $adress->setNumber($_POST['number']);
+            $id_address = $adress->insert();
+            $datebirth = date('Y-m-d H:i:s', strtotime($_POST['date_birth']));
+            $user->setName($_POST['name']);
+            $user->setFirstname($_POST['firstname']);
+            $user->setDate_birth($datebirth);
+            $user->setEmail($_POST['email']);
+            $user->setPassword($_POST['password']);
+            $user->setPhone_number($_POST['phone_number']);
+            $user->setRole($_POST['role']);
+            $user->setId_address($id_address);
+            $user->insert();
+        }
         $this->render('index/adduser');
     }
 
@@ -54,10 +81,10 @@ class IndexController extends AppController
 
     public function modifyuserAction($id)
     {
-        $user = new User(); 
+        $user = new User();
         $user->setId($id);
         $address['coor'] = $user->selectInner('address', 'user.id_address = address.id', ['user.id' => $user->getId()]);
-        if (isset($_POST['name'])) {   
+        if (isset($_POST['name'])) {
 
             $user->setName($_POST['name']);
             $user->setFirstname($_POST['firstname']);
@@ -65,9 +92,9 @@ class IndexController extends AppController
             $user->setEmail($_POST['email']);
             $user->setPassword($_POST['password']);
             $user->setPhone_number($_POST['phone_number']);
+            $user->setRole($_POST['role']);
             $user->update();
-
-            $adress = new Address(); 
+            $adress = new Address();
             $adress->setId($_POST['id_address']);
             $adress->setCountry($_POST['country']);
             $adress->setCity($_POST['city']);
@@ -75,7 +102,7 @@ class IndexController extends AppController
             $adress->setStreet($_POST['street']);
             $adress->setNumber($_POST['number']);
             $adress->update();
-
+            $address['coor'] = $user->selectInner('address', 'user.id_address = address.id', ['user.id' => $user->getId()]);
         }
         $this->render('index/modifyuser', $address);
     }

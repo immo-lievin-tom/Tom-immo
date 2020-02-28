@@ -7,7 +7,7 @@ class User extends Model
 {
 
     
-
+    protected $id_address;
     protected $name;
     protected $firstname;
     protected $email;
@@ -29,11 +29,10 @@ class User extends Model
     public function getFieldArray()
     {
         
-        return ['name'=> $this->getName(), 'firstname' => $this->getFirstname(), 'email'=> $this->getEmail(),'date_birth'=>$this->getDate_birth(), 'password'=>$this->getPassword(),'role'=>$this->getRole(), 'phone_number'=>$this->getPhone_number()];
+        return ['name'=> $this->getName(), 'firstname' => $this->getFirstname(), 'email'=> $this->getEmail(),'date_birth'=>$this->getDate_birth(), 'password'=>$this->getPassword(),'role'=>$this->getRole(), 'phone_number'=>$this->getPhone_number(), 'id_address'=>$this->getId_address()];
     }
 
     
-
     /**
      * Get the value of firstname
      */ 
@@ -170,6 +169,26 @@ class User extends Model
     public function setPhone_number($phone_number)
     {
         $this->phone_number = $phone_number;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of id_address
+     */ 
+    public function getId_address()
+    {
+        return $this->id_address;
+    }
+
+    /**
+     * Set the value of id_address
+     *
+     * @return  self
+     */ 
+    public function setId_address($id_address)
+    {
+        $this->id_address = $id_address;
 
         return $this;
     }

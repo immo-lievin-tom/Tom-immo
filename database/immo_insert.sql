@@ -10,9 +10,9 @@ INSERT INTO `address`(`number`, `street`, `zipcode`, `country`, `city`) VALUES
 (20, 'rue pasteur', '75000', 'France', 'Paris');
 
 INSERT INTO `user`(`name`, `firstname`, `email`, `password`, `date_birth`,`role`,`id_address`) VALUES 
-('dufour','olivier','olivier.dufour@yahoo.com','020988','02-09-1988','admin', 1),
-('laslaa','mohammed','mohammed.laslaa@yahoo.com','coucou','02-08-1987','admin',2),
-('devise','theo','t.devise@laposte.net','coucou','02-79-1988','admin',3);
+('dufour','olivier','olivier.dufour@yahoo.com','020988','1988-09-02',1, 1),
+('laslaa','mohammed','mohammed.laslaa@yahoo.com','coucou','1987-02-08',1,2),
+('devise','theo','t.devise@laposte.net','coucou','1988-02-12',1,3);
 
 INSERT INTO `message`(`name`, `object`, `message`, `isActive`, `isRead`,`id_user`) VALUES 
 ('coucou','test','ca fait chier git cest hard', 1, 1, 1),

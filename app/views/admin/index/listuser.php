@@ -16,13 +16,16 @@
             foreach ($alluser as $key) {
                 echo '<tr>';
                 foreach ($key as $key2 => $value) {
-                    if($key2 !== "id" ) {
+                    if($key2 !== "id" && $key2 !== 'isActive') {
                         echo '<td class="text-center" scope="row">' . $value . '</td>';
-                        
+                    }
+                    if($key2 == 'isActive'){
+                        $result = ($value == 1) ? "Activer" : "Désactiver";
+                        echo $result;
+                        echo '<td class="text-center"><a href=' . BASE_ADMIN . 'index/activeuser/?id=' . $key['id'] . '><button class="btn bg-white mx-auto col-9 rounded-0 btndelete">' . $result . '</button></a></td>';
+                        echo '<td class="text-center"><a class="text-decoration-none text-dark" href=' . BASE_ADMIN . 'index/modifyuser/' . $key['id'] . '><i class="icofont-arrow-right icofont-2x"></i></a></td>';
                     }
                 }
-                echo '<td class="text-center"><button class="btn bg-white mx-auto col-9 rounded-0 btndelete">Activer</button></td>';
-                echo '<td class="text-center"><a class="text-decoration-none text-dark" href=' . BASE_ADMIN . 'index/modifyuser/' . $key['id'] . '><i class="icofont-arrow-right icofont-2x"></i></a></td>';
                 echo '</tr>';
             }
             ?>

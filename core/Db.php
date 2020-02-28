@@ -28,11 +28,11 @@ class Db
         // foreach($array as $key => $value){
         //     self::$_sth->bindParam($key, $value);
         // }
-        
+
         try {
             $this->_pdo->beginTransaction();
             $this->_sth->execute($array);
-            var_dump($this->_sth->errorInfo());
+            //var_dump($this->_sth->errorInfo());
             $this->_lastInsertId = $this->_pdo->lastInsertId();
             $this->_pdo->commit();
             $this->_res = $this->_sth->fetchAll();
@@ -71,7 +71,9 @@ class Db
             $insertToQuery[':' . $key] = $value;
         }
         $insert = "INSERT INTO " . $tableName . " (" . implode(',', array_keys($array)) . ") " . "values(" . implode(',', array_keys($insertToQuery)) . ")";
-        echo $insert;
+
+        // echo $insert;
+        // var_dump($insert);
         $this->query($insert, $insertToQuery);
         return $this->getLastInsertId();
     }
@@ -94,10 +96,10 @@ class Db
         foreach ($where as $key => $value) {
             $wherereq[] = $key . "=:" . str_replace('.', '', $key);
             $arrayVal[":" . str_replace('.', '', $key)] = $value;
-          }
+        }
 
         $insert = "UPDATE " . $tableName . " SET " . implode(' , ', $update) . " WHERE " . implode(' AND ', $wherereq);
-        echo $insert;
+        
         $this->query($insert, $arrayVal);
     }
 

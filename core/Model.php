@@ -66,12 +66,19 @@ abstract class Model
   {
     $dbh = self::getDb();
     $tab = $this->getFieldArray();
-    if(count($where) == 0){
+    if (count($where) == 0) {
       $where = ['id' => $this->id];
       // $tab['id']=$this->id;
     }
-      $dbh->update($this->_table, $tab, $where);
+    $dbh->update($this->_table, $tab, $where);
     return $dbh->getResult();
+  }
+
+  public function insert()
+  {
+    $dbh = self::getDb();
+    return $dbh->insert($this->_table, $this->getFieldArray());
+    
   }
 
   /**
@@ -113,5 +120,4 @@ abstract class Model
 
     return $this;
   }
-
 }
