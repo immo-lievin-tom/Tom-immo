@@ -1,18 +1,17 @@
 <div class="col-12 col-sm-8 mx-auto col-lg-5 col-xl-9 mt-4 border p-2 mx-2 property-espace">
     <?php
 
-    // use Core\Validator;
+    use Core\Validator;
 
-    // $formvalidator = new Validator();
+    $formvalidator = new Validator();
 
 
-    // if (isset($_POST['submit'])) {
-    //     $formvalidator->testInputLength($_POST['desc'], 20, "Longueur de la description invalide")->testInputLength($_POST['title'], 5, "Longueur du nom invalide")->testInputLength($_POST['ref'], 5, "Longueur de la référence invalide")->testInputLength($_POST['ref'], 5, "Longueur du pays est invalide")->testInputLength($_POST['ref'], 2, "Longueur du chauffage est invalide")->validTypeMime('photo1', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")->validTypeMime('photo2', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")
-    //     ->validTypeMime('photo3', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")->isValid();
-    // }
-
-    var_dump($_FILES);
+    if (isset($_POST['submit'])) {
+        $formvalidator->testInputLength($_POST['desc'], 20, "Longueur de la description invalide")->testInputLength($_POST['title'], 5, "Longueur du nom invalide")->testInputLength($_POST['ref'], 5, "Longueur de la référence invalide")->testInputLength($_POST['ref'], 5, "Longueur du pays est invalide")->testInputLength($_POST['ref'], 2, "Longueur du chauffage est invalide")->validTypeMime('photo1', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")->validTypeMime('photo2', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")
+            ->validTypeMime('photo3', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")->isValid();
+    }
     ?>
+    
     <h4 class="text-center">Ajouter un bien</h4>
     <form method="post" class="w-50 mx-auto" id="formaddproperty" enctype="multipart/form-data">
         <div class="form-check form-check-inline">
@@ -59,7 +58,7 @@
             </div>
         </div>
         <div class="form-group d-flex justify-content-between">
-        <div class="d-flex w-25">
+            <div class="d-flex w-25">
                 <label for="zipcode" class="mr-2">Code Postal</label>
                 <input type="number" class="d-inline form-control" id="zipcode" name="zipcode">
             </div>
@@ -95,18 +94,18 @@
         <div class="form-check d-flex form-check-inline no-garage">
             <label for="heating" class="w-25 text-left">Type de chauffage</label>
             <div class="w-75">
-                <input class="form-check-input m-2" checked type="radio" name="heating" value="gaz">
-                <label class="form-check-label m-2" for="sale">Gaz</label>
+                <input class="form-check-input m-2" type="radio" name="heating" value="gaz">
+                <label class="form-check-label m-2" for="gaz">Gaz</label>
                 <input class="form-check-input m-2" type="radio" name="heating" value="electricity">
-                <label class="form-check-label m-2" for="leasing">Electricité</label>
+                <label class="form-check-label m-2" for="electricity">Electricité</label>
             </div>
         </div>
         <div class="form-check form-check-inline d-flex no-garage">
             <label class="w-25 text-left" for="garage">Garage</label>
             <div class="w-75">
-                <input class="form-check-input m-2" type="radio" value="1" name="garage" value="1">
+                <input class="form-check-input m-2" type="radio" value=1 name="garage">
                 <label class="form-check-label m-2" for="garage">Oui</label>
-                <input class="form-check-input m-2" checked type="radio" value="0" name="garage" value="0">
+                <input class="form-check-input m-2" type="radio" value=0 name="garage">
                 <label class="form-check-label m-2" for="garage">Non</label>
             </div>
         </div>
@@ -125,7 +124,8 @@
         <div class="form-group d-flex justify-content-between no-garage">
             <label for="energy">Classe énergetique</label>
             <select class="custom-select property-select w-25" name="energy" id="energy">
-                <option value="A" selected>A</option>
+                <option selected value=0>Choix</option>
+                <option value="A">A</option>
                 <option value="B">B</option>
                 <option value="C">C</option>
                 <option value="D">D</option>

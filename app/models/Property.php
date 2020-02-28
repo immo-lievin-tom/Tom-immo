@@ -6,7 +6,6 @@ use Core\Model;
 
 class Property extends Model
 {
-
     private $title;
     private $price;
     private $surface;
@@ -25,7 +24,9 @@ class Property extends Model
     private $id_address;
     private $id_cat;
     private $typeproperty;
-    private $Id;
+    private $Id_User;
+    private $isSale;
+    private $isRental;
     
     public function __construct()
     {
@@ -34,12 +35,7 @@ class Property extends Model
 
     public function getFieldArray()
     {
-        return ['name' => $this->getTitle(), 'price' =>  $this->getPrice(), 'surface' =>  $this->getSurface(), 'reference' =>  $this->getReference(), 'description'=>  $this->getDescription(),'nb_room'=> $this->getNb_room(),'nb_bedroom'=>  $this->getNb_bedroom(), 'nb_bathroom'=>  $this->getNb_bathroom(),'garden'=>  $this->getGarden(),'energy_class'=> $this->getEnergy_class(),'type_heating'=>  $this->getType_heating(), 'garage'=>  $this->getGarage(),'isActive'=>  $this->getIsActive(),'isTop'=>  $this->getIsTop(), 'isVisible'=>  $this->getIsVisible(), 'id_address' =>  $this->getId_address(), 'id_user'=> $this->getId(), 'id_cat'=> $this->getId_cat(), array_keys($this->getTypeproperty())[0] => array_values($this->getTypeproperty())[0]];
-    }
-
-    function insertProperty()
-    {
-        parent::insert(['name' => $this->getTitle(), 'price' =>  $this->getPrice(), 'surface' =>  $this->getSurface(), 'reference' =>  $this->getReference(), 'description'=>  $this->getDescription(),'nb_room'=> $this->getNb_room(),'nb_bedroom'=>  $this->getNb_bedroom(), 'nb_bathroom'=>  $this->getNb_bathroom(),'garden'=>  $this->getGarden(),'energy_class'=> $this->getEnergy_class(),'type_heating'=>  $this->getType_heating(), 'garage'=>  $this->getGarage(),'isActive'=>  $this->getIsActive(),'isTop'=>  $this->getIsTop(), 'isVisible'=>  $this->getIsVisible(), 'id_address' =>  $this->getId_address(), 'id_user'=> 2, 'id_cat'=> 1, array_keys($this->getTypeproperty())[0] => array_values($this->getTypeproperty())[0]]);
+        return ['name' => $this->getTitle(), 'typeproperty'=> $this->getTypeproperty(), 'price' =>  $this->getPrice(), 'surface' =>  $this->getSurface(), 'reference' =>  $this->getReference(), 'description'=>  $this->getDescription(),'nb_room'=> $this->getNb_room(),'nb_bedroom'=>  $this->getNb_bedroom(), 'nb_bathroom'=>  $this->getNb_bathroom(),'garden'=>  $this->getGarden(),'energy_class'=> $this->getEnergy_class(),'type_heating'=>  $this->getType_heating(), 'garage'=>  $this->getGarage(),'isActive'=>  $this->getIsActive(),'isTop'=>  $this->getIsTop(), 'isVisible'=>  $this->getIsVisible(), 'id_address' =>  $this->getId_address(), 'id_user'=> $this->getId_User(), 'id_cat'=> $this->getId_cat()];
     }
 
     public function getTable()
@@ -233,21 +229,21 @@ class Property extends Model
     }
 
     /**
-     * Get the value of id
+     * Get the value of id_user
      */ 
-    public function getId()
+    public function getId_User()
     {
-        return $this->Id;
+        return $this->Id_User;
     }
 
     /**
-     * Set the value of id
+     * Set the value of id_user
      *
      * @return  self
      */ 
-    public function setId($Id)
+    public function setId_User($Id_User)
     {
-        $this->Id = $Id;
+        $this->Id_User = $Id_User;
 
         return $this;
     }
@@ -428,6 +424,46 @@ class Property extends Model
     public function setTypeproperty($typeproperty)
     {
         $this->typeproperty = $typeproperty;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of isSale
+     */ 
+    public function getIsSale()
+    {
+        return $this->isSale;
+    }
+
+    /**
+     * Set the value of isSale
+     *
+     * @return  self
+     */ 
+    public function setIsSale($isSale)
+    {
+        $this->isSale = $isSale;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of isRental
+     */ 
+    public function getIsRental()
+    {
+        return $this->isRental;
+    }
+
+    /**
+     * Set the value of isRental
+     *
+     * @return  self
+     */ 
+    public function setIsRental($isRental)
+    {
+        $this->isRental = $isRental;
 
         return $this;
     }

@@ -31,7 +31,7 @@ class IndexController extends AppController
         // $images = new Image();
         // $allImages = $images->selectImage();
         $properties = new Property();
-        $allProperties['all'] = $properties->selectPerso(['name', 'reference', 'price', 'isTop', 'isVisible']);
+        $allProperties['all'] = $properties->selectPerso(['id','name', 'reference', 'price', 'isActive', 'isTop', 'isVisible']);
         $this->render('index/listproperty', $allProperties);
     }
 
@@ -52,6 +52,7 @@ class IndexController extends AppController
             $address = new Address();
             $image = new Image();
             $property = new Property();
+
             $address->setCity(htmlspecialchars($_POST['city']));
             $address->setStreet(htmlspecialchars($_POST['address']));
             $address->setCountry(htmlspecialchars($_POST['country']));
@@ -63,9 +64,11 @@ class IndexController extends AppController
             $isTop = isset($_POST['isTop']) && $_POST['isTop'] == "on" ? 1 : 0;
             $isActive = isset($_POST['isActive']) && $_POST['isActive'] == "on" ? 1 : 0;
             $isVisible = isset($_POST['isVisible']) && $_POST['isVisible'] == "on" ? 1 : 0;
-            $typeproperty = (isset($_POST['typeproperty']) && $_POST['typeproperty'] == 1) ? ['isSale' => 1] : ['isRental' => 1];
+            $typeproperty = (isset($_POST['typeproperty']) && $_POST['typeproperty'] == 1) ? 'sale' : 'rental';
+            $heating = !isset($_POST['heating']) ? 0 : $_POST['heating'];
+            $garage = isset($_POST['garage']) ? $_POST['garage'] : 0;
 
-            $property->setId(1);
+            $property->setId_User(1);
             $property->setTitle(htmlspecialchars($_POST['title']));
             $property->setPrice(htmlspecialchars($_POST['price']));
             $property->setSurface(htmlspecialchars($_POST['surface']));
@@ -76,8 +79,8 @@ class IndexController extends AppController
             $property->setNb_bathroom(htmlspecialchars($_POST['nb_bathroom']));
             $property->setGarden(htmlspecialchars($_POST['garden']));
             $property->setEnergy_class(htmlspecialchars($_POST['energy']));
-            $property->setType_heating(htmlspecialchars($_POST['heating']));
-            $property->setGarden(htmlspecialchars($_POST['garage']));
+            $property->setType_heating(htmlspecialchars($heating));
+            $property->setGarage(htmlspecialchars($garage));
             $property->setIsActive($isActive);
             $property->setIsTop($isTop);
             $property->setId_address($idaddress);
@@ -103,9 +106,12 @@ class IndexController extends AppController
         $this->render('index/adduser');
     }
 
-    public function modifypropertyAction()
+    public function modifypropertyAction($id)
     {
-        $this->render('index/modifyproperty');
+        $property = new Property();
+        $property->setId($id);
+        $table["all"] = $property->select();
+        $this->render('index/modifyproperty', $table);
     }
     public function modifyuserAction()
     {

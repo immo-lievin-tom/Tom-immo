@@ -9,6 +9,7 @@
                 <th class="text-center" scope="col">Référence</th>
                 <th class="text-center" scope="col">Prix</th>
                 <th class="text-center" scope="col">Modifier</th>
+                <th class="text-center" scope="col">Actif</th>
                 <th class="text-center" scope="col">Top</th>
                 <th class="text-center" scope="col">Visible</th>
                 <th class="text-center" scope="col">Supprimer</th>
@@ -22,8 +23,8 @@
                 foreach ($value as $key => $result) {
                     if ($key == "price") {
                         echo "<td class='text-center'>" . $result . " € </td>";
-                        echo '<td class="text-center"><a href=' . BASE_ADMIN . "index/modifyproperty" . '><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>';
-                    } elseif ($key == "isTop" || $key == "isVisible") {
+                        echo '<td class="text-center"><a href=' . BASE_ADMIN . "index/modifyproperty/" . $value["id"] . '><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>';
+                    } elseif ($key == "isTop" || $key == "isVisible" || $key == "isActive") {
                         $labelid = ($key == "isTop") ? "istop" : "isvis";
                         if ($result == 1) {
                             echo '<td class="text-center">
@@ -32,7 +33,7 @@
                                 <label class="custom-control-label" for=' . $value["reference"] . $labelid .  '></label>
                             </div>
                         </td>';
-                        }else{
+                        } else {
                             echo '<td class="text-center">
                             <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" id=' . $value["reference"] . $labelid . '>
@@ -40,9 +41,9 @@
                             </div>
                         </td>';
                         }
-                    } else {
+                    } elseif ($key !== 'id') {
                         echo "<td class='text-center'>" . $result . "</td>";
-                                        }
+                    }
                 }
                 echo '<td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>';
                 echo "</tr>";
