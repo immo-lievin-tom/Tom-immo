@@ -1,6 +1,3 @@
-<?php 
-var_dump($all);
-?>
 
 
 <div class="col-12 col-lg-10 pt-5">
@@ -18,14 +15,19 @@ var_dump($all);
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <?php 
+                    foreach($all as $line){?>
+                        <tr>
                     <td class="text-center" scope="row"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Supprimer</button></td>
-                    <td class="text-center" scope="row"><a class="text-decoration-none text-dark pt-3" href="<?= BASE_ADMIN . "index/detailmessage"?>">Voir</a></td>
-                    <td class="text-center pt-3">Mark</td>
-                    <td class="text-center pt-3">Salut</td>
-                    <td class="messageadmin pt-3">Lorem deux ipsum dolor sit amet consectetur adipisicing elit. Eaque ex sint maxime, placeat hic cupiditate rerum aliquam...</td>
-                    <td class="text-center pt-3">12:00</td>
+                    <td class="text-center" scope="row"><a class="text-decoration-none text-dark pt-3" href="<?= BASE_ADMIN . "index/detailmessage/".$line['id']?>">Voir</a></td>
+                    <td class="text-center pt-3"><?php echo $line['name'];?></td>
+                    <td class="text-center pt-3"><?php echo $line['object'];?></td>
+                    <td class="messageadmin pt-3"><?php echo $line['message'];?></td>
+                    <td class="text-center pt-3"><?php echo $line['date_create'];?></td>
                 </tr>
+                <?php
+                    }
+                ?>
             </tbody>
         </table>
     </div>

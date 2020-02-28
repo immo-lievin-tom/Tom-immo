@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 namespace App\Controllers\Admin;
@@ -6,7 +6,8 @@ namespace App\Controllers\Admin;
 use App\Controllers\Admin\AppController;
 use App\Models\Message;
 
-class IndexController extends AppController{
+class IndexController extends AppController
+{
 
     public function __construct()
     {
@@ -14,7 +15,7 @@ class IndexController extends AppController{
     }
 
     public function indexAction()
-    { 
+    {
         $this->render('index/index');
     }
 
@@ -31,10 +32,15 @@ class IndexController extends AppController{
     public function listmessageAction()
     {
         $message = new Message();
-        $array['all'] = $message->selectPerso(['name', 'object', 'message', 'date_create']);
+        $array['all'] = $message->selectPerso(['name', 'object', 'message', 'date_create', 'id']);
         $this->render('index/listmessage', $array);
     }
-
+    public function detailmessageAction($id)
+    {   $message = new Message();
+        $message->setId($id);
+        $array['one'] = $message->select();
+        $this->render('index/detail_message',$array);
+    }
     public function addpropertyAction()
     {
         $this->render('index/addproperty');
@@ -56,9 +62,5 @@ class IndexController extends AppController{
     public function exportAction()
     {
         $this->render('index/export');
-    }
-    public function detailmessageAction()
-    {
-        $this->render('index/detail_message');
     }
 }

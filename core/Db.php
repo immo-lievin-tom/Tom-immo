@@ -35,6 +35,8 @@ class Db
                 $this->_pdo->commit();
                 $this->_res = $this->_sth->fetchAll();
                 $this->_rowCount = $this->_sth->rowCount();
+            } else {
+                var_dump($this->_sth->errorInfo());
             }
         } catch (\PDOException $e) {
             $this->_pdo->rollBack();
