@@ -91,7 +91,7 @@ class Db
         }
 
         $insert = "UPDATE " . $tableName . " SET " . implode(' , ', $update) . " WHERE " . implode(' AND ', $wherereq);
-        echo $insert;
+        // echo $insert;
         $this->query($insert, $arrayVal);
     }
 

@@ -32,6 +32,45 @@ abstract class Model
     return $result;
   }
 
+  function selectInner($table2, $on, array $where = [])
+  {
+    $wherereq = "";
+    $where2 = [];
+    if (count($where) == 0) {
+      $insert = "SELECT * FROM " . $this->_table;
+    } else {
+      foreach ($where as $key => $value) {
+        $wherereq .= $key . "= :" .  str_replace('.', '', $key);
+        $where2[":" .  str_replace('.', '', $key)] = $value;
+      }
+      $insert = "SELECT * FROM " . $this->_table . " inner join " . $table2 . " on " . $on . " where " . $wherereq;
+    }
+    $dbh = self::getDb();
+
+    $dbh->query($insert, $where2);
+    return $dbh->getResult();
+  }
+
+  function selectChoiceInner(array $choice, $table2, $on, array $where = [])
+  {
+    $wherereq = "";
+    $condition = implode(" , ", $choice);
+
+    $where2 = [];
+    if (count($where) == 0) {
+      $insert = "SELECT * FROM " . $this->_table;
+    } else {
+      foreach ($where as $key => $value) {
+        $wherereq .= $key . "= :" .  str_replace('.', '', $key);
+        $where2[":" .  str_replace('.', '', $key)] = $value;
+      }
+      $insert = "SELECT " . $condition . " FROM " . $this->_table . " inner join " . $table2 . " on " . $on . " where " . $wherereq;
+    }
+    $dbh = self::getDb();
+    $dbh->query($insert, $where2);
+    return $dbh->getResult();
+  }
+
   function selectAll()
   {
     $dbh = self::getDb();
@@ -54,13 +93,23 @@ abstract class Model
     return $dbh->insert($this->_table, $this->getFieldArray());
   }
 
-  function update($where)
+  function update($where=[])
   {
     $dbh = self::getDb();
     if (count($where) == 0) {
       $where = ['id' => $this->id];
     }
     $dbh->update($this->_table, $this->getFieldArray(), $where);
+    return $dbh->getResult();
+  }
+
+  function updateIs(array $condition, $where=[])
+  {
+    $dbh = self::getDb();
+    if (count($where) == 0) {
+      $where = ['id' => $this->id];
+    }
+    $dbh->update($this->_table, $condition, $where);
     return $dbh->getResult();
   }
 

@@ -1,12 +1,23 @@
 <?php
 
-extract($all[0]);
+extract($property[0]);
+extract($address[0]);
 
-var_dump($all);
-echo $nb_room;
 ?>
 
 <div class="col-12 col-sm-8 mx-auto col-lg-5 col-xl-9 mt-4 border p-2 mx-2 property-espace">
+    <?php
+
+    if (!empty($err)) {
+        foreach ($err as $val) {
+            echo "<ul class='bg-danger text-white'>";
+            
+                echo "<li>" . $val . "</li>";
+            
+            echo "</ul>";
+        };
+    }
+    ?>
     <h4 class="text-center">Modifier un bien</h4>
     <form method="post" class="w-50 mx-auto" id="formaddproperty" enctype="multipart/form-data">
         <div class="form-check form-check-inline">
@@ -45,26 +56,27 @@ echo $nb_room;
         <div class="form-group d-flex justify-content-between">
             <div class="d-flex w-25">
                 <label for="num" class="mr-2">Numéro de rue</label>
-                <input type="number" class="d-inline form-control" id="num" name="num" >
+                <input type="hidden" name="id_address" value="<?= $id_address ?>">
+                <input type="number" class="d-inline form-control" id="num" name="num" value="<?= $number ?>">
             </div>
             <div class="d-flex w-50">
                 <label for="address" class="mr-2">Adresse</label>
-                <input type="text" class="d-inline form-control" id="address" name="address">
+                <input type="text" class="d-inline form-control" id="address" name="address" value="<?= $street ?>">
             </div>
         </div>
         <div class="form-group d-flex justify-content-between">
             <div class="d-flex w-25">
                 <label for="zipcode" class="mr-2">Code Postal</label>
-                <input type="number" class="d-inline form-control" id="zipcode" name="zipcode">
+                <input type="number" class="d-inline form-control" id="zipcode" name="zipcode" value="<?= $zipcode ?>">
             </div>
             <div class="d-flex w-50">
                 <label for="city" class="mr-2">Ville</label>
-                <input type="text" class="d-inline form-control" id="city" name="city">
+                <input type="text" class="d-inline form-control" id="city" name="city" value="<?= $city ?>">
             </div>
         </div>
         <div class="form-group d-flex justify-content-between">
             <label for="country">Pays</label>
-            <input type="text" class="w-75 d-inline form-control" id="country" name="country">
+            <input type="text" class="w-75 d-inline form-control" id="country" name="country" value="<?= $country ?>">
         </div>
         <div class="form-group d-flex justify-content-between">
             <label for="surface">Surface</label>
@@ -98,46 +110,66 @@ echo $nb_room;
         <div class="form-check form-check-inline d-flex no-garage">
             <label class="w-25 text-left" for="garage">Garage</label>
             <div class="w-75">
-                <input class="form-check-input m-2" type="radio" value=1 name="garage">
+                <input class="form-check-input m-2" <?= ($garage == 1) ? "checked" : "" ?> type="radio" value=1 name="garage">
                 <label class="form-check-label m-2" for="garage">Oui</label>
-                <input class="form-check-input m-2" type="radio" value=0 name="garage">
+                <input class="form-check-input m-2" <?= ($garage == 0) ? "checked" : "" ?> type="radio" value=0 name="garage">
                 <label class="form-check-label m-2" for="garage">Non</label>
             </div>
         </div>
         <div class="my-2 custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="isActive" name="isActive" <?= ($isActive == 1) ? "checked" : ""?>>
+            <input type="checkbox" class="custom-control-input" id="isActive" name="isActive" <?= ($property[0]['isActive'] == 1) ? "checked" : " " ?>>
             <label class="custom-control-label" for="isActive">Actif</label>
         </div>
         <div class="my-2 custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="isTop" name="isTop" <?= ($isTop == 1) ? "checked" : ""?>>
+            <input type="checkbox" class="custom-control-input" id="isTop" name="isTop" <?= ($isTop == 1) ? "checked" : " " ?>>
             <label class="custom-control-label" for="isTop">Top</label>
         </div>
         <div class="my-2 custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="isVisible" name="isVisible" <?= ($isVisible == 1) ? "checked" : ""?>>
+            <input type="checkbox" class="custom-control-input" id="isVisible" name="isVisible" <?= ($isVisible == 1) ? "checked" : " " ?>>
             <label class="custom-control-label" for="isVisible">Visible</label>
         </div>
         <div class="form-group d-flex justify-content-between no-garage">
             <label for="energy">Classe énergetique</label>
             <select class="custom-select property-select w-25" name="energy" id="energy">
-                <option selected value=0>Choix</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-                <option value="E">E</option>
+                <option value=0>Choix</option>
+                <option <?= ($energy_class == "A") ? "selected" : "" ?> value="A">A</option>
+                <option <?= ($energy_class == "B") ? "selected" : "" ?> value="B">B</option>
+                <option <?= ($energy_class == "C") ? "selected" : "" ?> value="C">C</option>
+                <option <?= ($energy_class == "D") ? "selected" : "" ?> value="D">D</option>
+                <option <?= ($energy_class == "E") ? "selected" : "" ?> value="E">E</option>
             </select>
         </div>
-        <div class="form-group d-flex justify-content-between">
+        <div class="form-group">
+            <label for="energy">Les images</label>
+            <div class="row d-flex justify-content-between align-items-center">
+                <?php
+                $idarr = [];
+                foreach ($image as $table) {
+                    $int = '$';
+                    foreach ($table as $key => $value) {
+                        if ($key == 'path') {
+                            echo "<div class='col-4'><img src=" . BASE_READIMG . $value . " alt='' class='w-100 photo img-fluid'></div>";
+                        } else {
+                            array_push($idarr, $value);
+                        }
+                    };
+                }
+                ?>
+            </div>
+            <p class="modifyimg text-danger">Modifier les images</p>
+        </div>
+
+        <div class="form-group d-none justify-content-between imggroup">
             <label for="photo1">Photo 1</label>
-            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo1" name="photo1">
+            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo1" name="<?= $idarr[0] ?>">
         </div>
-        <div class="form-group d-flex justify-content-between">
+        <div class="form-group d-none justify-content-between imggroup">
             <label for="photo2">Photo 2</label>
-            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo2" name="photo2">
+            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo2" name="<?= $idarr[1] ?>">
         </div>
-        <div class="form-group d-flex justify-content-between">
+        <div class="form-group d-none justify-content-between imggroup">
             <label for="photo3">Photo 3</label>
-            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo3" name="photo3">
+            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo3" name="<?= $idarr[2] ?>">
         </div>
         <button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button>
     </form>

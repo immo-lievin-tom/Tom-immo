@@ -7,6 +7,10 @@ use Core\Model;
 class Image extends Model
 {
 
+    private $name;
+    private $path;
+    private $isTop;
+    private $id_property;
 
     public function __construct()
     {
@@ -14,7 +18,7 @@ class Image extends Model
     }
 
     public function getFieldArray(){
-        return [];
+        return ['name' => $this->getName(), 'path' => $this->getPath(), 'isTop' => $this->getIsTop(), 'id_property' => $this->getId_Property()];
     }
 
     public function getTable()
@@ -26,12 +30,44 @@ class Image extends Model
         return $this->selectAll();
     }
 
-    function insertImage($data)
+    /**
+     * Get the value of path
+     */ 
+    public function getPath()
     {
-      $dbh = self::getDb();
-      return $dbh->insert($this->_table, $data);
+        return $this->path;
     }
 
+    /**
+     * Set the value of name
+     *
+     * @return  self
+     */ 
+    public function setPath($path)
+    {
+        $this->path = $path;
+
+        return $this;
+    }
+    /**
+     * Get the value of IsTop
+     */ 
+    public function getIsTop()
+    {
+        return $this->isTop;
+    }
+
+    /**
+     * Set the value of IsTop
+     *
+     * @return  self
+     */ 
+    public function setIsTop($IsTop)
+    {
+        $this->isTop = $IsTop;
+
+        return $this;
+    }
     /**
      * Get the value of name
      */ 
@@ -48,6 +84,25 @@ class Image extends Model
     public function setName($name)
     {
         $this->name = $name;
+
+        return $this;
+    }
+    /**
+     * Get the value of name
+     */ 
+    public function getId_Property()
+    {
+        return $this->id_Property;
+    }
+
+    /**
+     * Set the value of name
+     *
+     * @return  self
+     */ 
+    public function setId_Property($Id_Property)
+    {
+        $this->id_Property = $Id_Property;
 
         return $this;
     }

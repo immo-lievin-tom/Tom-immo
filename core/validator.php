@@ -17,7 +17,7 @@ class Validator
      * @return self
      */
 
-    public function testInputLength($totest, $condition, $message):self
+    public function testInputLength($totest, $condition, $message): self
     {
         if (strlen($totest) < $condition) {
             array_push($this->errors, $message);
@@ -33,7 +33,7 @@ class Validator
      * @return self
      */
 
-    public function testMail($totest, $message):self
+    public function testMail($totest, $message): self
     {
         if (preg_match("/^[a-z]*([.]|\w)[a-z]*\d*[@][a-z]*[.]\w{2,5}/", $totest) == 0) {
             array_push($this->errors, $message);
@@ -49,7 +49,7 @@ class Validator
      * @return self
      */
 
-    public function testPassword($totest, $message):self
+    public function testPassword($totest, $message): self
     {
         if (preg_match("/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[#$%^&*()+=!?\-';,.\/{}|:<>?~]).{8,20})/", $totest) == 0) {
             array_push($this->errors, $message);
@@ -66,7 +66,7 @@ class Validator
      * @return self
      */
 
-    public function inputMatchRegex($totest, $regex, $message):self
+    public function inputMatchRegex($totest, $regex, $message): self
     {
         if (preg_match($regex, $totest) == 0) {
             array_push($this->errors, $message);
@@ -82,7 +82,7 @@ class Validator
      * @return self
      */
 
-    public function validUrl($totest, $message):self
+    public function validUrl($totest, $message): self
     {
         if (!filter_var($totest, FILTER_VALIDATE_URL)) {
             array_push($this->errors, $message);
@@ -99,14 +99,16 @@ class Validator
      * @return self
      */
 
-    public function validTypeMime($totest, array $listmime, $message):self
+    public function validTypeMime($totest, array $listmime, $message): self
     {
         foreach ($listmime as $val) {
-            if (isset($_POST[$totest])) {
+            if (isset($_FILES[$totest]) && !empty($_FILES[$totest]['tmp_name'])) {
                 $mime = mime_content_type($_FILES[$totest]["tmp_name"]);
                 if ($val == $mime) {
                     return $this;
                 }
+            }else{
+                return $this;
             }
         }
         array_push($this->errors, $message);
@@ -122,7 +124,7 @@ class Validator
      * @return self
      */
 
-    public function testDate($totest, $message, $message2):self
+    public function testDate($totest, $message, $message2): self
     {
         if (strpos($totest, '-') !== false) {
             $test_arr = explode("-", $totest);
@@ -144,8 +146,7 @@ class Validator
     public function isValid()
     {
         if (count($this->errors) !== 0) {
-            echo "<p class='rounded text-white bg-danger'>" . implode(" / ", $this->errors) . "</p>";
-            $this->errors = [];
+            return $this->errors;
         }
     }
 }

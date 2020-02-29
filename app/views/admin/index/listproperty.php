@@ -1,8 +1,13 @@
+<?php
+
+?>
+
 <div class="col-10 pt-5">
     <div class="titre_message pb-5">
         <h4 class="text-center">LISTE DES BIENS</h4>
     </div>
     <table class="table table-striped mx-auto border w-100">
+        <p class="textdelete bg-danger text-white p-2">Un bien ne peut être supprimé, il a donc été désactivé !</p>
         <thead class="text-center">
             <tr>
                 <th class="text-center" scope="col">Titre</th>
@@ -26,17 +31,18 @@
                         echo '<td class="text-center"><a href=' . BASE_ADMIN . "index/modifyproperty/" . $value["id"] . '><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Modifier</button></a></td>';
                     } elseif ($key == "isTop" || $key == "isVisible" || $key == "isActive") {
                         $labelid = ($key == "isTop") ? "istop" : "isvis";
+                        $labelid = ($key == "isActive") ? "isact" : $labelid;
                         if ($result == 1) {
                             echo '<td class="text-center">
-                            <div class="custom-control custom-switch">
-                                <input type="checkbox" checked class="custom-control-input" id=' . $value["reference"] . $labelid . '>
+                            <div class="' . $labelid . ' custom-control custom-switch">
+                                <input property="' . $value["id"] .'" val ="' . 1 . '" type="checkbox" checked class="custom-control-input" id=' . $value["reference"] . $labelid . '>
                                 <label class="custom-control-label" for=' . $value["reference"] . $labelid .  '></label>
                             </div>
                         </td>';
                         } else {
                             echo '<td class="text-center">
-                            <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id=' . $value["reference"] . $labelid . '>
+                            <div class="' . $labelid . ' custom-control custom-switch">
+                                <input property="' . $value["id"] .'"val ="' . 0 . '"type="checkbox" class="custom-control-input" id=' . $value["reference"] . $labelid . '>
                                 <label class="custom-control-label" for=' . $value["reference"] . $labelid .  '></label>
                             </div>
                         </td>';
@@ -45,7 +51,7 @@
                         echo "<td class='text-center'>" . $result . "</td>";
                     }
                 }
-                echo '<td class="text-center"><a class="text-decoration-none text-dark" href="#"><i class="icofont-ui-delete icofont-2x"></i></a></td>';
+                echo '<td class="text-center"><a property="' . $value["id"] .'"class="delete text-decoration-none text-dark"><i class="icofont-ui-delete icofont-2x"></i></a></td>';
                 echo "</tr>";
             }
             ?>

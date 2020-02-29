@@ -94,3 +94,11 @@ form {
 .error{
   color: red;
 }
+
+.modifyimg{
+  cursor: pointer;
+}
+
+.delete{
+  cursor: pointer;
+}

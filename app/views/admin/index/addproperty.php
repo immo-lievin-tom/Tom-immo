@@ -1,17 +1,13 @@
 <div class="col-12 col-sm-8 mx-auto col-lg-5 col-xl-9 mt-4 border p-2 mx-2 property-espace">
     <?php
-
-    use Core\Validator;
-
-    $formvalidator = new Validator();
-
-
-    if (isset($_POST['submit'])) {
-        $formvalidator->testInputLength($_POST['desc'], 20, "Longueur de la description invalide")->testInputLength($_POST['title'], 5, "Longueur du nom invalide")->testInputLength($_POST['ref'], 5, "Longueur de la référence invalide")->testInputLength($_POST['ref'], 5, "Longueur du pays est invalide")->testInputLength($_POST['ref'], 2, "Longueur du chauffage est invalide")->validTypeMime('photo1', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")->validTypeMime('photo2', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")
-            ->validTypeMime('photo3', ['image/jpg', 'image/png'], "This MIME Content-type is not valid")->isValid();
-    }
+    if (isset($err) && count($err) > 0) {
+        echo "<ul class='bg-danger text-white'>";
+        foreach ($err as $key => $value) {
+            echo "<li>" . $value . "</li>";
+        }
+        echo "</ul>";
+    };
     ?>
-    
     <h4 class="text-center">Ajouter un bien</h4>
     <form method="post" class="w-50 mx-auto" id="formaddproperty" enctype="multipart/form-data">
         <div class="form-check form-check-inline">
@@ -144,6 +140,6 @@
             <label for="photo3">Photo 3</label>
             <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo3" name="photo3">
         </div>
-        <button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button>
+        <input type="submit" class="btn btn-outline-dark color1b0a2e text-white" value="Ajouter">
     </form>
 </div>
