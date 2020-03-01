@@ -97,18 +97,25 @@ class IndexController extends AppController
                 $property->setTypeproperty($typeproperty);
 
                 $idproperty = $property->insert();
-
+                $init = 0;
                 foreach ($_FILES as $key) {
                     $target_file = BASE_UPIMG . basename($key["name"]);
+                    $keyarr = array_keys($_FILES);
                     if (move_uploaded_file($key['tmp_name'], $target_file)) {
                         $image = new Image();
                         $name = explode(".", $key["name"]);
                         $image->setName($name[0]);
                         $image->setPath($key['name']);
-                        $image->setIsTop(true);
+                        if ($keyarr[$init] == $_POST['phototop']) {
+                            echo $_POST['phototop'] . $keyarr[$init];
+                            $image->setIsTop(1);
+                        } else {
+                            $image->setIsTop(0);
+                        };
                         $image->setId_Property($idproperty);
                         $image->insert();
                     }
+                    $init++;
                 }
             }
         }
@@ -164,35 +171,46 @@ class IndexController extends AppController
             $address->setId(htmlspecialchars($_POST['id_address']));
             $address->update();
 
+            if (isset($_POST['phototop'])) {
+                $imagetop = new Image();
+                $imagetop->updatePerso(['isTop' => 0], ['image.id_property' => $id]);
+                $imagetop->setId(htmlspecialchars($_POST['phototop']));
+                $imagetop->setId_Property($id);
+                $imagetop->setIsTop(1);
+                $imagetop->updateIs(['isTop' => $imagetop->getIsTop()]);
+            }
+
             if (isset($_FILES)) {
                 $keyarr = array_keys($_FILES);
                 $formvalidator = new Validator();
-                $init = 0;
+                $in = 0;
+                $init = $keyarr[0];
+
                 foreach ($_FILES as $key) {
                     $target_file = BASE_UPIMG . basename($key["name"]);
-                    $resultvalidator = $formvalidator->validTypeMime($keyarr[$init], ['image/jpg', 'image/jpeg', 'image/png'], "This MIME Content-type of " . $key['name'] . " is not valid")->isValid();
+                    $resultvalidator = $formvalidator->validTypeMime($keyarr[$in], ['image/jpg', 'image/jpeg', 'image/png'], "The MIME Content-type of " . $key['name'] . " is not valid")->isValid();
                     if ($resultvalidator) {
                         $table['err'] = $resultvalidator;
                     } else {
                         if ($key['name'] !== '' && move_uploaded_file($key['tmp_name'], $target_file)) {
                             $image = new Image();
                             $name = explode(".", $key["name"]);
-                            $image->setId($keyarr[$init]);
+                            $image->setId($init);
                             $image->setName($name[0]);
                             $image->setPath($key['name']);
-                            $image->setIsTop(true);
                             $image->setId_Property($id);
                             $image->update();
                         }
                     }
                     $init++;
+                    $in++;
                 }
             }
         }
 
         $table['property'] = $property->select();
         $table['address'] = $property->selectInner('address', 'property.id_address = address.id', ['property.id' => $id]);
-        $table['image'] = $image->selectChoiceInner(['image.id', 'path'], 'property', 'property.id = image.id_property', ['property.id' => $id]);
+        $table['image'] = $image->selectChoiceInner(['image.id', 'path', 'image.isTop'], 'property', 'property.id = image.id_property', ['property.id' => $id]);
 
         $this->render('index/modifyproperty', $table);
     }

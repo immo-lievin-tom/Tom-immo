@@ -129,6 +129,14 @@
             </select>
         </div>
         <div class="form-group d-flex justify-content-between">
+            <label for="phototop">Photo en avant</label>
+            <select class="custom-select w-25" name="phototop" id="phototop">
+                <option selected value="photo1">Photo 1</option>
+                <option value="photo2">Photo 2</option>
+                <option value="photo3">Photo 3</option>
+            </select>
+        </div>
+        <div class="form-group d-flex justify-content-between">
             <label for="photo1">Photo 1</label>
             <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo1" name="photo1">
         </div>
@@ -140,6 +148,7 @@
             <label for="photo3">Photo 3</label>
             <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo3" name="photo3">
         </div>
+        
         <input type="submit" class="btn btn-outline-dark color1b0a2e text-white" value="Ajouter">
     </form>
 </div>

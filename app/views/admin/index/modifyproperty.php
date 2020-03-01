@@ -158,18 +158,25 @@ extract($address[0]);
             </div>
             <p class="modifyimg text-danger">Modifier les images</p>
         </div>
-
+        <div class="form-group d-flex justify-content-between">
+            <label for="phototop">Photo en avant</label>
+            <select class="custom-select w-25" name="phototop" id="phototop">
+                <option <?=($image[0]['isTop'] == 1) ? 'selected' : '' ?> value="<?= $idarr[0] ?>">Photo 1</option>
+                <option <?=($image[1]['isTop'] == 1) ? 'selected' : '' ?> value="<?= $idarr[2] ?>">Photo 2</option>
+                <option <?=($image[2]['isTop'] == 1) ? 'selected' : '' ?> value="<?= $idarr[4] ?>">Photo 3</option>
+            </select>
+        </div>
         <div class="form-group d-none justify-content-between imggroup">
             <label for="photo1">Photo 1</label>
             <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo1" name="<?= $idarr[0] ?>">
         </div>
         <div class="form-group d-none justify-content-between imggroup">
             <label for="photo2">Photo 2</label>
-            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo2" name="<?= $idarr[1] ?>">
+            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo2" name="<?= $idarr[2] ?>">
         </div>
         <div class="form-group d-none justify-content-between imggroup">
             <label for="photo3">Photo 3</label>
-            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo3" name="<?= $idarr[2] ?>">
+            <input type="file" class="w-75 btn buttonrad d-inline form-control" id="photo3" name="<?= $idarr[4] ?>">
         </div>
         <button type="submit" class="btn btn-outline-dark color1b0a2e text-white">Ajouter</button>
     </form>

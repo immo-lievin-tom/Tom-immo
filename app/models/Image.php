@@ -10,7 +10,7 @@ class Image extends Model
     private $name;
     private $path;
     private $isTop;
-    private $id_property;
+    private $id_Property;
 
     public function __construct()
     {

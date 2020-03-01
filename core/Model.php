@@ -55,7 +55,6 @@ abstract class Model
   {
     $wherereq = "";
     $condition = implode(" , ", $choice);
-
     $where2 = [];
     if (count($where) == 0) {
       $insert = "SELECT * FROM " . $this->_table;
@@ -93,7 +92,7 @@ abstract class Model
     return $dbh->insert($this->_table, $this->getFieldArray());
   }
 
-  function update($where=[])
+  function update($where = [])
   {
     $dbh = self::getDb();
     if (count($where) == 0) {
@@ -103,7 +102,17 @@ abstract class Model
     return $dbh->getResult();
   }
 
-  function updateIs(array $condition, $where=[])
+  function updatePerso($array, $where = [])
+  {
+    $dbh = self::getDb();
+    if (count($where) == 0) {
+      $where = ['id' => $this->id];
+    }
+    $dbh->update($this->_table, $array, $where);
+    return $dbh->getResult();
+  }
+
+  function updateIs(array $condition, $where = [])
   {
     $dbh = self::getDb();
     if (count($where) == 0) {
