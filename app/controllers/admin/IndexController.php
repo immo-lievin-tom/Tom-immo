@@ -184,7 +184,6 @@ class IndexController extends AppController
                 $keyarr = array_keys($_FILES);
                 $formvalidator = new Validator();
                 $in = 0;
-                $init = $keyarr[0];
 
                 foreach ($_FILES as $key) {
                     $target_file = BASE_UPIMG . basename($key["name"]);
@@ -195,14 +194,13 @@ class IndexController extends AppController
                         if ($key['name'] !== '' && move_uploaded_file($key['tmp_name'], $target_file)) {
                             $image = new Image();
                             $name = explode(".", $key["name"]);
-                            $image->setId($init);
+                            $image->setId($keyarr[$in]);
                             $image->setName($name[0]);
                             $image->setPath($key['name']);
                             $image->setId_Property($id);
                             $image->update();
                         }
                     }
-                    $init++;
                     $in++;
                 }
             }

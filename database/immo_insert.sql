@@ -24,15 +24,16 @@ INSERT INTO `property`(`name`, `typeproperty`, `price`, `reference`, `descriptio
 ('Appartement','sale', 125000, 'XXXXggXXX', 'Bel appartement avec une vue incroyable en mer !', 1, 4, 1, 70, '', 'C', 'electricity', 1, 1, 1, 1, 1, 1, 2);
 
 INSERT INTO `image`(`name`, `path`, `isTop`, `id_property`) VALUES 
-('img1', '/img/img315.jpg', 1, 1),
-('img2', '/img/img311.jpg', 0, 1),
-('img3', '/img/img310.jpg', 0, 1),
-('img1', '/img/img309.jpg', 1, 2),
-('img2', '/img/img308.jpg', 0, 2),
-('img3', '/img/img306.jpg', 0, 2),
-('img1', '/img/img305.jpg', 1, 3),
-('img2', '/img/img302.jpg', 0, 3),
-('img3', '/img/img301.jpg', 0, 3);
+('holiday-house-177401_1280', 'holiday-house-177401_1280.jpg', 1, 1),
+('agriculture-1807581_1920', 'agriculture-1807581_1920.jpg', 0, 1),
+('kitchen-1940174_1280', 'kitchen-1940174_1280.jpg', 0, 1),
+('holiday-house-177401_1280', 'holiday-house-177401_1280.jpg', 1, 2),
+('agriculture-1807581_1920', 'agriculture-1807581_1920.jpg', 0, 2),
+('kitchen-1940174_1280', 'kitchen-1940174_1280.jpg', 0, 2),
+('holiday-house-177401_1280', 'holiday-house-177401_1280.jpg', 1, 3),
+('agriculture-1807581_1920', 'agriculture-1807581_1920.jpg', 0, 3),
+('kitchen-1940174_1280', 'kitchen-1940174_1280.jpg', 0, 3);
+
 
 INSERT INTO `favorite`(`id_user`, `id_property`) VALUES 
 (1,1),
