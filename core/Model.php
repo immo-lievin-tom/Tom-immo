@@ -102,17 +102,7 @@ abstract class Model
     return $dbh->getResult();
   }
 
-  function updatePerso($array, $where = [])
-  {
-    $dbh = self::getDb();
-    if (count($where) == 0) {
-      $where = ['id' => $this->id];
-    }
-    $dbh->update($this->_table, $array, $where);
-    return $dbh->getResult();
-  }
-
-  function updateIs(array $condition, $where = [])
+  function updateIs($condition, $where = [])
   {
     $dbh = self::getDb();
     if (count($where) == 0) {

@@ -173,7 +173,7 @@ class IndexController extends AppController
 
             if (isset($_POST['phototop'])) {
                 $imagetop = new Image();
-                $imagetop->updatePerso(['isTop' => 0], ['image.id_property' => $id]);
+                $imagetop->updateIs(['isTop' => 0], ['image.id_property' => $id]);
                 $imagetop->setId(htmlspecialchars($_POST['phototop']));
                 $imagetop->setId_Property($id);
                 $imagetop->setIsTop(1);
