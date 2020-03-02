@@ -1,3 +1,14 @@
+<?php
+if (isset($error) && count($error) > 0) {
+    echo '<ul>';
+    foreach ($error as $key => $value) {
+        echo '<li>' . $value . '</li>';
+    }
+    echo '</ul>';
+} 
+
+
+?>
 <div class="col-10 pt-5">
     <form method="POST" class="mx-auto">
         <div class="form-group col-12">

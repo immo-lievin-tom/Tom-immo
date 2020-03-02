@@ -15,7 +15,8 @@ class User extends Model
     protected $password;
     protected $role;
     protected $phone_number;
-
+    private $is_active;
+    
     public function __construct()
     {
         $this->set_table('user');
@@ -189,6 +190,26 @@ class User extends Model
     public function setId_address($id_address)
     {
         $this->id_address = $id_address;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of is_active
+     */ 
+    public function getIs_active()
+    {
+        return $this->is_active;
+    }
+
+    /**
+     * Set the value of is_active
+     *
+     * @return  self
+     */ 
+    public function setIs_active($is_active)
+    {
+        $this->is_active = $is_active;
 
         return $this;
     }

@@ -1,5 +1,12 @@
 <?php
 $date = explode(' ', $coor[0]['date_birth']);
+if (isset($error) && count($error) > 0) {
+    echo '<ul>';
+    foreach ($error as $key => $value) {
+        echo '<li>' . $value . '</li>';
+    }
+    echo '</ul>';
+} 
 
 ?>
 
