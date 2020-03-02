@@ -11,18 +11,20 @@
                     <th class="text-center" scope="col">Expéditeur</th>
                     <th class="text-center" scope="col">Objet</th>
                     <th class="text-center" scope="col">Message</th>
+                    <th class="text-center" scope="col">Lu</th>
                     <th class="text-center" scope="col">Heure</th>
                 </tr>
             </thead>
             <tbody>
                 <?php 
                     foreach($all as $line){?>
-                        <tr>
-                    <td class="text-center" scope="row"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Supprimer</button></td>
+                        <tr class=" <?php echo ($line['isRead'] == 0) ? 'bold' : '' ?>">
+                    <td class="text-center" scope="row"><a href="<?= BASE_ADMIN . "index/listMessage/".$line['id'].'/delete'?>" class="btn bg-white mx-auto col-12 rounded-0 btndelete">Supprimer</a></td>
                     <td class="text-center" scope="row"><a class="text-decoration-none text-dark pt-3" href="<?= BASE_ADMIN . "index/detailmessage/".$line['id']?>">Voir</a></td>
                     <td class="text-center pt-3"><?php echo $line['name'];?></td>
                     <td class="text-center pt-3"><?php echo $line['object'];?></td>
                     <td class="messageadmin pt-3"><?php echo $line['message'];?></td>
+                    <td class="text-center pt-3"><?php echo $line['date_create'];?></td>
                     <td class="text-center pt-3"><?php echo $line['date_create'];?></td>
                 </tr>
                 <?php

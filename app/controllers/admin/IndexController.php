@@ -29,16 +29,27 @@ class IndexController extends AppController
         $this->render('index/listuser');
     }
 
-    public function listmessageAction()
+    public function listmessageAction($id='', $action='')
     {
         $message = new Message();
-        $array['all'] = $message->selectPerso(['name', 'object', 'message', 'date_create', 'id']);
+       
+        if($id!='' && $action == 'delete'){
+            $message->setId($id);
+            $message->updateIs(['isActive' => 0 ]);
+        }
+        $array['all'] = $message->selectBy( ['isActive' => 1]);
         $this->render('index/listmessage', $array);
+
+
     }
+
     public function detailmessageAction($id)
     {   $message = new Message();
         $message->setId($id);
         $array['one'] = $message->select();
+
+        $message->updateIs(['isRead' => 1 ]);
+
         $this->render('index/detail_message',$array);
     }
     public function addpropertyAction()

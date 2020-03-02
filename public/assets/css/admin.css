@@ -90,3 +90,7 @@ form {
   border-color: green !important;
   background-color: green;
 }
+
+.bold {
+  font-weight: 900 !important;
+}

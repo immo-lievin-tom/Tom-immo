@@ -28,6 +28,7 @@ class Db
         // foreach($array as $key => $value){
         //     self::$_sth->bindParam($key, $value);
         // }
+ 
         try {
             $this->_pdo->beginTransaction();
             if ($this->_sth->execute($array)) {

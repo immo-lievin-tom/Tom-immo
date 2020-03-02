@@ -23,14 +23,6 @@ class Model
     return self::$_db;
   }
 
-  function select()
-    {
-      $where = ["id" => $this->id];
-      $dbh = self::getDb();
-      $result = $dbh->select($this->_table, $where)->getResult();
-      return $result;
-    }
-
   /**
    * Get the value of id
    */
@@ -54,12 +46,24 @@ class Model
   function selectPerso(array $table)
   {
     $condition = implode( " , ", $table );
+
  
     $insert = "SELECT ". $condition . " FROM " . $this->_table;   
     $dbh = self::getDb();
     $dbh->query($insert);
     return $dbh->getResult();
   }
+
+  
+function select($where = [])
+{
+  if (count($where) == 0) {
+    $where = ['id' => $this->id];
+  }
+  $dbh = self::getDb();
+  $result = $dbh->select($this->_table, $where)->getResult();
+  return $result;
+}
 
   function selectAll()
   {
@@ -86,5 +90,15 @@ class Model
     $this->_table = $_table;
 
     return $this;
+  }
+
+  function updateIs($condition, $where = [])
+  {
+    $dbh = self::getDb();
+    if (count($where) == 0) {
+      $where = ['id' => $this->id];
+    }
+    $dbh->update($this->_table, $condition, $where);
+    return $dbh->getResult();
   }
 }
