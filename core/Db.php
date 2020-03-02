@@ -56,7 +56,6 @@ class Db
             }
             $insert = "SELECT * FROM " . $tableName . " where " . $wherereq;
         }
-        //echo $insert;
 
         $this->query($insert, $where2);
 
@@ -91,7 +90,7 @@ class Db
         }
 
         $insert = "UPDATE " . $tableName . " SET " . implode(' , ', $update) . " WHERE " . implode(' AND ', $wherereq);
-        // echo $insert;
+
         $this->query($insert, $arrayVal);
     }
 

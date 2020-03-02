@@ -1,13 +1,13 @@
 <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item slide active">
-            <img class="d-block w-100 img-fluid" src="<?= BASE_IMG . "imgslide1.jpg"?>" alt="Maison1">
+            <img class="d-block w-100 img-fluid" src="<?= BASE_IMG . "imgslide1.jpg" ?>" alt="Maison1">
         </div>
         <div class="carousel-item slide">
-            <img class="d-block w-100 img-fluid" src="<?= BASE_IMG . "imgslide2.jpg"?>" alt="Maison2">
+            <img class="d-block w-100 img-fluid" src="<?= BASE_IMG . "imgslide2.jpg" ?>" alt="Maison2">
         </div>
         <div class="carousel-item slide">
-            <img class="d-block w-100 img-fluid" src="<?= BASE_IMG . "imgslide3.jpg"?>" alt="Maison3">
+            <img class="d-block w-100 img-fluid" src="<?= BASE_IMG . "imgslide3.jpg" ?>" alt="Maison3">
         </div>
     </div>
     <a class="carousel-control-prev text-dark" href="#carouselIndicators" role="button" data-slide="prev">
@@ -43,79 +43,31 @@
 <div class="container-fluid">
     <div class="row my-3 my-lg-5">
 
-        <div class="col-12 col-lg-4">
-            <div class="row my-3 my-lg-5">
-                <h4 class="col-12 text-center announcetitle"><a href="http://localhost/tom-immo/html/front/frontannounce.php" class="text-decoration-none">Titre annonce</a></h4>
-                <div class="col-12 col-sm-10 col-md-9 col-lg-10 p-0 mx-auto mt-3">
-                    <!-- image -->
-                    <img class="w-100 img-fluid imgmain" src="<?= BASE_IMG . "img2_.jpg"?>" alt="">
-                </div>
-                <div class="row mx-1 mt-3 d-flex justify-content-center">
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img1_.jpg"?>" alt="">
-                    </div>
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img2_.jpg"?>" alt="">
-                    </div>
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img3_.jpg"?>" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+        <?php
 
-        <div class="col-12 col-lg-4">
-            <div class="row my-3 my-lg-5">
-                <h4 class="col-12 text-center announcetitle"><a href="http://localhost/tom-immo/html/front/frontannounce.php" class="text-decoration-none">Titre annonce</a></h4>
-                <div class="col-12 col-sm-10 col-md-9 col-lg-10 p-0 mx-auto mt-3">
-                    <!-- image -->
-                    <img class="w-100 img-fluid imgmain" src="<?= BASE_IMG . "img2_.jpg"?>" alt="">
-                </div>
-                <div class="row mx-1 mt-3 d-flex justify-content-center">
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img1_.jpg"?>" alt="">
-                    </div>
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img2_.jpg"?>" alt="">
+        foreach ($property as $key => $val) {
+            echo "<div class='col-12 col-lg-4'><div class='row my-3 my-lg-5'>";
+            foreach ($val as $key2 => $val2) {
+                if ($key2 == 'name') {
+                    echo "<h4 class='col-12 text-center announcetitle'><a href='" . BASE_ANNOUNCE . "/" . $val['id'] . "'class='text-decoration-none'>$val2</a></h4>";
+                    foreach ($image as $key1 => $value) {
+                        foreach ($value as $key2 => $value2) {
+                            if ($value2['id_property'] == $val['id']) {
+                                if ($value2['isTop'] == 1) {
+                                    echo "<div class='col-12 col-sm-10 col-md-9 col-lg-10 p-0 mx-auto mt-3'><img class='w-100 img-fluid imgmain' src=" . BASE_READIMG . $value2['path'] . " alt=''></div>";
+                                    echo "<div class='row mx-1 mt-3 d-flex justify-content-center'>";
+                                }
+                                echo "<div class='col-4 col-sm-3 p-1'><img class='w-100 img-fluid imgthumbnail' src=" .  BASE_READIMG . $value2['path'] . " alt=''></div>";
+                            };
+                        }
+                    }
+                    echo "</div>";
+                }
+            }
+            echo "</div></div>";
+        }
 
-                    </div>
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img3_.jpg"?>" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-lg-4">
-            <div class="row my-3 my-lg-5">
-                <h4 class="col-12 text-center announcetitle"><a href="http://localhost/tom-immo/html/front/frontannounce.php" class="text-decoration-none">Titre annonce</a></h4>
-                <div class="col-12 col-sm-10 col-md-9 col-lg-10 p-0 mx-auto mt-3">
-                    <!-- image -->
-                    <img class="w-100 img-fluid imgmain" src="<?= BASE_IMG . "img2_.jpg"?>" alt="">
-                </div>
-                <div class="row mx-1 mt-3 d-flex justify-content-center">
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img1_.jpg"?>" alt="">
-                    </div>
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img2_.jpg"?>" alt="">
-
-                    </div>
-                    <div class="col-4 col-sm-3 p-1">
-                        <!-- image -->
-                        <img class="w-100 img-fluid imgthumbnail" src="<?= BASE_IMG . "img3_.jpg"?>" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+        ?>
 
     </div>
 </div>

@@ -1,29 +1,35 @@
+<?php
+
+extract($property[0]);
+
+?>
+
 <!-- Title image and thumbnail -->
 
 <div class="row text-center w85 mx-auto imgcontain position-relative d-xl-flex justify-content-center">
-    <h1 class="w-100 announcetitle my-3">Titre de l'annonce</h1>
+    <h1 class="w-100 announcetitle my-3"><?= $name ?></h1>
     <div id="carouselIndicators" class="carousel col-12 mx-auto p-0" data-ride="carousel" data-interval="false">
         <div class="carousel-inner slidecontain">
             <div class="carousel-item active">
-                <img class="w-100 h-100 imgmain2 img-fluid" src="<?= BASE_IMG . "img1_.jpg" ?>" alt="Maison1">
+                <?php
+                foreach ($image as $key => $value) {
+                    if ($value['isTop'] == 1) {
+                        echo "<img class='w-100 h-100 imgmain2 img-fluid' src='" . BASE_READIMG . $value['path'] . "' alt='Maison1'>";
+                    };
+                }
+                ?>
             </div>
         </div>
     </div>
     <div class="col-12 mt-3 thumbnail">
         <div class="row d-flex justify-content-center">
-            <div class="col-4 col-sm-3 col-lg-2">
-                <!-- image -->
-                <img class="w-100 img-fluid thumbnailimg" src="<?= BASE_IMG . "img1_.jpg" ?>" alt="">
-            </div>
-            <div class="col-4 col-sm-3 col-lg-2">
-                <!-- image -->
-                <img class="w-100 img-fluid thumbnailimg" src="<?= BASE_IMG . "img2_.jpg" ?>" alt="">
-
-            </div>
-            <div class="col-4 col-sm-3 col-lg-2">
-                <!-- image -->
-                <img class="w-100 img-fluid thumbnailimg" src="<?= BASE_IMG . "img3_.jpg" ?>" alt="">
-            </div>
+                <?php
+                foreach ($image as $key => $value) {
+                    echo "<div class='col-4 col-sm-3 col-lg-2'>";
+                    echo "<img class='w-100 img-fluid thumbnailimg' src='" . BASE_READIMG . $value['path'] . "' alt='Maison1'>";
+                    echo "</div>";
+                }
+                ?>
         </div>
     </div>
 </div>
@@ -37,19 +43,18 @@
     <div class="col-10 col-lg-5 col-xl-4 mt-4 border description p-2 mx-2">
         <h4>Description</h4>
         <p class="ref">Référence : <span class="reference">FDC899964</span></p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, minima fugiat modi totam similique autem quia error nemo rem at rerum nisi non, accusantium possimus quis dignissimos dicta assumenda harum.</p>
+        <p><?= utf8_encode($description) ?></p>
         <div class="row">
-            <p class="col-4">Surface : <span class="surface">125</span> m²</p>
-            <p class="col-4">Garage : <span class="garage">2</span></p>
-            <p class="col-4">Chambre : <span class="bedroom">2</span></p>
-            <p class="col-4">Nb de pièces : <span class="room">3</span></p>
-            <p class="col-4">Chauffage : <span class="heating">Gaz</span></p>
-            <p class="col-4">Salle de bain : <span class="bathroom">1</span></p>
+            <p class="col-4">Surface : <span class="surface"><?= $surface ?></span> m²</p>
+            <p class="col-4">Garage : <span class="garage"><?= $garage ?></span></p>
+            <p class="col-4">Chambre : <span class="bedroom"><?= $nb_bedroom ?></span></p>
+            <p class="col-4">Nb de pièces : <span class="room"><?= $nb_room ?></span></p>
+            <p class="col-4">Chauffage : <span class="heating"><?= $type_heating ?></span></p>
+            <p class="col-4">Salle de bain : <span class="bathroom"><?= $nb_bedroom ?></span></p>
         </div>
         <p class="text-center">Détail du prix :</p>
         <div class="contain border text-center p-2">
-
-            <p class="text-dark"><span class="price">125 000</span> €</p>
+            <p class="text-dark"><span class="price"><?= $price ?></span> €</p>
         </div>
     </div>
 
