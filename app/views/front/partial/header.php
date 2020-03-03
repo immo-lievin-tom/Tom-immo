@@ -16,10 +16,10 @@
                     <a class="p-0 text-decoration-none" href="<?= BASE_DIR ?>">Accueil</a>
                 </li>
                 <li class="list-unstyled py-2 flex-fill text-center limenu">
-                    <a class="p-0 text-decoration-none" href="#">Biens</a>
+                    <a class="p-0 text-decoration-none" href="<?= BASE_DIR . "index/category" ?>">Biens</a>
                 </li>
                 <li class="list-unstyled py-2 flex-fill text-center limenu limenucat position-relative">
-                    <a class="p-0 text-decoration-none" href="<?= BASE_DIR . "/index/property" ?>">Catégories</a>
+                    <a class="p-0 text-decoration-none" href="<?= BASE_DIR . "index/property" ?>">Catégories</a>
                     <ul class="submenu p-0 mt-lg-2 w-100">
                         <li class="list-unstyled py-2 licat"><a class="text-decoration-none" href="#">Catégorie 1</a></li>
                         <li class="list-unstyled py-2 licat"><a class="text-decoration-none" href="#">Catégorie 2</a></li>

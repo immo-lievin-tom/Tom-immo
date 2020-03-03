@@ -28,10 +28,10 @@ class Db
         // foreach($array as $key => $value){
         //     self::$_sth->bindParam($key, $value);
         // }
-
         try {
             $this->_pdo->beginTransaction();
             $this->_sth->execute($array);
+
             $this->_lastInsertId = $this->_pdo->lastInsertId();
             $this->_pdo->commit();
             $this->_res = $this->_sth->fetchAll();
@@ -51,8 +51,8 @@ class Db
             $insert = "SELECT * FROM " . $tableName;
         } else {
             foreach ($where as $key => $value) {
-                $wherereq .= $key . "= :" . $key;
-                $where2[":$key"] = $value;
+                $wherereq .= $key . "= :"  . str_replace('.', '', $key);
+                $where2[":" . str_replace('.', '', $key)] = $value;
             }
             $insert = "SELECT * FROM " . $tableName . " where " . $wherereq;
         }

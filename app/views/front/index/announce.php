@@ -42,7 +42,7 @@ extract($property[0]);
 
     <div class="col-10 col-lg-5 col-xl-4 mt-4 border description p-2 mx-2">
         <h4>Description</h4>
-        <p class="ref">Référence : <span class="reference">FDC899964</span></p>
+        <p class="ref">Référence : <span class="reference"><?= $reference ?></span></p>
         <p><?= utf8_encode($description) ?></p>
         <div class="row">
             <p class="col-4">Surface : <span class="surface"><?= $surface ?></span> m²</p>

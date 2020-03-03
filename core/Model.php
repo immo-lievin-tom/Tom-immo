@@ -46,11 +46,8 @@ abstract class Model
         $where2[":" .  str_replace('.', '', $key)] = $value;
       }
       $insert = "SELECT * FROM " . $this->_table . " inner join " . $table2 . " on " . $on . " where " . $wherereq;
-      echo $insert;
-
     }
     $dbh = self::getDb();
-
     $dbh->query($insert, $where2);
     return $dbh->getResult();
   }

@@ -48,6 +48,14 @@ class Property extends Model
         return $this->selectAll();
     }
 
+    function selectPropertyInner($table, $cond)
+    {
+        $insert = "SELECT * , property.name as title FROM " . $this->_table . " inner join " . $table . " where " . $cond;
+        $dbh = self::getDb();
+        $dbh->query($insert);
+        return $dbh->getResult();
+    }
+
     /**
      * Get the value of title
      */ 
