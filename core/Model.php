@@ -52,6 +52,25 @@ abstract class Model
     return $dbh->getResult();
   }
 
+  function selectChoiceInner(array $choice, $table2, $on, array $where = [])
+  {
+    $wherereq = "";
+    $condition = implode(" , ", $choice);
+    $where2 = [];
+    if (count($where) == 0) {
+      $insert = "SELECT * FROM " . $this->_table;
+    } else {
+      foreach ($where as $key => $value) {
+        $wherereq .= $key . "= :" .  str_replace('.', '', $key);
+        $where2[":" .  str_replace('.', '', $key)] = $value;
+      }
+      $insert = "SELECT " . $condition . " FROM " . $this->_table . " inner join " . $table2 . " on " . $on . " where " . $wherereq;
+    }
+    $dbh = self::getDb();
+    $dbh->query($insert, $where2);
+    return $dbh->getResult();
+  }
+
   // function selectPersoCondition($choice, array $where = [])
   // {
   //   $wherereq = "";
