@@ -130,21 +130,11 @@ class IndexController extends AppController
         $this->render('index/modifyuser', $address);
     }
 
-    public function connectionAction()
+
+    public function disconnectAction()
     {
-        $user = new User();
-        if (isset($_POST['email']) && isset($_POST['password'])) {
-            $result = $user->selectPersoCondition(['email', 'password'], ['email'=>$_POST['email']]);
-            var_dump($result);
-            if($result){
-                if (password_verify($_POST['password'], $result[0]['password'])) {
-                    header('Location: index/index');
-                }
-            }else{
-                echo "Dommage";
-            }
-        }
-        $this->render('index/connection');
+        session_destroy();
+        $this->render('index/index');
     }
 
 

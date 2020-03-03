@@ -9,7 +9,7 @@ abstract class Model
   protected static $_db;
   protected $id;
   protected $_table;
-  
+
   abstract public function getFieldArray();
 
   protected function __construct()
@@ -58,7 +58,7 @@ abstract class Model
       }
       $insert = "SELECT * FROM " . $this->_table . " INNER JOIN " . $table2 . " on " . $arg . " WHERE " . $wherereq;
     }
-    //echo $insert;
+    echo $insert;
     $dbh = self::getDb();
     $dbh->query($insert, $where2);
     return $dbh->getResult();
@@ -151,6 +151,4 @@ abstract class Model
 
     return $this;
   }
-
-  
 }

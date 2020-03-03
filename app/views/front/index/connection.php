@@ -11,7 +11,7 @@
                 <label for="password">Mot de passe</label>
                 <input type="password" class="col-8 d-inline form-control" id="password" name="password">
             </div>
-            <button type="submit" class="btn btn-outline-dark bg-dark  text-white">Je m'inscris !</button>
+            <button type="submit" class="btn btn-outline-dark bg-dark  text-white">Je me connecte !</button>
             <a href="inscription" class="text-white">
                 <p>Pas encore de compte ? Inscrivez-vous !</p>
             </a>
