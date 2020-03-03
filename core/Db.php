@@ -32,7 +32,6 @@ class Db
         try {
             $this->_pdo->beginTransaction();
             $this->_sth->execute($array);
-            //var_dump($this->_sth->errorInfo());
             $this->_lastInsertId = $this->_pdo->lastInsertId();
             $this->_pdo->commit();
             $this->_res = $this->_sth->fetchAll();
@@ -52,12 +51,11 @@ class Db
             $insert = "SELECT * FROM " . $tableName;
         } else {
             foreach ($where as $key => $value) {
-                $wherereq .= $key . "= :" . $key;
-                $where2[":$key"] = $value;
+                $wherereq .= $key . "= :"  . str_replace('.', '', $key);
+                $where2[":" . str_replace('.', '', $key)] = $value;
             }
             $insert = "SELECT * FROM " . $tableName . " where " . $wherereq;
         }
-        //echo $insert;
 
         $this->query($insert, $where2);
 
@@ -71,9 +69,6 @@ class Db
             $insertToQuery[':' . $key] = $value;
         }
         $insert = "INSERT INTO " . $tableName . " (" . implode(',', array_keys($array)) . ") " . "values(" . implode(',', array_keys($insertToQuery)) . ")";
-
-        // echo $insert;
-        // var_dump($insert);
         $this->query($insert, $insertToQuery);
         return $this->getLastInsertId();
     }
@@ -99,8 +94,6 @@ class Db
         }
 
         $insert = "UPDATE " . $tableName . " SET " . implode(' , ', $update) . " WHERE " . implode(' AND ', $wherereq);
-        // echo $insert;
-        // var_dump($array);
         $this->query($insert, $arrayVal);
     }
 

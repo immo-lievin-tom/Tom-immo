@@ -4,15 +4,14 @@ INSERT INTO `category`(`name`, `isActive`) VALUES
 ('garage',1),
 ('loft',1);
 
-INSERT INTO `address`(`number`, `street`, `zipcode`, `country`, `city`) VALUES 
-(2, 'rue malfidano', '62950', 'France', 'Noyelles-Godault'),
+INSERT INTO `address`(`number`, `street`, `zipcode`, `country`, `city`) VALUES (2, 'rue malfidano', '62950', 'France', 'Noyelles-Godault'),
 (24, 'rue de la libération', '62800', 'France', 'Lièvin'),
 (20, 'rue pasteur', '75000', 'France', 'Paris');
 
 INSERT INTO `user`(`name`, `firstname`, `email`, `password`, `date_birth`,`role`,`id_address`) VALUES 
-('dufour','olivier','olivier.dufour@yahoo.com','020988','1988-09-02',1, 1),
-('laslaa','mohammed','mohammed.laslaa@yahoo.com','coucou','1987-02-08',1,2),
-('devise','theo','t.devise@laposte.net','coucou','1988-02-12',1,3);
+('dufour','olivier','olivier.dufour@yahoo.com','020988','02-09-1988','admin', 1),
+('laslaa','mohammed','mohammed.laslaa@yahoo.com','coucou','02-08-1987','admin',2),
+('devise','theo','t.devise@laposte.net','coucou','02-79-1988','admin',3);
 
 INSERT INTO `message`(`name`, `object`, `message`, `isActive`, `isRead`,`id_user`) VALUES 
 ('coucou','test','ca fait chier git cest hard', 1, 1, 1),
@@ -25,16 +24,15 @@ INSERT INTO `property`(`name`, `typeproperty`, `price`, `reference`, `descriptio
 ('Appartement','sale', 125000, 'XXXXggXXX', 'Bel appartement avec une vue incroyable en mer !', 1, 4, 1, 70, '', 'C', 'electricity', 1, 1, 1, 1, 1, 1, 2);
 
 INSERT INTO `image`(`name`, `path`, `isTop`, `id_property`) VALUES 
-('holiday-house-177401_1280', 'holiday-house-177401_1280.jpg', 1, 1),
-('agriculture-1807581_1920', 'agriculture-1807581_1920.jpg', 0, 1),
-('kitchen-1940174_1280', 'kitchen-1940174_1280.jpg', 0, 1),
-('holiday-house-177401_1280', 'holiday-house-177401_1280.jpg', 1, 2),
-('agriculture-1807581_1920', 'agriculture-1807581_1920.jpg', 0, 2),
-('kitchen-1940174_1280', 'kitchen-1940174_1280.jpg', 0, 2),
-('holiday-house-177401_1280', 'holiday-house-177401_1280.jpg', 1, 3),
-('agriculture-1807581_1920', 'agriculture-1807581_1920.jpg', 0, 3),
-('kitchen-1940174_1280', 'kitchen-1940174_1280.jpg', 0, 3);
-
+('img1', '/img/img315.jpg', 1, 1),
+('img2', '/img/img311.jpg', 0, 1),
+('img3', '/img/img310.jpg', 0, 1),
+('img1', '/img/img309.jpg', 1, 2),
+('img2', '/img/img308.jpg', 0, 2),
+('img3', '/img/img306.jpg', 0, 2),
+('img1', '/img/img305.jpg', 1, 3),
+('img2', '/img/img302.jpg', 0, 3),
+('img3', '/img/img301.jpg', 0, 3);
 
 INSERT INTO `favorite`(`id_user`, `id_property`) VALUES 
 (1,1),

@@ -16,17 +16,6 @@ abstract class Model
   {
   }
 
-  function selectPerso(array $table)
-  {
-    $condition = implode(" , ", $table);
-
-    $insert = "SELECT " . $condition . " FROM " . $this->_table;
-    $dbh = self::getDb();
-    $dbh->query($insert);
-    return $dbh->getResult();
-  }
-
-
   public static function getDb()
   {
     if (!self::$_db) {
@@ -45,7 +34,7 @@ abstract class Model
     return $result;
   }
 
-  function selectInner($table2, $arg, array $where = [])
+  function selectInner($table2, $on, array $where = [])
   {
     $wherereq = "";
     $where2 = [];
@@ -53,44 +42,34 @@ abstract class Model
       $insert = "SELECT * FROM " . $this->_table;
     } else {
       foreach ($where as $key => $value) {
-        $wherereq .= $key . "=:" . str_replace('.', '', $key);
-        $where2[":" . str_replace('.', '', $key)] = $value;
+        $wherereq .= $key . "= :" .  str_replace('.', '', $key);
+        $where2[":" .  str_replace('.', '', $key)] = $value;
       }
-      $insert = "SELECT * FROM " . $this->_table . " INNER JOIN " . $table2 . " on " . $arg . " WHERE " . $wherereq;
+      $insert = "SELECT * FROM " . $this->_table . " inner join " . $table2 . " on " . $on . " where " . $wherereq;
     }
-    echo $insert;
     $dbh = self::getDb();
     $dbh->query($insert, $where2);
     return $dbh->getResult();
   }
 
-  function update($where = [])
-  {
-    $dbh = self::getDb();
-    $tab = $this->getFieldArray();
-    if (count($where) == 0) {
-      $where = ['id' => $this->id];
-      // $tab['id']=$this->id;
-    }
-    $dbh->update($this->_table, $tab, $where);
-    return $dbh->getResult();
-  }
-
-  function updateIs($condition, $where = [])
-  {
-    $dbh = self::getDb();
-    if (count($where) == 0) {
-      $where = ['id' => $this->id];
-    }
-    $dbh->update($this->_table, $condition, $where);
-    return $dbh->getResult();
-  }
-
-  public function insert()
-  {
-    $dbh = self::getDb();
-    return $dbh->insert($this->_table, $this->getFieldArray());
-  }
+  // function selectPersoCondition($choice, array $where = [])
+  // {
+  //   $wherereq = "";
+  //   $condition = implode(" , ", $choice);
+  //   $where2 = [];
+  //   if (count($where) == 0) {
+  //     $insert = "SELECT * FROM " . $this->_table;
+  //   } else {
+  //     foreach ($where as $key => $value) {
+  //       $wherereq .= $key . "= :" .  str_replace('.', '', $key);
+  //       $where2[":" .  str_replace('.', '', $key)] = $value;
+  //     }
+  //     $insert = "SELECT " . $condition . " FROM " . $this->_table . " inner join " . $table2 . " on " . $on . " where " . $wherereq;
+  //   }
+  //   $dbh = self::getDb();
+  //   $dbh->query($insert, $where2);
+  //   return $dbh->getResult();
+  // }
 
   function selectPersoCondition($choice, array $where = [])
   {
@@ -109,6 +88,48 @@ abstract class Model
     }
     $dbh = self::getDb();
     $dbh->query($insert, $where2);
+    return $dbh->getResult();
+  }
+
+  function selectAll()
+  {
+    $dbh = self::getDb();
+    $result = $dbh->select($this->_table)->getResult();
+    return $result;
+  }
+
+  function selectPerso(array $table)
+  {
+    $condition = implode(" , ", $table);
+    $insert = "SELECT " . $condition . " FROM " . $this->_table;
+    $dbh = self::getDb();
+    $dbh->query($insert);
+    return $dbh->getResult();
+  }
+
+  function insert()
+  {
+    $dbh = self::getDb();
+    return $dbh->insert($this->_table, $this->getFieldArray());
+  }
+
+  function update($where = [])
+  {
+    $dbh = self::getDb();
+    if (count($where) == 0) {
+      $where = ['id' => $this->id];
+    }
+    $dbh->update($this->_table, $this->getFieldArray(), $where);
+    return $dbh->getResult();
+  }
+
+  function updateIs($condition, $where = [])
+  {
+    $dbh = self::getDb();
+    if (count($where) == 0) {
+      $where = ['id' => $this->id];
+    }
+    $dbh->update($this->_table, $condition, $where);
     return $dbh->getResult();
   }
 
@@ -147,8 +168,6 @@ abstract class Model
    */
   public function set_table($_table)
   {
-    $this->_table = $_table;
-
-    return $this;
+    return $this->_table = $_table;
   }
 }

@@ -13,7 +13,7 @@ class Address extends Model
     private $country;
     private $city;
 
-
+    
     public function __construct()
     {
         $this->set_table('address');
@@ -27,6 +27,11 @@ class Address extends Model
     public function getTable()
     {
         return $this->get_table();
+    }
+
+    function selectAddress()
+    {
+        return $this->selectAll();
     }
 
     /**

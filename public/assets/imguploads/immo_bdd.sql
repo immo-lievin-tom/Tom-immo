@@ -41,9 +41,8 @@ CREATE TABLE `user` (
     `phone_number` INT NOT NULL,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
-    `date_delete` DATETIME DEFAULT CURRENT_DATE,
-    `role` INT NOT NULL,
-    `isActive` BOOLEAN DEFAULT 1,
+    `date_delete` DATETIME,
+    `role` VARCHAR(255),
     `id_address` int, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_address`) REFERENCES address(id)
