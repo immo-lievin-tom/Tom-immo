@@ -2,6 +2,7 @@
 
 extract($property[0]);
 
+
 ?>
 
 <!-- Title image and thumbnail -->

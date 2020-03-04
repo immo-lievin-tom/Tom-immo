@@ -86,6 +86,7 @@ class IndexController extends AppController
     {
         $property = new Property();
         $image = new Image();
+        $property->setId($id);
         $result['property'] = $property->select(['id' => $id]);
         $result['image'] = $image->selectPersoCondition(['name', 'id_property', 'path', 'isTop'], ['id_property' => $id]);
         $this->render('index/announce', $result);

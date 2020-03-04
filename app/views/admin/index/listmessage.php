@@ -1,5 +1,3 @@
-
-
 <div class="col-12 col-lg-10 pt-5">
     <div class="col-12 mx-auto">
         <h4 class="text-center my-3">Listes des Messages</h4>
