@@ -1,26 +1,26 @@
-$(document).ready(function() {
-  $(".disa").click(function(e) {
+$(document).ready(function () {
+  $(".disa").click(function (e) {
     e.preventDefault();
-    $("input").each(function() {
+    $("input").each(function () {
       $(this).attr("disabled", false);
     });
     $(this).addClass("d-none");
     $(".send").removeClass("d-none");
   });
-  $(".bb").click(function() {
-    $(".bb").each(function() {
+  $(".bb").click(function () {
+    $(".bb").each(function () {
       $(".bb").removeClass("buttonespace");
     });
     $(this).addClass("buttonespace");
   });
-  $(".property-select").on("change", function() {
+  $(".property-select").on("change", function () {
     if ($(this).val() == "3") {
-      $(".no-garage").each(function() {
+      $(".no-garage").each(function () {
         $(".no-garage").addClass("d-none");
         $(".no-garage").removeClass("d-flex");
       });
     } else {
-      $(".no-garage").each(function() {
+      $(".no-garage").each(function () {
         $(".no-garage").addClass("d-flex");
         $(".no-garage").removeClass("d-none");
       });
@@ -28,12 +28,12 @@ $(document).ready(function() {
   });
 
   if ($(".property-select").val() == "3") {
-    $(".no-garage").each(function() {
+    $(".no-garage").each(function () {
       $(".no-garage").addClass("d-none");
       $(".no-garage").removeClass("d-flex");
     });
   } else {
-    $(".no-garage").each(function() {
+    $(".no-garage").each(function () {
       $(".no-garage").addClass("d-flex");
       $(".no-garage").removeClass("d-none");
     });
@@ -80,18 +80,18 @@ $(document).ready(function() {
       photo2: "Please provide a file image",
       photo3: "Please provide a file image"
     },
-    submitHandler: function(form) {
+    submitHandler: function (form) {
       form.submit();
     }
   });
 
   $(".textdelete").hide();
 
-  $(".modifyimg").click(function() {
+  $(".modifyimg").click(function () {
     $(".imggroup").toggleClass("d-flex");
   });
 
-  $(".isact").mousedown(function() {
+  $(".isact").mousedown(function () {
     idproperty = $(this)
       .children()
       .attr("property");
@@ -105,7 +105,7 @@ $(document).ready(function() {
     });
   });
 
-  $(".isvis").mousedown(function() {
+  $(".isvis").mousedown(function () {
     idproperty = $(this)
       .children()
       .attr("property");
@@ -119,7 +119,7 @@ $(document).ready(function() {
     });
   });
 
-  $(".istop").mousedown(function() {
+  $(".istop").mousedown(function () {
     idproperty = $(this)
       .children()
       .attr("property");
@@ -133,22 +133,33 @@ $(document).ready(function() {
     });
   });
 
-  $(".delete").mousedown(function() {
+  $(".delete").mousedown(function () {
     idproperty = $(this).attr("property");
     $.ajax({
       method: "post",
       url: "desactive",
       data: { desactive: idproperty }
-    }).done(function() {
-      let message = setInterval(function() {
+    }).done(function () {
+      let message = setInterval(function () {
         $(".textdelete").show();
-      },200);
+      }, 200);
 
-      setTimeout(function(){
+      setTimeout(function () {
         clearInterval(message);
         $(".textdelete").hide();
         location.reload();
-      },2000) 
+      }, 2000)
     });
+  });
+  $(".heart").click(function () {
+    idproperty = $(this).attr('idproperty');
+    iduser = $(this).attr('iduser');
+    $.ajax({
+      method: "post",
+      url: "/tom-immo/public/espace/myaccount/deletefavorite",
+      data: { 'idproperty': idproperty, 'iduser': iduser }
+    }).done(function (res) {
+      $('.favorite-espace').html(res)
+    })
   });
 });
