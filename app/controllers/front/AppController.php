@@ -3,6 +3,8 @@
 namespace App\Controllers\Front;
 
 use Core\Controller;
+use App\Models\Category;
+
 
 class AppController extends Controller
 {
@@ -21,9 +23,7 @@ class AppController extends Controller
         //Chacun de ses elements peut etre surchargé dans vos methodeAction
         $element['header'] = $this->buildHeader();
         $element['footer'] = $this->buildFooter();
-
         $this->addContentToView($element);
-
         parent::__construct();
     }
 

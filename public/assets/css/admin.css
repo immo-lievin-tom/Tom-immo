@@ -90,3 +90,15 @@ form {
   border-color: green !important;
   background-color: green;
 }
+
+.error{
+  color: red;
+}
+
+.modifyimg{
+  cursor: pointer;
+}
+
+.delete{
+  cursor: pointer;
+}

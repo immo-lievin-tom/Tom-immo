@@ -11,7 +11,7 @@ CREATE TABLE `category` (
     `isActive` BOOLEAN DEFAULT 1,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
-    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME,
     PRIMARY KEY (`id`)
 )ENGINE=innoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
@@ -42,7 +42,8 @@ CREATE TABLE `user` (
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
     `date_delete` DATETIME DEFAULT CURRENT_DATE,
-    `role` VARCHAR(255),
+    `role` INT NOT NULL,
+    `isActive` BOOLEAN DEFAULT 1,
     `id_address` int, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_address`) REFERENCES address(id)
@@ -58,7 +59,7 @@ CREATE TABLE `message` (
     `isRead` BOOLEAN,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
-    `date_delete` DATETIME DEFAULT CURRENT_DATE,
+    `date_delete` DATETIME,
     `id_user` INT,
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_user`) REFERENCES user(id)
@@ -68,10 +69,13 @@ DROP TABLE IF EXISTS `property`;
 CREATE TABLE `property` (
     `id` int(10) NOT NULL AUTO_INCREMENT,
     `name` varchar(255) NOT NULL,
+    `typeproperty` varchar(255),
+    `price` INT NOT NULL,
+    `reference` varchar(255) NOT NULL,
     `description` varchar(255) NOT NULL,
-    `nb_bedroom` INT,
-    `nb_room` INT,
-    `nb_bathroom` INT,
+    `nb_bedroom` INT DEFAULT 0,
+    `nb_room` INT DEFAULT 0,
+    `nb_bathroom` INT DEFAULT 0,
     `surface` INT NOT NULL, 
     `garden` INT, 
     `energy_class` varchar(255),
@@ -96,8 +100,8 @@ CREATE TABLE `image` (
     `path` varchar(255) NOT NULL,
     `date_create` DATETIME DEFAULT CURRENT_DATE,
     `date_update` DATETIME DEFAULT CURRENT_DATE,
-    `date_delete` DATETIME DEFAULT CURRENT_DATE,
-    `default` BOOLEAN,
+    `date_delete` DATETIME,
+    `isTop` BOOLEAN,
     `id_property` int, 
     PRIMARY KEY (`id`),
     FOREIGN KEY (`id_property`) REFERENCES property(id)
