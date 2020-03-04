@@ -51,15 +51,17 @@
                 if ($key2 == 'name') {
                     echo "<h4 class='col-12 text-center announcetitle'><a href='" . BASE_ANNOUNCE . "/" . $val['id'] . "'class='text-decoration-none'>$val2</a></h4>";
                     foreach ($image as $key1 => $value) {
+            $thumbnail = ""; 
                         foreach ($value as $key2 => $value2) {
-                            if ($value2['id_property'] == $val['id']) {
+                            if ($value2['id_property'] == $val['id']) {   
                                 if ($value2['isTop'] == 1) {
                                     echo "<div class='col-12 col-sm-10 col-md-9 col-lg-10 p-0 mx-auto mt-3'><img class='w-100 img-fluid imgmain' src=" . BASE_READIMG . $value2['path'] . " alt=''></div>";
                                     echo "<div class='row mx-1 mt-3 d-flex justify-content-center'>";
                                 }
-                                echo "<div class='col-4 col-sm-3 p-1'><img class='w-100 img-fluid imgthumbnail' src=" .  BASE_READIMG . $value2['path'] . " alt=''></div>";
+                                $thumbnail .= "<div class='col-4 col-sm-3 p-1'><img class='w-100 img-fluid imgthumbnail' src=" .  BASE_READIMG . $value2['path'] . " alt=''></div>";
                             };
                         }
+                        echo $thumbnail;
                     }
                     echo "</div>";
                 }

@@ -86,7 +86,7 @@ class IndexController extends AppController
     public function categoryAction()
     {
         $property = new Property();
-        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property and image.isTop = 1');
+        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property', 'image.isTop = 1');
         $this->render('index/category', $result);
     }
 
@@ -98,7 +98,7 @@ class IndexController extends AppController
     public function selectrentalAction()
     {
         $property = new Property();
-        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property and image.isTop = 1 and property.typeproperty = "rental"');
+        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property', 'image.isTop = 1 and property.typeproperty = "rental"');
 
         foreach ($result['result'] as $key => $value) {
             echo "<div class='col-12 col-sm-10 col-md-8 col-lg-4 text-center announcecat position-relative'>";
@@ -106,7 +106,7 @@ class IndexController extends AppController
             echo "<img src='" . BASE_IMG . $path . "' class='w-100 img-fluid imgcategory' alt=''>
                     <div class='txtdescannounce position-absolute mx-auto d-flex align-items-center'>
                         <p class='mx-auto p-3 descannounce'>" . $description .
-                            "<a href='" .  BASE_ANNOUNCE . "/" . $id . "'>Plus d'infos</a>
+                "<a href='" .  BASE_ANNOUNCE . "/" . $id . "'>Plus d'infos</a>
                         </p>
                     </div>
 
@@ -122,7 +122,7 @@ class IndexController extends AppController
     public function selectsaleAction()
     {
         $property = new Property();
-        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property and image.isTop = 1 and property.typeproperty = "sale"');
+        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property', 'image.isTop = 1 and property.typeproperty = "sale"');
 
         foreach ($result['result'] as $key => $value) {
             echo "<div class='col-12 col-sm-10 col-md-8 col-lg-4 text-center announcecat position-relative'>";
@@ -130,7 +130,103 @@ class IndexController extends AppController
             echo "<img src='" . BASE_IMG . $path . "' class='w-100 img-fluid imgcategory' alt=''>
                     <div class='txtdescannounce position-absolute mx-auto d-flex align-items-center'>
                         <p class='mx-auto p-3 descannounce'>" . $description .
-                            "<a href='" .  BASE_ANNOUNCE . "/" . $id . "'>Plus d'infos</a>
+                "<a href='" .  BASE_ANNOUNCE . "/" . $id . "'>Plus d'infos</a>
+                        </p>
+                    </div>
+
+                    <div class='px-2 text-left txtsub'>
+                        <p class='mt-2'>" .  $title . "</p>
+                        <p>Référence : <span>" . $reference  . "</span></p>
+                        <p>Prix : <span class='price'>" . $price  . "</span> €</p>
+                    </div>
+                </div>";
+        }
+    }
+
+    public function selectallpropertyAction()
+    {
+        $property = new Property();
+        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property', 'image.isTop = 1');
+
+        foreach ($result['result'] as $key => $value) {
+            echo "<div class='col-12 col-sm-10 col-md-8 col-lg-4 text-center announcecat position-relative'>";
+            extract($value);
+            echo "<img src='" . BASE_IMG . $path . "' class='w-100 img-fluid imgcategory' alt=''>
+                    <div class='txtdescannounce position-absolute mx-auto d-flex align-items-center'>
+                        <p class='mx-auto p-3 descannounce'>" . $description .
+                "<a href='" .  BASE_ANNOUNCE . "/" . $id . "'>Plus d'infos</a>
+                        </p>
+                    </div>
+
+                    <div class='px-2 text-left txtsub'>
+                        <p class='mt-2'>" .  $title . "</p>
+                        <p>Référence : <span>" . $reference  . "</span></p>
+                        <p>Prix : <span class='price'>" . $price  . "</span> €</p>
+                    </div>
+                </div>";
+        }
+    }
+
+    public function selectapartmentAction()
+    {
+        $property = new Property();
+        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property', 'image.isTop = 1 and property.id_cat = "2"');
+
+        foreach ($result['result'] as $key => $value) {
+            echo "<div class='col-12 col-sm-10 col-md-8 col-lg-4 text-center announcecat position-relative'>";
+            extract($value);
+            echo "<img src='" . BASE_IMG . $path . "' class='w-100 img-fluid imgcategory' alt=''>
+                    <div class='txtdescannounce position-absolute mx-auto d-flex align-items-center'>
+                        <p class='mx-auto p-3 descannounce'>" . $description .
+                "<a href='" .  BASE_ANNOUNCE . "/" . $id . "'>Plus d'infos</a>
+                        </p>
+                    </div>
+
+                    <div class='px-2 text-left txtsub'>
+                        <p class='mt-2'>" .  $title . "</p>
+                        <p>Référence : <span>" . $reference  . "</span></p>
+                        <p>Prix : <span class='price'>" . $price  . "</span> €</p>
+                    </div>
+                </div>";
+        }
+    }
+
+    public function selecthouseAction()
+    {
+        $property = new Property();
+        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property', 'image.isTop = 1 and property.id_cat = "1"');
+
+        foreach ($result['result'] as $key => $value) {
+            echo "<div class='col-12 col-sm-10 col-md-8 col-lg-4 text-center announcecat position-relative'>";
+            extract($value);
+            echo "<img src='" . BASE_IMG . $path . "' class='w-100 img-fluid imgcategory' alt=''>
+                    <div class='txtdescannounce position-absolute mx-auto d-flex align-items-center'>
+                        <p class='mx-auto p-3 descannounce'>" . $description .
+                "<a href='" .  BASE_ANNOUNCE . "/" . $id . "'>Plus d'infos</a>
+                        </p>
+                    </div>
+
+                    <div class='px-2 text-left txtsub'>
+                        <p class='mt-2'>" .  $title . "</p>
+                        <p>Référence : <span>" . $reference  . "</span></p>
+                        <p>Prix : <span class='price'>" . $price  . "</span> €</p>
+                    </div>
+                </div>";
+        }
+    }
+
+    public function selectgarageAction()
+    {
+        $property = new Property();
+        $result['result'] = $property->selectPropertyInner('image', 'property.id = image.id_property', 'image.isTop = 1 and property.id_cat = "3"');
+
+        foreach ($result['result'] as $key => $value) {
+            echo "<div class='col-12 col-sm-10 col-md-8 col-lg-4 text-center announcecat position-relative'>";
+            extract($value);
+            echo "<img src='" . BASE_IMG . $path . "' class='w-100 img-fluid imgcategory' alt=''>
+                    <div class='txtdescannounce position-absolute mx-auto d-flex align-items-center'>
+                        <p class='mx-auto p-3 descannounce'>" . $description .
+                "<a href='" .  BASE_ANNOUNCE . "/" . $id . "'>Plus d'infos</a>
                         </p>
                     </div>
 

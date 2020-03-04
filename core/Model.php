@@ -172,9 +172,10 @@ abstract class Model
     return $this;
   }
 
+
   /**
    * Get the value of _table
-   */
+   */ 
   public function get_table()
   {
     return $this->_table;
