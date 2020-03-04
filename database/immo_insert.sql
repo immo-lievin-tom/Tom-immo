@@ -38,5 +38,7 @@ INSERT INTO `image`(`name`, `path`, `isTop`, `id_property`) VALUES
 
 INSERT INTO `favorite`(`id_user`, `id_property`) VALUES 
 (1,1),
+(1,2),
+(1,3),
 (2,2),
 (3,3);

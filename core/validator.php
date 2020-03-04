@@ -128,7 +128,7 @@ class Validator
     {
         if (strpos($totest, '-') !== false) {
             $test_arr = explode("-", $totest);
-            if (strlen($test_arr[0]) > 2 || $test_arr[0] > 31 || strlen($test_arr[1]) > 2 || $test_arr[1] > 12 || strlen($test_arr[1]) > 4) {
+            if (strlen($test_arr[2]) > 2 || $test_arr[2] > 31 || strlen($test_arr[1]) > 2 || $test_arr[1] > 12 || strlen($test_arr[0]) > 4) {
                 array_push($this->errors, $message);
             }
         } else {

@@ -35,15 +35,15 @@
                         if ($result == 1) {
                             echo '<td class="text-center">
                             <div class="' . $labelid . ' custom-control custom-switch">
-                                <input property="' . $value["id"] .'" val ="' . 1 . '" type="checkbox" checked class="custom-control-input" id=' . $value["reference"] . $labelid . '>
-                                <label class="custom-control-label" for=' . $value["reference"] . $labelid .  '></label>
+                                <input property="' . $value["id"] .'" val ="' . 1 . '" type="checkbox" checked class="custom-control-input" id=' . $value["id"] . $value["reference"] . $labelid . '>
+                                <label class="custom-control-label" for=' . $value["id"] . $value["reference"] . $labelid .  '></label>
                             </div>
                         </td>';
                         } else {
                             echo '<td class="text-center">
                             <div class="' . $labelid . ' custom-control custom-switch">
-                                <input property="' . $value["id"] .'"val ="' . 0 . '"type="checkbox" class="custom-control-input" id=' . $value["reference"] . $labelid . '>
-                                <label class="custom-control-label" for=' . $value["reference"] . $labelid .  '></label>
+                                <input property="' . $value["id"] .'"val ="' . 0 . '"type="checkbox" class="custom-control-input" id=' . $value["id"] . $value["reference"] . $labelid . '>
+                                <label class="custom-control-label" for=' . $value["id"] . $value["reference"] . $labelid .  '></label>
                             </div>
                         </td>';
                         }

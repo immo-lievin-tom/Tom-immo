@@ -44,7 +44,6 @@ $(document).ready(function () {
             }else{
                 btn.children().children().html("Activer");
             }
-
             if(btn.attr('isact') == 1){
                 btn.attr('isact', 0);
             }else{
