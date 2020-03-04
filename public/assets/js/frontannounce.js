@@ -37,5 +37,23 @@ window.addEventListener("resize", function () {
   }
 });
 
+$(document).ready(function () {
+  $('.ajax-fav').click(function(){
+    idproperty = $(this).attr('idproperty');
+    iduser = $(this).attr('iduser');
+    $.ajax({
+      method: "post",
+      url: "/tom-immo/public/index/addfavorite",
+      data: { 'idproperty': idproperty, 'iduser': iduser },
+      success: function (response) {
+        console.log(response)
+        if(response){
+          $('.ajax-fav').text('Favoris')
+        }
+      }
+    });
+  })
+})
+
 
 

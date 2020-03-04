@@ -13,7 +13,8 @@ class AnnounceController extends AppController
     
     public function categoryAction()
     {
-       $this->render('category/index');
+        $this->render('category/index');
     }
 
+    
 }
