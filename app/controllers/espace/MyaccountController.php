@@ -109,7 +109,7 @@ class MyaccountController extends AppController
             $idproperty = $property->insert();
             $init = 0;
             foreach ($_FILES as $key) {
-                $target_file = BASE_UPIMG . basename($key["name"]);
+                $target_file = BASE_UPIMG . basename(md5($key["name"]) . ".jpg");
                 $keyarr = array_keys($_FILES);
                 if (move_uploaded_file($key['tmp_name'], $target_file)) {
                     $image = new Image();
