@@ -10,4 +10,8 @@ class Message extends Model
     {
         $this->set_table('message');
     }
+
+    public function getFieldArray(){
+      
+    }
 }
