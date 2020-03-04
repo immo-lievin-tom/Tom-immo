@@ -39,8 +39,6 @@ class IndexController extends AppController
         }
         $array['all'] = $message->selectBy( ['isActive' => 1]);
         $this->render('index/listmessage', $array);
-
-
     }
 
     public function detailmessageAction($id)

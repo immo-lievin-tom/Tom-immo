@@ -3,6 +3,7 @@
 namespace App\Controllers\Admin;
 
 use Core\Controller;
+use App\Models\Message;
 
 class AppController extends Controller
 {
@@ -38,7 +39,9 @@ class AppController extends Controller
 
     public function buildMenu()
     {
-        return $this->renderView('partial/menu');
+        $messages = New Message();
+        $messagesNonLus = $messages->getMessagesNonLus()[0]['Nb'];
+        return $this->renderView('partial/menu', ['messages'=>$messagesNonLus]);
     }
 
 }

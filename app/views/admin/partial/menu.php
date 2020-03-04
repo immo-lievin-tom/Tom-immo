@@ -5,5 +5,5 @@
 
     <a href="<?= BASE_ADMIN . "index/export" ?>" class="anchor"><button class="btn btn-light mx-auto col-12 rounded-0">Import/Export</button><br></a>
 
-    <a href="<?= BASE_ADMIN . "index/listmessage" ?>" class="anchor"><button class="btn btn-light mx-auto col-12 rounded-0">Messages</button></a>
+    <a href="<?= BASE_ADMIN . "index/listmessage" ?>" class="anchor"><button class="btn btn-light mx-auto col-12 rounded-0">Messages(<?php echo $messages ?>)</button></a>
 </div>

@@ -39,10 +39,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="text-center"  scope="row"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Supprimer</button></td>
+                                <td class="text-center" scope="row"><button class="btn bg-white mx-auto col-12 rounded-0 btndelete">Supprimer</button></td>
                                 <td class="text-center" scope="row"><a class="text-decoration-none text-dark" href="#"><i class="icofont-eye icofont-2x"></i></a></td>
-                                <td class="text-center" >Mark</td>
-                                <td class="text-center" >Salut</td>
+                                <td class="text-center">Mark</td>
+                                <td class="text-center">Salut</td>
                                 <td class="messageadmin">Lorem deux ipsum dolor sit amet consectetur adipisicing elit. Eaque ex sint maxime, placeat hic cupiditate rerum aliquam...</td>
                                 <td class="text-center">12:00</td>
                             </tr>

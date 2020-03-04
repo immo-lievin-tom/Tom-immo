@@ -25,6 +25,13 @@ class Message extends Model
       return $dbh->getResult();
     }
 
+      public function getMessagesNonLus()
+      {
+        $sql = "select count(*) as Nb from message where isRead = 0";
+        $tab = [];
+        return $this->freeSelect($sql, $tab);
+      }
+
 
   
     function selectBy($where = [])
