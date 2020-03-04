@@ -74,7 +74,6 @@
     </div> -->
     <div class="contentannouncecat w-100 d-flex">
         <?php
-
         foreach ($result as $key => $value) {
             echo "<div class='col-12 col-sm-10 col-md-8 col-lg-4 mx-auto text-center announcecat position-relative'>";
             extract($value);
