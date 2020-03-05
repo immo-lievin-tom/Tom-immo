@@ -57,6 +57,7 @@ extract($property[0]);
         <div class="contain border text-center p-2">
             <p class="text-dark"><span class="price"><?= $price ?></span> €</p>
         </div>
+        <a class="text-white" href="#"><button idproperty="2" iduser="1" class="btn text-white ajax-fav bg">Ajouter aux favoris</button></a>
     </div>
 
     <!-- Contact -->

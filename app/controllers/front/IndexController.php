@@ -5,6 +5,7 @@ namespace App\Controllers\Front;
 
 use App\Controllers\Front\AppController;
 use App\Models\Property;
+use App\Models\Favorite;
 use App\Models\Image;
 use App\Models\User;
 
@@ -15,8 +16,6 @@ class IndexController extends AppController
 
     public function __construct()
     {
-
-
         parent::__construct();
     }
 
@@ -72,6 +71,15 @@ class IndexController extends AppController
     public function inscriptionAction()
     {
         $this->render('index/inscription');
+    }
+
+    public function addfavoriteAction()
+    {
+        $fav = new Favorite();
+        $fav->setId_property($_POST['idproperty']);
+        $fav->setId_user($_POST['iduser']);
+        $fav->insert();
+        echo true;
     }
 
     public function announceAction($id)
