@@ -23,5 +23,5 @@ define('DEFAULT_METHOD', 'index');
 
 // Liste des modules a preciser dans l'url
 
-define('TAB_MODULES', ['admin', 'espace']);
+define('TAB_MODULES', ['admin', 'espace', 'api']);
 define('DEFAULT_MODULE', 'front');
