@@ -1,0 +1,19 @@
+{
+    "name": "62014-70-05/testphpunit",
+    "authors": [
+        {
+            "name": "Laslaa",
+            "email": "mohamed.laslaa@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^9.0",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Tests\\": "tests/"
+        }
+    }
+}
