@@ -20,9 +20,9 @@ INSERT INTO `message`(`name`, `object`, `message`, `isActive`, `isRead`,`id_user
 ('coucou','test','ca fait chier git cest hard', 1, 1, 3);
 
 
-INSERT INTO `property`(`name`, `typeproperty`, `price`, `reference`, `description`, `nb_bedroom`, `nb_room`, `nb_bathroom`, `surface`, `garden`, `energy_class`, `type_heating`, `garage`, `isActive`, `isTop`, `isVisible`, `id_address`, `id_user`, `id_cat`) VALUES ('Maison', 'sale', 125000, 'XXXXXXXf', 'Belle maison avec une vue incroyable en mer !', 3, 7, 2, 125, 2, 'C', 'gaz', 1, 1, 1, 1, 1, 2, 1),
-('Garage','rental', 125000, 'XXXfdgXXXX', 'Garage spacieux idéal mécanicien', '', '', '', 20, '', '', '', '',1, 1, 1, 2, 3, 3),
-('Appartement','sale', 125000, 'XXXXggXXX', 'Bel appartement avec une vue incroyable en mer !', 1, 4, 1, 70, '', 'C', 'electricity', 1, 1, 1, 1, 1, 1, 2);
+INSERT INTO `property`(`name`, `typeproperty`, `price`, `reference`, `description`, `nb_bedroom`, `nb_room`, `nb_bathroom`, `surface`, `garden`, `energy_class`, `type_heating`, `garage`, `isActive`, `isTop`, `isVisible`, `id_address`, `id_user`, `id_cat`, `date_create`) VALUES ('Maison', 'sale', 125000, 'XXXXXXXf', 'Belle maison avec une vue incroyable en mer !', 3, 7, 2, 125, 2, 'C', 'gaz', 1, 1, 1, 1, 1, 2, 1, '2020-02-15'),
+('Garage','rental', 125000, 'XXXfdgXXXX', 'Garage spacieux idéal mécanicien', '', '', '', 20, '', '', '', '',1, 1, 1, 2, 3, 3, '2020-02-14'),
+('Appartement','sale', 125000, 'XXXXggXXX', 'Bel appartement avec une vue incroyable en mer !', 1, 4, 1, 70, '', 'C', 'electricity', 1, 1, 1, 1, 1, 1, 2, '2020-02-20');
 
 INSERT INTO `image`(`name`, `path`, `isTop`, `id_property`) VALUES 
 ('holiday-house-177401_1280', 'holiday-house-177401_1280.jpg', 1, 1),

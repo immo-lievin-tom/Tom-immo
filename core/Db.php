@@ -1,7 +1,7 @@
 <?php
 
 namespace Core;
-
+require_once '../config/config.php';
 class Db
 {
     private static $_instance = null;

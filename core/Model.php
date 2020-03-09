@@ -117,6 +117,15 @@ abstract class Model
     return $result;
   }
 
+  function selectSpecific($req)
+  {
+    $dbh = self::getDb();
+    $dbh->query($req);
+    return $dbh->getResult();
+  }
+
+
+
   function selectPerso(array $table)
   {
     $condition = implode(" , ", $table);

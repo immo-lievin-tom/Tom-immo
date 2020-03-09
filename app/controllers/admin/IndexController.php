@@ -69,7 +69,6 @@ class IndexController extends AppController
             } else {
                 $address = new Address();
                 $property = new Property();
-
                 $address->setCity(htmlspecialchars($_POST['city']));
                 $address->setStreet(htmlspecialchars($_POST['address']));
                 $address->setCountry(htmlspecialchars($_POST['country']));
