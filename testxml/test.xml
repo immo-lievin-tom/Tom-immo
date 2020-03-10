@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<path>/property/1</path>
-<datecreate>2020-02-15 00:00:00</datecreate>
-<path>/property/2</path>
-<datecreate>2020-02-14 00:00:00</datecreate>
-<path>/property/3</path>
-<datecreate>2020-02-20 00:00:00</datecreate>
+<contain>
+	<path>
+		/property/1
+	</path>
+	<datecreate>
+		2020-02-15 00:00:00
+	</datecreate>
+	<path>
+		/property/2
+	</path>
+	<datecreate>
+		2020-02-14 00:00:00
+	</datecreate>
+</contain>
